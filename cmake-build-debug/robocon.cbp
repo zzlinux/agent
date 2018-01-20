@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="robocon"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\..\usr\local\share\pcl-1.8\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\;CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\CMake\;CMake Files\cmake_modules\;CMake Files\trace\;CMake Files\cameraLocation\;CMake Files\radarLocation\;CMake Files\thread\;CMake Files\protocol\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robocon">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/bin/robocon" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 robocon"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robocon/fast">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/bin/robocon" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 robocon/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="trace">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/libtrace.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 trace"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="trace/fast">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/libtrace.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 trace/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="camera">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/libcamera.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 camera"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="camera/fast">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/libcamera.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 camera/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="radar">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/libradar.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 radar"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="radar/fast">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/libradar.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 radar/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="thread">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/libthread.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 thread"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="thread/fast">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/libthread.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 thread/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="protocol">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/libprotocol.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 protocol"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="protocol/fast">
+				<Option output="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/libprotocol.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/trace"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/CLionProjects/agent/protocol"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 protocol/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/cameraLocation/CameraController.cpp">
+			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/cameraLocation/CameraController.h">
+			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/cameraLocation/CameraModel.cpp">
+			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/cameraLocation/CameraModel.h">
+			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/main.cpp">
+			<Option target="robocon"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/protocol/serialapp.cpp">
+			<Option target="protocol"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/protocol/serialapp.h">
+			<Option target="protocol"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/protocol/serialbase.cpp">
+			<Option target="protocol"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/protocol/serialbase.h">
+			<Option target="protocol"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/protocol/utility.cpp">
+			<Option target="protocol"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/protocol/utility.h">
+			<Option target="protocol"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarController.cpp">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarController.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarModel.cpp">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarModel.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Connection_information.cpp">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Connection_information.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Urg_driver.cpp">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Urg_driver.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/ticks.cpp">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/ticks.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_connection.c">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_connection.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_debug.c">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_debug.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_ring_buffer.c">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_ring_buffer.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_sensor.c">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_sensor.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_serial.c">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_serial.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_serial_utils_linux.c">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_tcpclient.c">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_tcpclient.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_utils.c">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_utils.h">
+			<Option target="radar"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/thread/Param.cpp">
+			<Option target="thread"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/thread/Param.h">
+			<Option target="thread"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/thread/ThreadController.cpp">
+			<Option target="thread"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/thread/ThreadController.h">
+			<Option target="thread"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/BallAssociate.cpp">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/BallAssociate.h">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/BallDetector.cpp">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/BallDetector.h">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/CircleDetector.cpp">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/CircleDetector.h">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/FitTrace.cpp">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/FitTrace.h">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/Trajectory.cpp">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/Trajectory.h">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/rgbd_camera.cpp">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/rgbd_camera.h">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/transformer.cpp">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/transformer.h">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/local/share/pcl-1.8/PCLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\pcl-1.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/local/share/pcl-1.8/PCLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\pcl-1.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig-Java.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig-Python.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig-Tcl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/UseVTK.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig-Java.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig-Python.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig-Tcl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/UseVTK.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig-Java.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig-Python.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/VTKConfig-Tcl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/UseVTK.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/../../../../../usr/lib/vtk-5.8/CMake/vtkMakeInstantiator.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\CMake\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/cmake_modules/FindOpenNI2.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/cmake_modules/FindEigen3.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/trace/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\trace\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/cameraLocation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cameraLocation\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/radarLocation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\radarLocation\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/thread/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thread\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/CLionProjects/agent/protocol/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\protocol\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

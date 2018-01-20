@@ -1,0 +1,6 @@
+/home/robocon/workspace/CLionProjects/robocon/build/cameraLocation/CMakeFiles/camera.dir
+/home/robocon/workspace/CLionProjects/robocon/build/protocol/CMakeFiles/protocol.dir
+/home/robocon/workspace/CLionProjects/robocon/build/radarLocation/CMakeFiles/radar.dir
+/home/robocon/workspace/CLionProjects/robocon/build/CMakeFiles/robocon.dir
+/home/robocon/workspace/CLionProjects/robocon/build/thread/CMakeFiles/thread.dir
+/home/robocon/workspace/CLionProjects/robocon/build/trace/CMakeFiles/trace.dir

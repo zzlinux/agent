@@ -1,0 +1,26 @@
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+include_directories(
+        ${OPENNI2_INCLUDE_DIRS}
+)
+add_library(trace
+        BallAssociate.cpp
+        BallAssociate.h
+        BallDetector.cpp
+        BallDetector.h
+        CircleDetector.cpp
+        CircleDetector.h
+        FitTrace.cpp
+        FitTrace.h
+        rgbd_camera.cpp
+        rgbd_camera.h
+        Trajectory.cpp
+        Trajectory.h
+        transformer.cpp
+        transformer.h
+        )
+target_link_libraries(trace
+        ${PCL_LIBRARIES}
+        ${OpenNI2_LIBRARIES}
+        ${EIGEN3_LIBS}
+        ${OpenCV_LIBS}
+        )
