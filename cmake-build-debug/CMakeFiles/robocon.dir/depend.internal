@@ -22,8 +22,8 @@ CMakeFiles/robocon.dir/main.cpp.o
  ../trace/Trajectory.h
  ../trace/rgbd_camera.h
  ../trace/transformer.h
- /home/robocon/workspace/CLionProjects/agent/main.cpp
- /home/robocon/workspace/CLionProjects/agent/thread/ThreadController.h
+ /home/robocon/workspace/agent/main.cpp
+ /home/robocon/workspace/agent/thread/ThreadController.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense

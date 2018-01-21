@@ -176,13 +176,13 @@ Eigen/Dense
 ../thread/Param.h
 ../thread/Param.h
 
-/home/robocon/workspace/CLionProjects/agent/main.cpp
+/home/robocon/workspace/agent/main.cpp
 iostream
 -
 thread/ThreadController.h
-/home/robocon/workspace/CLionProjects/agent/thread/ThreadController.h
+/home/robocon/workspace/agent/thread/ThreadController.h
 
-/home/robocon/workspace/CLionProjects/agent/thread/ThreadController.h
+/home/robocon/workspace/agent/thread/ThreadController.h
 iostream
 -
 boost/thread.hpp
@@ -192,25 +192,25 @@ opencv2/core/core.hpp
 pcl/visualization/cloud_viewer.h
 -
 BallAssociate.h
-/home/robocon/workspace/CLionProjects/agent/thread/BallAssociate.h
+/home/robocon/workspace/agent/thread/BallAssociate.h
 BallDetector.h
-/home/robocon/workspace/CLionProjects/agent/thread/BallDetector.h
+/home/robocon/workspace/agent/thread/BallDetector.h
 CircleDetector.h
-/home/robocon/workspace/CLionProjects/agent/thread/CircleDetector.h
+/home/robocon/workspace/agent/thread/CircleDetector.h
 FitTrace.h
-/home/robocon/workspace/CLionProjects/agent/thread/FitTrace.h
+/home/robocon/workspace/agent/thread/FitTrace.h
 rgbd_camera.h
-/home/robocon/workspace/CLionProjects/agent/thread/rgbd_camera.h
+/home/robocon/workspace/agent/thread/rgbd_camera.h
 Trajectory.h
-/home/robocon/workspace/CLionProjects/agent/thread/Trajectory.h
+/home/robocon/workspace/agent/thread/Trajectory.h
 transformer.h
-/home/robocon/workspace/CLionProjects/agent/thread/transformer.h
+/home/robocon/workspace/agent/thread/transformer.h
 CameraController.h
-/home/robocon/workspace/CLionProjects/agent/thread/CameraController.h
+/home/robocon/workspace/agent/thread/CameraController.h
 RadarController.h
-/home/robocon/workspace/CLionProjects/agent/thread/RadarController.h
+/home/robocon/workspace/agent/thread/RadarController.h
 serialapp.h
-/home/robocon/workspace/CLionProjects/agent/thread/serialapp.h
+/home/robocon/workspace/agent/thread/serialapp.h
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

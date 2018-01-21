@@ -31,13 +31,13 @@ namespace hitcrt
             std::cout<<"trace,ncount,size "<<i<<","<<traces[i].ncount<<","<<traces[i].points.size();
             if(traces[i].lastSize == traces[i].points.size()) traces[i].ncount++;  //update stop record
             else traces[i].ncount = 0;
-            if (traces[i].ncount > 3 && traces[i].points.size() < 6)           // remove stop trace
+            if (traces[i].ncount > 3 && traces[i].points.size() < 4)           // remove stop trace
             {
                 std::cout<<" remove stop id "<<i<<"  "<<traces[i].points.size();
                 clearTrace(i);
             }
             std::cout<<std::endl;
-            if (traces[i].ncount > 3 && traces[i].points.size() >= 6)          // get correct trace
+            if (traces[i].ncount > 3 && traces[i].points.size() >= 4)          // get correct trace
             {
                 std::cout <<i<< " : get max trace: " <<traces[i].points.size()<< std::endl;
                 ballTraces.push_back(traces[i]);
@@ -49,7 +49,7 @@ namespace hitcrt
     }
     void BallAssociate::findMovement(cv::Mat & color,std::vector<pcl::PointXYZ> &targets)
     {
-         std::cout<<"targets "<<targets.size()<<std::endl;
+         if(targets.size()>0) std::cout<<"targets "<<targets.size()<<std::endl;
          for(auto p:targets)
          {
              bool flag = false;

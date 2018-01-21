@@ -43,10 +43,10 @@ RM = /home/robocon/Documents/software/clion-2017.2.3/bin/cmake/bin/cmake -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robocon/workspace/CLionProjects/agent
+CMAKE_SOURCE_DIR = /home/robocon/workspace/agent
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robocon/workspace/CLionProjects/agent/cmake-build-debug
+CMAKE_BINARY_DIR = /home/robocon/workspace/agent/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include protocol/CMakeFiles/protocol.dir/depend.make
@@ -59,16 +59,16 @@ include protocol/CMakeFiles/protocol.dir/flags.make
 
 protocol/CMakeFiles/protocol.dir/serialapp.cpp.o: protocol/CMakeFiles/protocol.dir/flags.make
 protocol/CMakeFiles/protocol.dir/serialapp.cpp.o: ../protocol/serialapp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object protocol/CMakeFiles/protocol.dir/serialapp.cpp.o"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protocol.dir/serialapp.cpp.o -c /home/robocon/workspace/CLionProjects/agent/protocol/serialapp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object protocol/CMakeFiles/protocol.dir/serialapp.cpp.o"
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protocol.dir/serialapp.cpp.o -c /home/robocon/workspace/agent/protocol/serialapp.cpp
 
 protocol/CMakeFiles/protocol.dir/serialapp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/protocol.dir/serialapp.cpp.i"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/CLionProjects/agent/protocol/serialapp.cpp > CMakeFiles/protocol.dir/serialapp.cpp.i
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/protocol/serialapp.cpp > CMakeFiles/protocol.dir/serialapp.cpp.i
 
 protocol/CMakeFiles/protocol.dir/serialapp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protocol.dir/serialapp.cpp.s"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/CLionProjects/agent/protocol/serialapp.cpp -o CMakeFiles/protocol.dir/serialapp.cpp.s
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/protocol/serialapp.cpp -o CMakeFiles/protocol.dir/serialapp.cpp.s
 
 protocol/CMakeFiles/protocol.dir/serialapp.cpp.o.requires:
 
@@ -83,16 +83,16 @@ protocol/CMakeFiles/protocol.dir/serialapp.cpp.o.provides.build: protocol/CMakeF
 
 protocol/CMakeFiles/protocol.dir/serialbase.cpp.o: protocol/CMakeFiles/protocol.dir/flags.make
 protocol/CMakeFiles/protocol.dir/serialbase.cpp.o: ../protocol/serialbase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object protocol/CMakeFiles/protocol.dir/serialbase.cpp.o"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protocol.dir/serialbase.cpp.o -c /home/robocon/workspace/CLionProjects/agent/protocol/serialbase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object protocol/CMakeFiles/protocol.dir/serialbase.cpp.o"
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protocol.dir/serialbase.cpp.o -c /home/robocon/workspace/agent/protocol/serialbase.cpp
 
 protocol/CMakeFiles/protocol.dir/serialbase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/protocol.dir/serialbase.cpp.i"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/CLionProjects/agent/protocol/serialbase.cpp > CMakeFiles/protocol.dir/serialbase.cpp.i
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/protocol/serialbase.cpp > CMakeFiles/protocol.dir/serialbase.cpp.i
 
 protocol/CMakeFiles/protocol.dir/serialbase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protocol.dir/serialbase.cpp.s"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/CLionProjects/agent/protocol/serialbase.cpp -o CMakeFiles/protocol.dir/serialbase.cpp.s
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/protocol/serialbase.cpp -o CMakeFiles/protocol.dir/serialbase.cpp.s
 
 protocol/CMakeFiles/protocol.dir/serialbase.cpp.o.requires:
 
@@ -107,16 +107,16 @@ protocol/CMakeFiles/protocol.dir/serialbase.cpp.o.provides.build: protocol/CMake
 
 protocol/CMakeFiles/protocol.dir/utility.cpp.o: protocol/CMakeFiles/protocol.dir/flags.make
 protocol/CMakeFiles/protocol.dir/utility.cpp.o: ../protocol/utility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object protocol/CMakeFiles/protocol.dir/utility.cpp.o"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protocol.dir/utility.cpp.o -c /home/robocon/workspace/CLionProjects/agent/protocol/utility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object protocol/CMakeFiles/protocol.dir/utility.cpp.o"
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protocol.dir/utility.cpp.o -c /home/robocon/workspace/agent/protocol/utility.cpp
 
 protocol/CMakeFiles/protocol.dir/utility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/protocol.dir/utility.cpp.i"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/CLionProjects/agent/protocol/utility.cpp > CMakeFiles/protocol.dir/utility.cpp.i
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/protocol/utility.cpp > CMakeFiles/protocol.dir/utility.cpp.i
 
 protocol/CMakeFiles/protocol.dir/utility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protocol.dir/utility.cpp.s"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/CLionProjects/agent/protocol/utility.cpp -o CMakeFiles/protocol.dir/utility.cpp.s
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/protocol/utility.cpp -o CMakeFiles/protocol.dir/utility.cpp.s
 
 protocol/CMakeFiles/protocol.dir/utility.cpp.o.requires:
 
@@ -143,9 +143,9 @@ protocol/libprotocol.a: protocol/CMakeFiles/protocol.dir/serialbase.cpp.o
 protocol/libprotocol.a: protocol/CMakeFiles/protocol.dir/utility.cpp.o
 protocol/libprotocol.a: protocol/CMakeFiles/protocol.dir/build.make
 protocol/libprotocol.a: protocol/CMakeFiles/protocol.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libprotocol.a"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && $(CMAKE_COMMAND) -P CMakeFiles/protocol.dir/cmake_clean_target.cmake
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/protocol.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libprotocol.a"
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && $(CMAKE_COMMAND) -P CMakeFiles/protocol.dir/cmake_clean_target.cmake
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/protocol.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 protocol/CMakeFiles/protocol.dir/build: protocol/libprotocol.a
@@ -159,10 +159,10 @@ protocol/CMakeFiles/protocol.dir/requires: protocol/CMakeFiles/protocol.dir/util
 .PHONY : protocol/CMakeFiles/protocol.dir/requires
 
 protocol/CMakeFiles/protocol.dir/clean:
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol && $(CMAKE_COMMAND) -P CMakeFiles/protocol.dir/cmake_clean.cmake
+	cd /home/robocon/workspace/agent/cmake-build-debug/protocol && $(CMAKE_COMMAND) -P CMakeFiles/protocol.dir/cmake_clean.cmake
 .PHONY : protocol/CMakeFiles/protocol.dir/clean
 
 protocol/CMakeFiles/protocol.dir/depend:
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocon/workspace/CLionProjects/agent /home/robocon/workspace/CLionProjects/agent/protocol /home/robocon/workspace/CLionProjects/agent/cmake-build-debug /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robocon/workspace/agent/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocon/workspace/agent /home/robocon/workspace/agent/protocol /home/robocon/workspace/agent/cmake-build-debug /home/robocon/workspace/agent/cmake-build-debug/protocol /home/robocon/workspace/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : protocol/CMakeFiles/protocol.dir/depend
 

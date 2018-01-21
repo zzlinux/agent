@@ -17,6 +17,15 @@ public:
         center3d = pcl::PointXYZ(0,0,0);
         center2d = cv::Point(0,0);
     };
+    struct searchRange{
+        struct {float min;float max;}x,y,z;
+    };
+    const searchRange r[3] =
+            {
+                    {{-1,1.8},{3.5,4.5},{0.5,2.3}},
+                    {{0,2.5},{5.5,6.5},{0.5,2.3}},
+                    {{-0.8,0.8},{5.5,6.5},{0.5,3.3}}
+            };
     pcl::PointXYZ center3d;
     cv::Point center2d;
     float radius3d;

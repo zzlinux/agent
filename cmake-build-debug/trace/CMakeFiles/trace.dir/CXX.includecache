@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/robocon/workspace/CLionProjects/agent/thread/Param.h
+/home/robocon/workspace/agent/thread/Param.h
 opencv2/opencv.hpp
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/BallAssociate.cpp
+/home/robocon/workspace/agent/trace/BallAssociate.cpp
 BallAssociate.h
-/home/robocon/workspace/CLionProjects/agent/trace/BallAssociate.h
+/home/robocon/workspace/agent/trace/BallAssociate.h
 transformer.h
-/home/robocon/workspace/CLionProjects/agent/trace/transformer.h
+/home/robocon/workspace/agent/trace/transformer.h
 sys/time.h
 -
 opencv2/imgproc/imgproc.hpp
@@ -22,9 +22,9 @@ opencv2/imgproc/imgproc.hpp
 opencv2/highgui/highgui.hpp
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/BallAssociate.h
+/home/robocon/workspace/agent/trace/BallAssociate.h
 Trajectory.h
-/home/robocon/workspace/CLionProjects/agent/trace/Trajectory.h
+/home/robocon/workspace/agent/trace/Trajectory.h
 vector
 -
 pcl/point_types.h
@@ -32,11 +32,11 @@ pcl/point_types.h
 opencv2/core/core.hpp
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/BallDetector.cpp
+/home/robocon/workspace/agent/trace/BallDetector.cpp
 BallDetector.h
-/home/robocon/workspace/CLionProjects/agent/trace/BallDetector.h
+/home/robocon/workspace/agent/trace/BallDetector.h
 transformer.h
-/home/robocon/workspace/CLionProjects/agent/trace/transformer.h
+/home/robocon/workspace/agent/trace/transformer.h
 pcl/filters/radius_outlier_removal.h
 -
 pcl/filters/passthrough.h
@@ -52,9 +52,9 @@ pcl/common/common.h
 iostream
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/BallDetector.h
+/home/robocon/workspace/agent/trace/BallDetector.h
 opencv2/video/background_segm.hpp
-/home/robocon/workspace/CLionProjects/agent/trace/opencv2/video/background_segm.hpp
+/home/robocon/workspace/agent/trace/opencv2/video/background_segm.hpp
 opencv2/core/core.hpp
 -
 pcl/point_cloud.h
@@ -62,11 +62,11 @@ pcl/point_cloud.h
 pcl/point_types.h
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/CircleDetector.cpp
+/home/robocon/workspace/agent/trace/CircleDetector.cpp
 CircleDetector.h
-/home/robocon/workspace/CLionProjects/agent/trace/CircleDetector.h
+/home/robocon/workspace/agent/trace/CircleDetector.h
 transformer.h
-/home/robocon/workspace/CLionProjects/agent/trace/transformer.h
+/home/robocon/workspace/agent/trace/transformer.h
 pcl/point_types.h
 -
 pcl/point_cloud.h
@@ -82,7 +82,7 @@ pcl/common/common.h
 pcl/common/centroid.h
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/CircleDetector.h
+/home/robocon/workspace/agent/trace/CircleDetector.h
 opencv2/core/core.hpp
 -
 pcl/point_cloud.h
@@ -90,35 +90,35 @@ pcl/point_cloud.h
 pcl/point_types.h
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/FitTrace.cpp
+/home/robocon/workspace/agent/trace/FitTrace.cpp
 FitTrace.h
-/home/robocon/workspace/CLionProjects/agent/trace/FitTrace.h
+/home/robocon/workspace/agent/trace/FitTrace.h
 sys/time.h
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/FitTrace.h
+/home/robocon/workspace/agent/trace/FitTrace.h
 Trajectory.h
-/home/robocon/workspace/CLionProjects/agent/trace/Trajectory.h
+/home/robocon/workspace/agent/trace/Trajectory.h
 opencv2/core/core.hpp
-/home/robocon/workspace/CLionProjects/agent/trace/opencv2/core/core.hpp
+/home/robocon/workspace/agent/trace/opencv2/core/core.hpp
 
-/home/robocon/workspace/CLionProjects/agent/trace/Trajectory.cpp
+/home/robocon/workspace/agent/trace/Trajectory.cpp
 Trajectory.h
-/home/robocon/workspace/CLionProjects/agent/trace/Trajectory.h
+/home/robocon/workspace/agent/trace/Trajectory.h
 FitTrace.h
-/home/robocon/workspace/CLionProjects/agent/trace/FitTrace.h
+/home/robocon/workspace/agent/trace/FitTrace.h
 
-/home/robocon/workspace/CLionProjects/agent/trace/Trajectory.h
+/home/robocon/workspace/agent/trace/Trajectory.h
 vector
 -
 pcl/point_types.h
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/rgbd_camera.cpp
+/home/robocon/workspace/agent/trace/rgbd_camera.cpp
 rgbd_camera.h
-/home/robocon/workspace/CLionProjects/agent/trace/rgbd_camera.h
+/home/robocon/workspace/agent/trace/rgbd_camera.h
 
-/home/robocon/workspace/CLionProjects/agent/trace/rgbd_camera.h
+/home/robocon/workspace/agent/trace/rgbd_camera.h
 opencv2/opencv.hpp
 -
 openni2/OpenNI.h
@@ -126,11 +126,11 @@ openni2/OpenNI.h
 string
 -
 
-/home/robocon/workspace/CLionProjects/agent/trace/transformer.cpp
+/home/robocon/workspace/agent/trace/transformer.cpp
 transformer.h
-/home/robocon/workspace/CLionProjects/agent/trace/transformer.h
+/home/robocon/workspace/agent/trace/transformer.h
 
-/home/robocon/workspace/CLionProjects/agent/trace/transformer.h
+/home/robocon/workspace/agent/trace/transformer.h
 math.h
 -
 pcl/point_types.h
@@ -144,7 +144,7 @@ Eigen/Core
 Eigen/Dense
 -
 ../thread/Param.h
-/home/robocon/workspace/CLionProjects/agent/thread/Param.h
+/home/robocon/workspace/agent/thread/Param.h
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

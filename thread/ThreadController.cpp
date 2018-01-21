@@ -4,6 +4,7 @@
 
 #include "ThreadController.h"
 #include "Param.h"
+#include <time.h>
 
 namespace hitcrt
 {
@@ -12,7 +13,7 @@ namespace hitcrt
         serial = std::unique_ptr<SerialApp>(new SerialApp("/dev/ttyUSB0",115200));
         m_radarMode = 0;
         m_traceMode = 2;
-        m_throwArea = 0;
+        m_throwArea = 2;
     }
     void ThreadController::init()
     {
@@ -22,18 +23,18 @@ namespace hitcrt
     }
     void ThreadController::run()
     {
-        //createTraceThreads();
+        createTraceThreads();
         //createCameraThreads();
-        createRadarThread();
+        //createRadarThread();
         m_communicationThread = boost::thread(boost::bind(&ThreadController::m_communication,this));
-        //m_mutualThread = boost::thread(boost::bind(&ThreadController::m_mutual,this));
+        m_mutualThread = boost::thread(boost::bind(&ThreadController::m_mutual,this));
         //m_radarProcessThread.join();
         //m_cameraProcessThread.join();
         m_communicationThread.join();
     }
     void ThreadController::createTraceThreads()
     {
-        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,"../data/trace/0106-ballquake.ONI"));
+        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,"0106-ballquake.ONI"));
         m_traceDataThread = boost::thread(boost::bind(&ThreadController::m_traceReadFrame,this));
         m_traceProcessThread = boost::thread(boost::bind(&ThreadController::m_traceProcess,this));
     }
@@ -57,6 +58,7 @@ namespace hitcrt
         {
             boost::this_thread::interruption_point();
             serial->receive(flag,data);
+            std::cout<<"receive,flag"<< static_cast<int>(flag)<<std::endl;
             if(flag == SerialApp::RECEIVE_RADAR)
             {
                 if(std::round(data[0]) == 0)            //horizontal
@@ -78,6 +80,7 @@ namespace hitcrt
                     m_traceMode = 1;
                 else if(std::round(data[1]) == 2)       //throw again
                     m_traceMode = 2;
+                std::cout<<"traceMode,area "<< static_cast<int>(m_traceMode)<<","<< static_cast<int>(m_throwArea)<<std::endl;
             }
         }
     }
@@ -95,13 +98,16 @@ namespace hitcrt
                 m_traceProcessThread.interrupt();
                 m_traceProcessThread.join();
 
-                m_cameraDataThread.interrupt();
-                m_cameraDataThread.join();
-                m_cameraProcessThread.interrupt();
-                m_cameraProcessThread.join();
+                //m_cameraDataThread.interrupt();
+                //m_cameraDataThread.join();
+                //m_cameraProcessThread.interrupt();
+                //m_cameraProcessThread.join();
 
-                m_radarProcessThread.interrupt();
-                m_radarProcessThread.join();
+                //m_radarProcessThread.interrupt();
+                //m_radarProcessThread.join();
+
+                m_mutualThread.interrupt();
+                m_mutualThread.join();
 
                 m_communicationThread.interrupt();
                 m_communicationThread.join();
@@ -118,7 +124,6 @@ namespace hitcrt
             }else if(ch == 'h'){        //horizontal
                 m_radarMode = 0;
             }
-
         }
     }
     void ThreadController::m_traceReadFrame()
@@ -158,19 +163,19 @@ namespace hitcrt
     }
     void ThreadController::m_traceProcess()
     {
-        std::cout<<"traceprocess "<<m_traceProcessThread.get_id()<<std::endl;
-        char key = ' ';
-        struct timeval st,en;
-        const int MAXTHROWTIME = 10000;
+        std::cout<<"traceprocessThread id  "<<m_traceProcessThread.get_id()<<std::endl;
+        double throwTimeStart;
+        const int MAXTHROWTIME = 7;
         //pcl::visualization::CloudViewer view("cloud");
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
         CircleDetector circle;
         BallDetector ball;
         BallAssociate associate;
+        char key = ' ';
         char isHit = 10;
+        std::vector<float>traceflag(2,1);
         while (true)
         {
-            gettimeofday(&st,NULL);
             boost::this_thread::interruption_point();
             cv::Mat color,depth,depth8U;
             bool circleFlag = false;
@@ -185,15 +190,14 @@ namespace hitcrt
             }
             if(color.empty()||depth.empty()){continue;}
             depth.convertTo(depth8U,CV_8UC1);
-            if(m_traceMode ==0)continue;
-            else if(m_traceMode==1){
+            if(m_traceMode==1){
                 if(!circle.detector(depth,cloud,m_throwArea)){std::cout<<"find circle failed"<<std::endl;continue;}
                 std::cout<<"find circle ok"<<std::endl;
                 m_traceMode = 2;
                 circleFlag = true;
                 ball.init();
             }else if(m_traceMode ==2){
-                gettimeofday(&st, NULL);
+                throwTimeStart = cv::getTickCount();
                 isHit = 10;
                 m_traceMode = 3;
                 associate.clear();
@@ -223,20 +227,22 @@ namespace hitcrt
                     if(distCen<0.4) {isHit = 1;std::cout<<"yesyesyesyesyesyesyesyesyesyesyes"<<std::endl;}
                     else {isHit = 0;std::cout<<"errorerrorerrorerrorerrorerrorerrorerror"<<std::endl;}
                 }
-                gettimeofday(&en,NULL);
-                int tracetime = (en.tv_usec-st.tv_usec)/1000;
+                double tracetime= ((double)cv::getTickCount() - throwTimeStart)/cv::getTickFrequency();
                 std::vector<float> throwresult(1);
                 if(isHit==1){
                     throwresult[0] = 1;
                     serial->send(SerialApp::SEND_TRACE,throwresult);
                     m_traceMode = 0;
+                    std::cout<<"tracetime: "<<tracetime<<std::endl;
                 }else if(tracetime>=MAXTHROWTIME||isHit==0) {
                     throwresult[0] = 0;
                     serial->send(SerialApp::SEND_TRACE,throwresult);
                     m_traceMode = 0;
+                    std::cout<<"failed for tracetime: "<<tracetime<<std::endl;
                 }
             }
             /***************************DEBUG VIEW*************************/
+            if(!Param::DEBUG)continue;
             if(circleFlag)
             {
                 cv::circle(color,circle.center2d,3,cv::Scalar(80,35,176),-1);

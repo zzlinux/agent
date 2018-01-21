@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robocon/workspace/CLionProjects/agent/protocol/serialapp.cpp" "/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/serialapp.cpp.o"
-  "/home/robocon/workspace/CLionProjects/agent/protocol/serialbase.cpp" "/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/serialbase.cpp.o"
-  "/home/robocon/workspace/CLionProjects/agent/protocol/utility.cpp" "/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/utility.cpp.o"
+  "/home/robocon/workspace/agent/protocol/serialapp.cpp" "/home/robocon/workspace/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/serialapp.cpp.o"
+  "/home/robocon/workspace/agent/protocol/serialbase.cpp" "/home/robocon/workspace/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/serialbase.cpp.o"
+  "/home/robocon/workspace/agent/protocol/utility.cpp" "/home/robocon/workspace/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/utility.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

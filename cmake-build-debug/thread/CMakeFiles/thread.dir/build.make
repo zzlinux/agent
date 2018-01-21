@@ -43,10 +43,10 @@ RM = /home/robocon/Documents/software/clion-2017.2.3/bin/cmake/bin/cmake -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robocon/workspace/CLionProjects/agent
+CMAKE_SOURCE_DIR = /home/robocon/workspace/agent
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robocon/workspace/CLionProjects/agent/cmake-build-debug
+CMAKE_BINARY_DIR = /home/robocon/workspace/agent/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include thread/CMakeFiles/thread.dir/depend.make
@@ -59,16 +59,16 @@ include thread/CMakeFiles/thread.dir/flags.make
 
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: thread/CMakeFiles/thread.dir/flags.make
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../thread/ThreadController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thread/CMakeFiles/thread.dir/ThreadController.cpp.o"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/thread.dir/ThreadController.cpp.o -c /home/robocon/workspace/CLionProjects/agent/thread/ThreadController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thread/CMakeFiles/thread.dir/ThreadController.cpp.o"
+	cd /home/robocon/workspace/agent/cmake-build-debug/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/thread.dir/ThreadController.cpp.o -c /home/robocon/workspace/agent/thread/ThreadController.cpp
 
 thread/CMakeFiles/thread.dir/ThreadController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/thread.dir/ThreadController.cpp.i"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/CLionProjects/agent/thread/ThreadController.cpp > CMakeFiles/thread.dir/ThreadController.cpp.i
+	cd /home/robocon/workspace/agent/cmake-build-debug/thread && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/thread/ThreadController.cpp > CMakeFiles/thread.dir/ThreadController.cpp.i
 
 thread/CMakeFiles/thread.dir/ThreadController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/thread.dir/ThreadController.cpp.s"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/CLionProjects/agent/thread/ThreadController.cpp -o CMakeFiles/thread.dir/ThreadController.cpp.s
+	cd /home/robocon/workspace/agent/cmake-build-debug/thread && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/thread/ThreadController.cpp -o CMakeFiles/thread.dir/ThreadController.cpp.s
 
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o.requires:
 
@@ -83,16 +83,16 @@ thread/CMakeFiles/thread.dir/ThreadController.cpp.o.provides.build: thread/CMake
 
 thread/CMakeFiles/thread.dir/Param.cpp.o: thread/CMakeFiles/thread.dir/flags.make
 thread/CMakeFiles/thread.dir/Param.cpp.o: ../thread/Param.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thread/CMakeFiles/thread.dir/Param.cpp.o"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/thread.dir/Param.cpp.o -c /home/robocon/workspace/CLionProjects/agent/thread/Param.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thread/CMakeFiles/thread.dir/Param.cpp.o"
+	cd /home/robocon/workspace/agent/cmake-build-debug/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/thread.dir/Param.cpp.o -c /home/robocon/workspace/agent/thread/Param.cpp
 
 thread/CMakeFiles/thread.dir/Param.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/thread.dir/Param.cpp.i"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/CLionProjects/agent/thread/Param.cpp > CMakeFiles/thread.dir/Param.cpp.i
+	cd /home/robocon/workspace/agent/cmake-build-debug/thread && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/thread/Param.cpp > CMakeFiles/thread.dir/Param.cpp.i
 
 thread/CMakeFiles/thread.dir/Param.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/thread.dir/Param.cpp.s"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/CLionProjects/agent/thread/Param.cpp -o CMakeFiles/thread.dir/Param.cpp.s
+	cd /home/robocon/workspace/agent/cmake-build-debug/thread && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/thread/Param.cpp -o CMakeFiles/thread.dir/Param.cpp.s
 
 thread/CMakeFiles/thread.dir/Param.cpp.o.requires:
 
@@ -117,9 +117,9 @@ thread/libthread.a: thread/CMakeFiles/thread.dir/ThreadController.cpp.o
 thread/libthread.a: thread/CMakeFiles/thread.dir/Param.cpp.o
 thread/libthread.a: thread/CMakeFiles/thread.dir/build.make
 thread/libthread.a: thread/CMakeFiles/thread.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libthread.a"
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread && $(CMAKE_COMMAND) -P CMakeFiles/thread.dir/cmake_clean_target.cmake
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/thread.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libthread.a"
+	cd /home/robocon/workspace/agent/cmake-build-debug/thread && $(CMAKE_COMMAND) -P CMakeFiles/thread.dir/cmake_clean_target.cmake
+	cd /home/robocon/workspace/agent/cmake-build-debug/thread && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/thread.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 thread/CMakeFiles/thread.dir/build: thread/libthread.a
@@ -132,10 +132,10 @@ thread/CMakeFiles/thread.dir/requires: thread/CMakeFiles/thread.dir/Param.cpp.o.
 .PHONY : thread/CMakeFiles/thread.dir/requires
 
 thread/CMakeFiles/thread.dir/clean:
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread && $(CMAKE_COMMAND) -P CMakeFiles/thread.dir/cmake_clean.cmake
+	cd /home/robocon/workspace/agent/cmake-build-debug/thread && $(CMAKE_COMMAND) -P CMakeFiles/thread.dir/cmake_clean.cmake
 .PHONY : thread/CMakeFiles/thread.dir/clean
 
 thread/CMakeFiles/thread.dir/depend:
-	cd /home/robocon/workspace/CLionProjects/agent/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocon/workspace/CLionProjects/agent /home/robocon/workspace/CLionProjects/agent/thread /home/robocon/workspace/CLionProjects/agent/cmake-build-debug /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/CMakeFiles/thread.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robocon/workspace/agent/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocon/workspace/agent /home/robocon/workspace/agent/thread /home/robocon/workspace/agent/cmake-build-debug /home/robocon/workspace/agent/cmake-build-debug/thread /home/robocon/workspace/agent/cmake-build-debug/thread/CMakeFiles/thread.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : thread/CMakeFiles/thread.dir/depend
 

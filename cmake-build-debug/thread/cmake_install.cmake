@@ -1,4 +1,4 @@
-# Install script for directory: /home/robocon/workspace/CLionProjects/agent/thread
+# Install script for directory: /home/robocon/workspace/agent/thread
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

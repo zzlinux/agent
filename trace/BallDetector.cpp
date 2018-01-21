@@ -54,7 +54,7 @@ namespace hitcrt
         color.copyTo(fgcolor,andmask);
         //cv::imshow("andmask",andmask);
         //cv::imshow("mask",mask);
-        cv::imshow("fgcolor",fgcolor);
+        //cv::imshow("fgcolor",fgcolor);
         //cv::imshow("contmask",contMask);
         std::vector<cv::Point3f> pt3d;
         for(int j = 0;j<fgimg.rows;j++)
@@ -76,17 +76,21 @@ namespace hitcrt
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_y_filtered(new pcl::PointCloud<pcl::PointXYZ>);
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_x_filtered(new pcl::PointCloud<pcl::PointXYZ>);
         pcl::PassThrough<pcl::PointXYZ> pass;
+        int i = (int)area-1;
         pass.setInputCloud(cloud);
         pass.setFilterFieldName("z");
-        pass.setFilterLimits(0.7,4.3);
+        std::cout<<"z :"<<r[i].z.min<<","<<r[i].z.max<<std::endl;
+        pass.setFilterLimits(r[i].z.min,r[i].z.max);
         pass.filter(*cloud_z_filtered);
         pass.setInputCloud(cloud_z_filtered);
         pass.setFilterFieldName("y");
-        pass.setFilterLimits(0.8,7);
+        std::cout<<"y :"<<r[i].y.min<<","<<r[i].y.max<<std::endl;
+        pass.setFilterLimits(r[i].y.min,r[i].y.max);
         pass.filter(*cloud_y_filtered);
         pass.setInputCloud(cloud_y_filtered);
         pass.setFilterFieldName("x");
-        pass.setFilterLimits(-1.6,1.6);
+        std::cout<<"x :"<<r[i].x.min<<","<<r[i].x.max<<std::endl;
+        pass.setFilterLimits(r[i].x.min,r[i].x.max);
         pass.filter(*cloud_x_filtered);
         //std::cout<<"pass filter.size: "<<cloud_x_filtered->points.size()<<std::endl;
         if(cloud_x_filtered->points.size()==0)return;
@@ -125,7 +129,7 @@ namespace hitcrt
             pcl::getMinMax3D (*cloud_cluster, minPt, maxPt);
             if((maxPt.x-minPt.x)>maxDeltaX||(maxPt.y-minPt.y)>maxDeltaY||(maxPt.z-minPt.z)>maxDeltaZ)
             {
-                std::cout<<"delta error"<<std::endl;
+                std::cout<<"delta error delta error delta error delta error "<<std::endl;
                 continue;
             }
             std::cout<<"cluster.size: "<<cloud_cluster->points.size()<<std::endl;

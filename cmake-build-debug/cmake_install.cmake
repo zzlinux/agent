@@ -1,4 +1,4 @@
-# Install script for directory: /home/robocon/workspace/CLionProjects/agent
+# Install script for directory: /home/robocon/workspace/agent
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/trace/cmake_install.cmake")
-  include("/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/cmake_install.cmake")
-  include("/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/radarLocation/cmake_install.cmake")
-  include("/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/thread/cmake_install.cmake")
-  include("/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/protocol/cmake_install.cmake")
+  include("/home/robocon/workspace/agent/cmake-build-debug/trace/cmake_install.cmake")
+  include("/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/cmake_install.cmake")
+  include("/home/robocon/workspace/agent/cmake-build-debug/radarLocation/cmake_install.cmake")
+  include("/home/robocon/workspace/agent/cmake-build-debug/thread/cmake_install.cmake")
+  include("/home/robocon/workspace/agent/cmake-build-debug/protocol/cmake_install.cmake")
 
 endif()
 
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/robocon/workspace/agent/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

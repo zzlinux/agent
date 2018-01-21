@@ -48,10 +48,10 @@ RM = /home/robocon/Documents/software/clion-2017.2.3/bin/cmake/bin/cmake -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robocon/workspace/CLionProjects/agent
+CMAKE_SOURCE_DIR = /home/robocon/workspace/agent
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robocon/workspace/CLionProjects/agent/cmake-build-debug
+CMAKE_BINARY_DIR = /home/robocon/workspace/agent/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/CLionProjects/agent/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

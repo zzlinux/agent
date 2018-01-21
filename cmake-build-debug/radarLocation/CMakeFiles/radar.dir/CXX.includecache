@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarController.cpp
+/home/robocon/workspace/agent/radarLocation/RadarController.cpp
 RadarController.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarController.h
+/home/robocon/workspace/agent/radarLocation/RadarController.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarController.h
+/home/robocon/workspace/agent/radarLocation/RadarController.h
 RadarModel.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarModel.h
+/home/robocon/workspace/agent/radarLocation/RadarModel.h
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -22,17 +22,17 @@ opencv2/imgproc/imgproc.hpp
 list
 -
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarModel.cpp
+/home/robocon/workspace/agent/radarLocation/RadarModel.cpp
 RadarModel.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarModel.h
+/home/robocon/workspace/agent/radarLocation/RadarModel.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/RadarModel.h
+/home/robocon/workspace/agent/radarLocation/RadarModel.h
 lib/Urg_driver.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Urg_driver.h
+/home/robocon/workspace/agent/radarLocation/lib/Urg_driver.h
 lib/Connection_information.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Connection_information.h
+/home/robocon/workspace/agent/radarLocation/lib/Connection_information.h
 lib/math_utilities.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/math_utilities.h
+/home/robocon/workspace/agent/radarLocation/lib/math_utilities.h
 iostream
 -
 opencv2/core/core.hpp
@@ -42,11 +42,11 @@ opencv2/imgproc/imgproc.hpp
 opencv2/highgui/highgui.hpp
 -
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Connection_information.cpp
+/home/robocon/workspace/agent/radarLocation/lib/Connection_information.cpp
 Connection_information.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Connection_information.h
+/home/robocon/workspace/agent/radarLocation/lib/Connection_information.h
 detect_os.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/detect_os.h
+/home/robocon/workspace/agent/radarLocation/lib/detect_os.h
 string
 -
 cstring
@@ -54,55 +54,55 @@ cstring
 iostream
 -
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Connection_information.h
+/home/robocon/workspace/agent/radarLocation/lib/Connection_information.h
 Urg_driver.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Urg_driver.h
+/home/robocon/workspace/agent/radarLocation/lib/Urg_driver.h
 memory
 -
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Lidar.h
+/home/robocon/workspace/agent/radarLocation/lib/Lidar.h
 vector
 -
 cstddef
 -
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Urg_driver.cpp
+/home/robocon/workspace/agent/radarLocation/lib/Urg_driver.cpp
 Urg_driver.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Urg_driver.h
+/home/robocon/workspace/agent/radarLocation/lib/Urg_driver.h
 ticks.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/ticks.h
+/home/robocon/workspace/agent/radarLocation/lib/ticks.h
 urg_sensor.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_sensor.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_sensor.h
 urg_utils.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_utils.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_utils.h
 urg_serial_utils.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_serial_utils.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_serial_utils.h
 urg_errno.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_errno.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_errno.h
 urg_debug.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_debug.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_debug.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Urg_driver.h
+/home/robocon/workspace/agent/radarLocation/lib/Urg_driver.h
 memory
 -
 string
 -
 Lidar.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/Lidar.h
+/home/robocon/workspace/agent/radarLocation/lib/Lidar.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/detect_os.h
+/home/robocon/workspace/agent/radarLocation/lib/detect_os.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/math_utilities.h
+/home/robocon/workspace/agent/radarLocation/lib/math_utilities.h
 detect_os.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/detect_os.h
+/home/robocon/workspace/agent/radarLocation/lib/detect_os.h
 math.h
 -
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/ticks.cpp
+/home/robocon/workspace/agent/radarLocation/lib/ticks.cpp
 ticks.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/ticks.h
+/home/robocon/workspace/agent/radarLocation/lib/ticks.h
 detect_os.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/detect_os.h
+/home/robocon/workspace/agent/radarLocation/lib/detect_os.h
 time.h
 -
 mach/clock.h
@@ -110,45 +110,45 @@ mach/clock.h
 mach/mach.h
 -
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/ticks.h
+/home/robocon/workspace/agent/radarLocation/lib/ticks.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_connection.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_connection.h
 urg_serial.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_serial.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_serial.h
 urg_tcpclient.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_tcpclient.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_tcpclient.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_debug.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_debug.h
 urg_sensor.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_sensor.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_sensor.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_detect_os.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_detect_os.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_errno.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_errno.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_ring_buffer.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_ring_buffer.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_sensor.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_sensor.h
 urg_connection.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_connection.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_connection.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_serial.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_serial.h
 urg_detect_os.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_detect_os.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_detect_os.h
 windows.h
 -
 termios.h
 -
 urg_ring_buffer.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_ring_buffer.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_ring_buffer.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_serial_utils.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_serial_utils.h
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_tcpclient.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_tcpclient.h
 urg_ring_buffer.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_ring_buffer.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_ring_buffer.h
 urg_detect_os.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_detect_os.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_detect_os.h
 sys/types.h
 -
 windows.h
@@ -160,9 +160,9 @@ netinet/in.h
 arpa/inet.h
 -
 
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_utils.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_utils.h
 urg_sensor.h
-/home/robocon/workspace/CLionProjects/agent/radarLocation/lib/urg_sensor.h
+/home/robocon/workspace/agent/radarLocation/lib/urg_sensor.h
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h

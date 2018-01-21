@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robocon/workspace/CLionProjects/agent/cameraLocation/CameraController.cpp" "/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o"
-  "/home/robocon/workspace/CLionProjects/agent/cameraLocation/CameraModel.cpp" "/home/robocon/workspace/CLionProjects/agent/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o"
+  "/home/robocon/workspace/agent/cameraLocation/CameraController.cpp" "/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o"
+  "/home/robocon/workspace/agent/cameraLocation/CameraModel.cpp" "/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
