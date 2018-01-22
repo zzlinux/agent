@@ -12,8 +12,8 @@ namespace hitcrt
     {
         serial = std::unique_ptr<SerialApp>(new SerialApp("/dev/ttyUSB0",115200));
         m_radarMode = 0;
-        m_traceMode = 2;
-        m_throwArea = 2;
+        m_traceMode = 0;
+        m_throwArea = 1;
     }
     void ThreadController::init()
     {
@@ -34,7 +34,7 @@ namespace hitcrt
     }
     void ThreadController::createTraceThreads()
     {
-        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,"0106-ballquake.ONI"));
+        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::Live_mode,RGBDcamera::Kinect));
         m_traceDataThread = boost::thread(boost::bind(&ThreadController::m_traceReadFrame,this));
         m_traceProcessThread = boost::thread(boost::bind(&ThreadController::m_traceProcess,this));
     }
@@ -165,20 +165,17 @@ namespace hitcrt
     {
         std::cout<<"traceprocessThread id  "<<m_traceProcessThread.get_id()<<std::endl;
         double throwTimeStart;
-        const int MAXTHROWTIME = 7;
+        const int MAXTHROWTIME = 8;
         //pcl::visualization::CloudViewer view("cloud");
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
         CircleDetector circle;
         BallDetector ball;
         BallAssociate associate;
-        char key = ' ';
         char isHit = 10;
-        std::vector<float>traceflag(2,1);
         while (true)
         {
             boost::this_thread::interruption_point();
             cv::Mat color,depth,depth8U;
-            bool circleFlag = false;
             {
                 boost::shared_lock<boost::shared_mutex> readLock(kinectlock);
                 if (!depthFrameBuff.empty()) {
@@ -194,11 +191,10 @@ namespace hitcrt
                 if(!circle.detector(depth,cloud,m_throwArea)){std::cout<<"find circle failed"<<std::endl;continue;}
                 std::cout<<"find circle ok"<<std::endl;
                 m_traceMode = 2;
-                circleFlag = true;
-                ball.init();
             }else if(m_traceMode ==2){
                 throwTimeStart = cv::getTickCount();
                 isHit = 10;
+                ball.init();
                 m_traceMode = 3;
                 associate.clear();
             }else if(m_traceMode ==3){
@@ -220,7 +216,7 @@ namespace hitcrt
                     p.x = (p.y-R21.at<float>(0))/R21.at<float>(1);
                     p.z = R31.at<float>(0)+R31.at<float>(1)*p.y+R31.at<float>(2)*p.y*p.y;
                     float distCen = sqrt((p.x-circle.center3d.x)*(p.x-circle.center3d.x)+(p.z-circle.center3d.z)*(p.z-circle.center3d.z));
-                    std::cout<<p<<"   "<<distCen<<std::endl;
+                    std::cout<<"(p,dis) :"<<p<<"   "<<distCen<<std::endl;
                     cv::Point cen;
                     Transformer::invTrans(p,cen);
                     cv::circle(color,cen,3,cv::Scalar(200,30,58),-1);
@@ -233,6 +229,7 @@ namespace hitcrt
                     throwresult[0] = 1;
                     serial->send(SerialApp::SEND_TRACE,throwresult);
                     m_traceMode = 0;
+                    circle.isValued = false;
                     std::cout<<"tracetime: "<<tracetime<<std::endl;
                 }else if(tracetime>=MAXTHROWTIME||isHit==0) {
                     throwresult[0] = 0;
@@ -243,17 +240,16 @@ namespace hitcrt
             }
             /***************************DEBUG VIEW*************************/
             if(!Param::DEBUG)continue;
-            if(circleFlag)
+            if(circle.isValued)
             {
                 cv::circle(color,circle.center2d,3,cv::Scalar(80,35,176),-1);
-                cv::circle(color,circle.center2d,circle.radius2d,cv::Scalar(20,100,200),1);
+                cv::circle(color,circle.center2d,circle.radius2d,cv::Scalar(255,255,255),2);
             }
             cv::imshow("color",color);
-            cv::imshow("depth",depth8U);
+            //cv::imshow("depth",depth8U);
             //view.showCloud(cloud);
             cloud->points.clear();
-            key = cv::waitKey(1);
-            if(key=='w')cv::waitKey(100000);
+            cv::waitKey(1);
             /**************************DEBUG VIEW**************************/
         }
     }

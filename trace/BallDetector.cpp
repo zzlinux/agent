@@ -16,6 +16,7 @@ namespace hitcrt
     void BallDetector::init(){updateNum = 0;};
     void BallDetector::detector(cv::Mat &depth,cv::Mat &color, pcl::PointCloud<pcl::PointXYZ>::Ptr outCloud,std::vector<pcl::PointXYZ>& targets,char area)
     {
+        /********************remove giant targets**************************/
         cv::Mat depth8U;
         depth.convertTo(depth8U,CV_8UC1);
         cv::erode(depth8U, depth8U, cv::Mat(), cv::Point(-1, -1), 4);		//腐蚀    开运算去除白噪声
@@ -150,7 +151,7 @@ namespace hitcrt
             cv::Point ballCenter;
             for (auto p:targets) {
                 Transformer::invTrans(p, ballCenter);
-                cv::circle(color, ballCenter, 20, cv::Scalar(100, 200, 40), 1);
+                cv::circle(color, ballCenter, 20, cv::Scalar(255, 255, 255), 1);
             }
         }
 

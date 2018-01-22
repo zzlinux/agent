@@ -64,17 +64,19 @@ namespace hitcrt
         std::vector<pcl::PointIndices> cluster_indices;
         pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
         ec.setClusterTolerance(0.2);
-        ec.setMinClusterSize(280);
+        ec.setMinClusterSize(140);
         ec.setMaxClusterSize(1000);
         ec.setSearchMethod(tree);
         ec.setInputCloud(cloud_r_filtered);
         ec.extract(cluster_indices);
         std::cout<<"gans cluster.size: "<<cluster_indices.size()<<std::endl;
         if(cluster_indices.size()==0) return false;
+        size_t circleNum = 0;
         for(std::vector<pcl::PointIndices>::const_iterator it = cluster_indices.begin();it!= cluster_indices.end();it++) {
             const float maxDeltaX = 0.3;
             const float maxDeltaY = 0.3;
             const float maxDeltaZ = 3.1;
+            const float minDeltaZ = 1;
             pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cluster(new pcl::PointCloud<pcl::PointXYZ>);
             for (std::vector<int>::const_iterator pit = it->indices.begin(); pit != it->indices.end(); pit++)
                 cloud_cluster->points.push_back(cloud_r_filtered->points[*pit]);
@@ -83,7 +85,7 @@ namespace hitcrt
             pcl::PointXYZ minPt, maxPt;
             pcl::getMinMax3D(*cloud_cluster, minPt, maxPt);
             if ((maxPt.x - minPt.x) > maxDeltaX || (maxPt.y - minPt.y) > maxDeltaY ||
-                (maxPt.z - minPt.z) > maxDeltaZ)
+                (maxPt.z - minPt.z) > maxDeltaZ || (maxPt.z - minPt.z) < minDeltaZ)
                 continue;
             *outCloud+=*cloud_cluster;
             center3d  = pcl::PointXYZ(centroid[0],centroid[1],2.4);
@@ -96,6 +98,7 @@ namespace hitcrt
             circleNum++;
         }
         if(circleNum!=1)return false;
+        isValued = true;
         return true;
     }
 }

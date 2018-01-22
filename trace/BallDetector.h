@@ -21,8 +21,8 @@ namespace hitcrt {
         };
         const searchRange r[3] =
                 {
-                        {{-1.5,1.5},{0.8,6},{0.6,3}},
-                        {{-1.5,1.5},{0.8,7.5},{0.6,3}},
+                        {{0,1.5},{0.8,6},{0.6,3}},
+                        {{0,2.8},{0.8,7.5},{0.6,3}},
                         {{-1.5,1.5},{0.8,8},{0.6,4.2}}
                 };
         cv::Ptr<cv::BackgroundSubtractor> bg_model = cv::createBackgroundSubtractorMOG2().dynamicCast<cv::BackgroundSubtractor>();
