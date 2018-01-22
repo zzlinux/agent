@@ -88,7 +88,8 @@ namespace hitcrt
                 (maxPt.z - minPt.z) > maxDeltaZ || (maxPt.z - minPt.z) < minDeltaZ)
                 continue;
             *outCloud+=*cloud_cluster;
-            center3d  = pcl::PointXYZ(centroid[0],centroid[1],2.4);
+            if(area ==1||area == 2) center3d  = pcl::PointXYZ(centroid[0],centroid[1],2.4);
+            else if(area == 3) center3d = pcl::PointXYZ(centroid[0],centroid[1],3.4);
             cv::Point border;
             Transformer::invTrans(center3d,center2d);
             Transformer::invTrans(pcl::PointXYZ(centroid[0],centroid[1],2.8),border);

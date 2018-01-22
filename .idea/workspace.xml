@@ -18,19 +18,7 @@
   <component name="ChangeListManager">
     <list default="true" id="56f8f48e-4b3b-40dc-a959-6b84e8c51aa4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/robocon" afterPath="$PROJECT_DIR$/bin/robocon" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/libcamera.a" afterPath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/libcamera.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/protocol/libprotocol.a" afterPath="$PROJECT_DIR$/cmake-build-debug/protocol/libprotocol.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/radarLocation/libradar.a" afterPath="$PROJECT_DIR$/cmake-build-debug/radarLocation/libradar.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/ThreadController.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/ThreadController.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/thread/libthread.a" afterPath="$PROJECT_DIR$/cmake-build-debug/thread/libthread.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/trace/CMakeFiles/trace.dir/CircleDetector.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/trace/CMakeFiles/trace.dir/CircleDetector.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/trace/libtrace.a" afterPath="$PROJECT_DIR$/cmake-build-debug/trace/libtrace.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thread/ThreadController.cpp" afterPath="$PROJECT_DIR$/thread/ThreadController.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/BallDetector.cpp" afterPath="$PROJECT_DIR$/trace/BallDetector.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/BallDetector.h" afterPath="$PROJECT_DIR$/trace/BallDetector.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/CircleDetector.cpp" afterPath="$PROJECT_DIR$/trace/CircleDetector.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/CircleDetector.h" afterPath="$PROJECT_DIR$/trace/CircleDetector.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ThreadController.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ThreadController.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thread/ThreadController.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="227" column="28" lean-forward="false" selection-start-line="227" selection-start-column="28" selection-end-line="227" selection-end-column="28" />
+            <state relative-caret-position="433">
+              <caret line="191" column="36" lean-forward="false" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
               <folding>
                 <element signature="e#40#69#0" expanded="true" />
               </folding>
@@ -54,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CircleDetector.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CircleDetector.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trace/CircleDetector.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="76" column="39" lean-forward="false" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+            <state relative-caret-position="624">
+              <caret line="91" column="84" lean-forward="false" selection-start-line="91" selection-start-column="84" selection-end-line="91" selection-end-column="84" />
               <folding>
                 <element signature="e#40#67#0" expanded="true" />
               </folding>
@@ -119,7 +107,7 @@
       <file leaf-file-name="BallDetector.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trace/BallDetector.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="432">
               <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
               <folding />
             </state>
@@ -129,7 +117,7 @@
       <file leaf-file-name="BallDetector.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trace/BallDetector.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
+            <state relative-caret-position="700">
               <caret line="152" column="46" lean-forward="false" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
               <folding>
                 <element signature="e#40#65#0" expanded="true" />
@@ -164,8 +152,8 @@
         <option value="$PROJECT_DIR$/trace/BallDetector.h" />
         <option value="$PROJECT_DIR$/trace/CircleDetector.h" />
         <option value="$PROJECT_DIR$/trace/BallDetector.cpp" />
-        <option value="$PROJECT_DIR$/trace/CircleDetector.cpp" />
         <option value="$PROJECT_DIR$/thread/ThreadController.cpp" />
+        <option value="$PROJECT_DIR$/trace/CircleDetector.cpp" />
       </list>
     </option>
   </component>
@@ -202,11 +190,6 @@
             <path>
               <item name="robocon" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="agent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="robocon" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="agent" type="462c0819:PsiDirectoryNode" />
-              <item name="thread" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="robocon" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -285,15 +268,15 @@
       <workItem from="1516588540063" duration="2353000" />
       <workItem from="1516592148548" duration="947000" />
       <workItem from="1516600659804" duration="2005000" />
+      <workItem from="1516608985635" duration="253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39292000" />
+    <option name="totallyTimeSpent" value="39545000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="24" width="1857" height="1092" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21239892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -401,7 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -494,7 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,7 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -709,19 +689,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trace/BallDetector.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="432">
           <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trace/BallDetector.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="152" column="46" lean-forward="false" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
-          <folding>
-            <element signature="e#40#65#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -735,22 +705,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trace/CircleDetector.cpp">
+    <entry file="file://$PROJECT_DIR$/thread/ThreadController.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="76" column="39" lean-forward="false" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        <state relative-caret-position="433">
+          <caret line="191" column="36" lean-forward="false" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
           <folding>
-            <element signature="e#40#67#0" expanded="true" />
+            <element signature="e#40#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thread/ThreadController.cpp">
+    <entry file="file://$PROJECT_DIR$/trace/BallDetector.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="227" column="28" lean-forward="false" selection-start-line="227" selection-start-column="28" selection-end-line="227" selection-end-column="28" />
+        <state relative-caret-position="700">
+          <caret line="152" column="46" lean-forward="false" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
           <folding>
-            <element signature="e#40#69#0" expanded="true" />
+            <element signature="e#40#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trace/CircleDetector.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="91" column="84" lean-forward="false" selection-start-line="91" selection-start-column="84" selection-end-line="91" selection-end-column="84" />
+          <folding>
+            <element signature="e#40#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
