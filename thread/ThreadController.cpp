@@ -13,7 +13,7 @@ namespace hitcrt
         serial = std::unique_ptr<SerialApp>(new SerialApp("/dev/ttyUSB0",115200));
         m_radarMode = 0;
         m_traceMode = 0;
-        m_throwArea = 1;
+        m_throwArea = 2;
     }
     void ThreadController::init()
     {
@@ -34,7 +34,7 @@ namespace hitcrt
     }
     void ThreadController::createTraceThreads()
     {
-        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::Live_mode,RGBDcamera::Kinect));
+        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,"/home/robocon/workspace/oni/0124-circleedgeback-4in.ONI"));
         m_traceDataThread = boost::thread(boost::bind(&ThreadController::m_traceReadFrame,this));
         m_traceProcessThread = boost::thread(boost::bind(&ThreadController::m_traceProcess,this));
     }
@@ -204,7 +204,7 @@ namespace hitcrt
                 ballTraces.clear();
                 associate.apply(color,targets,ballTraces);
                 if(!ballTraces.empty())
-                    std::cout<<"get traces: "<<ballTraces.size()<<std::endl;
+                    std::cout<<"get traces: "<<static_cast<int>(ballTraces.size())<<std::endl;
                 for(auto t:ballTraces)
                 {
                     for(auto p:t.points)
@@ -217,6 +217,7 @@ namespace hitcrt
                     p.z = R31.at<float>(0)+R31.at<float>(1)*p.y+R31.at<float>(2)*p.y*p.y;
                     float distCen = sqrt((p.x-circle.center3d.x)*(p.x-circle.center3d.x)+(p.z-circle.center3d.z)*(p.z-circle.center3d.z));
                     std::cout<<"(p,dis) :"<<p<<"   "<<distCen<<std::endl;
+                    std::cout<<"(circle) "<<circle.center3d<<std::endl;
                     cv::Point cen;
                     Transformer::invTrans(p,cen);
                     cv::circle(color,cen,3,cv::Scalar(200,30,58),-1);
@@ -230,23 +231,32 @@ namespace hitcrt
                     serial->send(SerialApp::SEND_TRACE,throwresult);
                     m_traceMode = 0;
                     circle.isValued = false;
-                    std::cout<<"tracetime: "<<tracetime<<std::endl;
-                }else if(tracetime>=MAXTHROWTIME||isHit==0) {
+                    std::cout<<"yes tracetime: "<<tracetime<<std::endl;
+                    continue;
+                }else if(isHit==0) {
+                    throwresult[0] = 0;
+                    serial->send(SerialApp::SEND_TRACE,throwresult);
+                    m_traceMode = 0;
+                    std::cout<<"failed tracetime: "<<tracetime<<std::endl;
+                    continue;
+                }
+                if(tracetime>=MAXTHROWTIME){
                     throwresult[0] = 0;
                     serial->send(SerialApp::SEND_TRACE,throwresult);
                     m_traceMode = 0;
                     std::cout<<"failed for tracetime: "<<tracetime<<std::endl;
+                    continue;
                 }
             }
             /***************************DEBUG VIEW*************************/
             if(!Param::DEBUG)continue;
-            if(circle.isValued)
+            if(true)
             {
                 cv::circle(color,circle.center2d,3,cv::Scalar(80,35,176),-1);
-                cv::circle(color,circle.center2d,circle.radius2d,cv::Scalar(255,255,255),2);
+                cv::circle(color,circle.center2d,circle.radius2d,cv::Scalar(255,255,255),1);
             }
             cv::imshow("color",color);
-            //cv::imshow("depth",depth8U);
+            cv::imshow("depth",depth8U);
             //view.showCloud(cloud);
             cloud->points.clear();
             cv::waitKey(1);

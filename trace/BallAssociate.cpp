@@ -63,7 +63,7 @@ namespace hitcrt
                  std::cout<<"distxy "<<distxy<<" mindis "<<MINDISXY<<" maxdis "<<MAXDISXY<<std::endl;
                  if(distxy>MINDISXY&&distxy<MAXDISXY&&dy>MINDY)
                  {
-                     if(traces[i].points.size()<3)          //轨迹头两个点必须有颜色
+                     if(traces[i].points.size()<2)          //轨迹头两个点必须有颜色
                      {
                          if(colorJudge(p,color))            //如果颜色对应认为是球
                          {
@@ -109,13 +109,12 @@ namespace hitcrt
         cv::Point point;
         Transformer::invTrans(p,point);
         cv::cvtColor(color,imgHSV,CV_BGR2HSV);
-        cv::inRange(imgHSV,cv::Scalar(156,43,0),cv::Scalar(180,255,255),imgThreshold);
+        cv::inRange(imgHSV,cv::Scalar(100,43,46),cv::Scalar(124,255,255),imgThreshold);
         cv::erode(imgThreshold, imgThreshold, cv::Mat(), cv::Point(-1, -1), 1);		//腐蚀
         cv::dilate(imgThreshold, imgThreshold, cv::Mat(), cv::Point(-1, -1), 5);	//膨胀
         //cv::imshow("binary",imgThreshold);
-        if(imgThreshold.at<uchar>(point.y,point.x)>0)std::cout<<"hellocolor"<<std::endl;
-        else std::cout<<"byezero"<<std::endl;
-        return true;
+        if(imgThreshold.at<uchar>(point.y,point.x)>0){std::cout<<"hellocolor"<<std::endl;return true;}
+        else {std::cout<<"byezero"<<std::endl;return false;}
     }
     void BallAssociate::clearTrace(int i)
     {

@@ -28,7 +28,7 @@ namespace hitcrt
         for(size_t i = 0;i<contour.size();i++)
         {
             //std::cout<<std::dec<<contour[i].size()<<std::endl;
-            if(contour[i].size()>150)cv::drawContours(contMask,contour,i,cv::Scalar(0),-1);
+            if(contour[i].size()>110)cv::drawContours(contMask,contour,i,cv::Scalar(0),-1);
         }
         /*******************get moving targets*****************************/
         cv::Mat fgmask;
@@ -40,11 +40,12 @@ namespace hitcrt
         cv::erode(fgmask, fgmask, cv::Mat(), cv::Point(-1, -1), 4);		//腐蚀
         std::vector<std::vector<cv::Point> > contours;
         cv::findContours(fgmask,contours,CV_RETR_EXTERNAL,CV_CHAIN_APPROX_NONE);
-        if(contours.size()>0)std::cout<<"contour size: "<<contours.size()<<std::endl;
+        if(contours.size()>0)std::cout<<"ball contour size: "<<contours.size()<<std::endl;
+        else return;
         cv::Mat mask(color.size(),CV_8UC1,cv::Scalar(0));
         for(size_t i =0;i<contours.size();i++)
         {
-            //std::cout<<"c size:"<<contours[i].size()<<std::endl;
+            //std::cout<<"cc size:"<<(int)contours[i].size()<<std::endl;
             if(contours[i].size()<100) {
                 cv::drawContours(mask,contours,i,cv::Scalar(255),-1);
             }
@@ -65,13 +66,13 @@ namespace hitcrt
             {
                 float depth = data[i];
                 float pz = fabs(depth);
-                if(pz>500&& pz<8*1000.0) pt3d.push_back(cv::Point3f(i,j,pz));
+                if(pz>800&& pz<8*1000.0) pt3d.push_back(cv::Point3f(i,j,pz));
             }
         }
+        //std::cout<<"z limited.size: "<<pt3d.size()<<std::endl;
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
         Transformer::imgToWorld(pt3d,cloud);
-        if(cloud->size()==0)return;
-        //std::cout<<"z limited.size: "<<cloud->points.size()<<std::endl;
+        if(cloud->size()==0){std::cout<<"ball cloud.size "<<std::endl;return;}
         // pass filter
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_z_filtered(new pcl::PointCloud<pcl::PointXYZ>);
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_y_filtered(new pcl::PointCloud<pcl::PointXYZ>);
@@ -80,20 +81,20 @@ namespace hitcrt
         int i = (int)area-1;
         pass.setInputCloud(cloud);
         pass.setFilterFieldName("z");
-        std::cout<<"z :"<<r[i].z.min<<","<<r[i].z.max<<std::endl;
+        //std::cout<<"z :"<<r[i].z.min<<","<<r[i].z.max<<std::endl;
         pass.setFilterLimits(r[i].z.min,r[i].z.max);
         pass.filter(*cloud_z_filtered);
         pass.setInputCloud(cloud_z_filtered);
         pass.setFilterFieldName("y");
-        std::cout<<"y :"<<r[i].y.min<<","<<r[i].y.max<<std::endl;
+        //std::cout<<"y :"<<r[i].y.min<<","<<r[i].y.max<<std::endl;
         pass.setFilterLimits(r[i].y.min,r[i].y.max);
         pass.filter(*cloud_y_filtered);
         pass.setInputCloud(cloud_y_filtered);
         pass.setFilterFieldName("x");
-        std::cout<<"x :"<<r[i].x.min<<","<<r[i].x.max<<std::endl;
+        //std::cout<<"x :"<<r[i].x.min<<","<<r[i].x.max<<std::endl;
         pass.setFilterLimits(r[i].x.min,r[i].x.max);
         pass.filter(*cloud_x_filtered);
-        //std::cout<<"pass filter.size: "<<cloud_x_filtered->points.size()<<std::endl;
+        //std::cout<<"ball pass filter.size: "<<cloud_x_filtered->points.size()<<std::endl;
         if(cloud_x_filtered->points.size()==0)return;
         // radius filter
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_r_filtered(new pcl::PointCloud<pcl::PointXYZ>);
@@ -140,7 +141,7 @@ namespace hitcrt
             //          << maxPt.x-minPt.x << ", "
             //          << maxPt.y-minPt.y << ", "
             //          << maxPt.z-minPt.z << ") "<< std::endl;
-            std::cout << "The XYZ coordinates of the centroid are: ("
+            std::cout << "The XYZ centroid are: ("
                       << centroid[0] << ", "
                       << centroid[1] << ", "
                       << centroid[2] << ")." << std::endl;

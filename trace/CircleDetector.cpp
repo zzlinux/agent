@@ -88,11 +88,11 @@ namespace hitcrt
                 (maxPt.z - minPt.z) > maxDeltaZ || (maxPt.z - minPt.z) < minDeltaZ)
                 continue;
             *outCloud+=*cloud_cluster;
-            if(area ==1||area == 2) center3d  = pcl::PointXYZ(centroid[0],centroid[1],2.4);
+            if(area ==1||area == 2) center3d  = pcl::PointXYZ(centroid[0],centroid[1],maxPt.z+0.5);
             else if(area == 3) center3d = pcl::PointXYZ(centroid[0],centroid[1],3.4);
             cv::Point border;
             Transformer::invTrans(center3d,center2d);
-            Transformer::invTrans(pcl::PointXYZ(centroid[0],centroid[1],2.8),border);
+            Transformer::invTrans(pcl::PointXYZ(centroid[0],centroid[1],center3d.z+0.4),border);
             radius2d = center2d.y-border.y;
             std::cout << "gan cluster.size: " << cloud_cluster->points.size() << std::endl;
             std::cout<<"max(x,y,z): "<<centroid[0]<<","<<centroid[1]<<","<<centroid[2]<<","<<maxPt.z<<std::endl;
