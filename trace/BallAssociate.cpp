@@ -63,7 +63,7 @@ namespace hitcrt
                  std::cout<<"distxy "<<distxy<<" mindis "<<MINDISXY<<" maxdis "<<MAXDISXY<<std::endl;
                  if(distxy>MINDISXY&&distxy<MAXDISXY&&dy>MINDY)
                  {
-                     if(traces[i].points.size()<2)          //轨迹头两个点必须有颜色
+                     if(traces[i].points.size()<3)          //轨迹头两个点必须有颜色
                      {
                          if(colorJudge(p,color))            //如果颜色对应认为是球
                          {
@@ -109,7 +109,10 @@ namespace hitcrt
         cv::Point point;
         Transformer::invTrans(p,point);
         cv::cvtColor(color,imgHSV,CV_BGR2HSV);
-        cv::inRange(imgHSV,cv::Scalar(100,43,46),cv::Scalar(124,255,255),imgThreshold);
+        if(area == 1||area == 2)
+            cv::inRange(imgHSV,cv::Scalar(100,43,46),cv::Scalar(124,255,255),imgThreshold);     //color ball
+        else if(area == 3)
+            cv::inRange(imgHSV,cv::Scalar(26,43,46),cv::Scalar(34,255,255),imgThreshold);       //gold ball
         cv::erode(imgThreshold, imgThreshold, cv::Mat(), cv::Point(-1, -1), 1);		//腐蚀
         cv::dilate(imgThreshold, imgThreshold, cv::Mat(), cv::Point(-1, -1), 5);	//膨胀
         //cv::imshow("binary",imgThreshold);
@@ -134,9 +137,10 @@ namespace hitcrt
             break;
         }
     }
-    void BallAssociate::clear()
+    void BallAssociate::init(char throwarea)
     {
-        for(size_t i = 0;i<traces.size();i++)
+        area = throwarea;
+        for(size_t i = 0;i<traces.size();i++)       //clear trace
         {
             clearTrace(i);
         }

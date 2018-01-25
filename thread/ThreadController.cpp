@@ -30,11 +30,11 @@ namespace hitcrt
         m_mutualThread = boost::thread(boost::bind(&ThreadController::m_mutual,this));
         //m_radarProcessThread.join();
         //m_cameraProcessThread.join();
-        m_communicationThread.join();
+        m_mutualThread.join();
     }
     void ThreadController::createTraceThreads()
     {
-        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,"/home/robocon/workspace/oni/0124-circleedgeback-4in.ONI"));
+        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,"/home/robocon/workspace/oni/0124-circleedgeback-10in.ONI"));
         m_traceDataThread = boost::thread(boost::bind(&ThreadController::m_traceReadFrame,this));
         m_traceProcessThread = boost::thread(boost::bind(&ThreadController::m_traceProcess,this));
     }
@@ -194,12 +194,12 @@ namespace hitcrt
             }else if(m_traceMode ==2){
                 throwTimeStart = cv::getTickCount();
                 isHit = 10;
-                ball.init();
+                ball.init(m_throwArea);
+                associate.init(m_throwArea);
                 m_traceMode = 3;
-                associate.clear();
             }else if(m_traceMode ==3){
                 std::vector<pcl::PointXYZ> targets;
-                ball.detector(depth,color,cloud,targets,m_throwArea);
+                ball.detector(depth,color,cloud,targets);
                 std::vector<Trajectory> ballTraces;
                 ballTraces.clear();
                 associate.apply(color,targets,ballTraces);
@@ -237,12 +237,14 @@ namespace hitcrt
                     throwresult[0] = 0;
                     serial->send(SerialApp::SEND_TRACE,throwresult);
                     m_traceMode = 0;
+                    circle.isValued = false;
                     std::cout<<"failed tracetime: "<<tracetime<<std::endl;
                     continue;
                 }
                 if(tracetime>=MAXTHROWTIME){
                     throwresult[0] = 0;
                     serial->send(SerialApp::SEND_TRACE,throwresult);
+                    circle.isValued = false;
                     m_traceMode = 0;
                     std::cout<<"failed for tracetime: "<<tracetime<<std::endl;
                     continue;
@@ -250,7 +252,7 @@ namespace hitcrt
             }
             /***************************DEBUG VIEW*************************/
             if(!Param::DEBUG)continue;
-            if(true)
+            if(circle.isValued)
             {
                 cv::circle(color,circle.center2d,3,cv::Scalar(80,35,176),-1);
                 cv::circle(color,circle.center2d,circle.radius2d,cv::Scalar(255,255,255),1);

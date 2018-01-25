@@ -13,8 +13,8 @@
 #include <iostream>
 namespace hitcrt
 {
-    void BallDetector::init(){updateNum = 0;};
-    void BallDetector::detector(cv::Mat &depth,cv::Mat &color, pcl::PointCloud<pcl::PointXYZ>::Ptr outCloud,std::vector<pcl::PointXYZ>& targets,char area)
+    void BallDetector::init(char throwarea){area = throwarea;updateNum = 0;};
+    void BallDetector::detector(cv::Mat &depth,cv::Mat &color, pcl::PointCloud<pcl::PointXYZ>::Ptr outCloud,std::vector<pcl::PointXYZ>& targets)
     {
         /********************remove giant targets**************************/
         cv::Mat depth8U;

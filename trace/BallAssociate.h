@@ -15,7 +15,7 @@ namespace hitcrt {
         BallAssociate();
         std::vector<Trajectory> traces;
         void apply(cv::Mat &color,std::vector<pcl::PointXYZ> &targets,std::vector<Trajectory> &ballTraces);
-        void clear();
+        void init(char throwarea);
     private:
         void findMovement(cv::Mat &color,std::vector<pcl::PointXYZ> &targets);
         bool colorJudge(pcl::PointXYZ &p, cv::Mat color);
@@ -27,6 +27,7 @@ namespace hitcrt {
         const float MINDY = 0.1;
         const float MAXPREERROR = 0.1;
         int tracesize = 0;
+        char area = 1;
     };
 }
 
