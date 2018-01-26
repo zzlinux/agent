@@ -188,32 +188,32 @@ protocol/fast:
 	$(MAKE) -f protocol/CMakeFiles/protocol.dir/build.make protocol/CMakeFiles/protocol.dir/build
 .PHONY : protocol/fast
 
-main.o: main.cpp.o
+calibration/floor_fit_cloud.o: calibration/floor_fit_cloud.cpp.o
 
-.PHONY : main.o
+.PHONY : calibration/floor_fit_cloud.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/main.cpp.o
-.PHONY : main.cpp.o
+calibration/floor_fit_cloud.cpp.o:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o
+.PHONY : calibration/floor_fit_cloud.cpp.o
 
-main.i: main.cpp.i
+calibration/floor_fit_cloud.i: calibration/floor_fit_cloud.cpp.i
 
-.PHONY : main.i
+.PHONY : calibration/floor_fit_cloud.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/main.cpp.i
-.PHONY : main.cpp.i
+calibration/floor_fit_cloud.cpp.i:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.i
+.PHONY : calibration/floor_fit_cloud.cpp.i
 
-main.s: main.cpp.s
+calibration/floor_fit_cloud.s: calibration/floor_fit_cloud.cpp.s
 
-.PHONY : main.s
+.PHONY : calibration/floor_fit_cloud.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/main.cpp.s
-.PHONY : main.cpp.s
+calibration/floor_fit_cloud.cpp.s:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.s
+.PHONY : calibration/floor_fit_cloud.cpp.s
 
 # Help Target
 help:
@@ -229,9 +229,9 @@ help:
 	@echo "... radar"
 	@echo "... thread"
 	@echo "... protocol"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... calibration/floor_fit_cloud.o"
+	@echo "... calibration/floor_fit_cloud.i"
+	@echo "... calibration/floor_fit_cloud.s"
 .PHONY : help
 
 

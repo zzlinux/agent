@@ -13,11 +13,9 @@ namespace hitcrt
         cv::FileStorage fs(cv::String("../param.yaml"), cv::FileStorage::READ);
         assert(fs.isOpened());
         cv::Mat intrinsic,coeff;
-        fs["OV2710_INTRINSIC"]>>intrinsic;
-        fs["OV2710_COEFFS"]>>coeff;
+        fs["camera_matrix"]>>intrinsic;
+        fs["distortion_coefficients"]>>coeff;
         fs.release();
-        std::cout<<intrinsic<<std::endl;
-        std::cout<<coeff<<std::endl;
         float intrinsic_matrix[] = {
                 2.913949555529118e+02,0,0,
                 0.249703033828407,      2.918644439977966e+02,    0,
@@ -29,7 +27,7 @@ namespace hitcrt
         };
         camera_matrix = cv::Mat(3, 3, CV_32FC1, intrinsic_matrix);
         dist_coeffs = cv::Mat(1, 4, CV_32FC1, coeffs);
-        cv::initUndistortRectifyMap(intrinsic.t(), coeff, cv::Mat(), cv::Mat(), cv::Size(640, 480), CV_32F, map1, map2);
+        cv::initUndistortRectifyMap(intrinsic, coeff, cv::Mat(), cv::Mat(), cv::Size(640, 480), CV_32F, map1, map2);
     }
     #define  RANDOMPOINT VecPoint.at(leftPointsIndex.at(rand()%leftPointsIndex.size()))
     void CameraModel::Ransc(std::vector<cv::Point2d> & VecPoint,std::vector<std::vector<cv::Point>> &lines)
