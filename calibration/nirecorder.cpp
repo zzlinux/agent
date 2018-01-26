@@ -124,7 +124,7 @@ int main( int argc, char **argv )
 
   Recorder mRecorder;
 
-  if( mRecorder.create("../color.ONI") != STATUS_OK)
+  if( mRecorder.create("../calibration/color.ONI") != STATUS_OK)
   {
     cerr << "Can't create Recorder: "
           << OpenNI::getExtendedError() << endl;
@@ -155,10 +155,10 @@ int main( int argc, char **argv )
 
         cv::cvtColor( mImageRGB, cImageBGR, CV_RGB2BGR );
         // 7d. show image
-        cv::flip(cImageBGR,cImageBGR,1);
-        cv::Mat c;
-        c = cImageBGR.t();
-        cv::imshow( "Color Image", c );
+        //cv::flip(cImageBGR,cImageBGR,1);
+        //cv::Mat c;
+        //c = cImageBGR.t();
+        cv::imshow( "Color Image",cImageBGR);
       }
     }
 
@@ -174,9 +174,9 @@ int main( int argc, char **argv )
       // 8c. re-map depth data [0,Max] to [0,255]
 
       mImageDepth.convertTo( mScaledDepth, CV_8U, 255.0 / iMaxDepth );
-      cv::flip(mScaledDepth,mScaledDepth,1);
-      cv::Mat d = mScaledDepth.t();
-      cv::imshow( "Depth Image",d );
+      //cv::flip(mScaledDepth,mScaledDepth,1);
+      //cv::Mat d = mScaledDepth.t();
+      cv::imshow( "Depth Image",mScaledDepth );
     }
 
     // 6a. check keyboard

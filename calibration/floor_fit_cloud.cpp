@@ -230,6 +230,13 @@ int main()
     cloud_plane -> points.clear();
     plane_flitered -> points.clear();
 
+    const cv::Mat mImageDepth(
+            oniDepthImg.getHeight(), oniDepthImg.getWidth(),
+            CV_16UC1, (DepthPixel*)oniDepthImg.getData() );
+    // 8c. re-map depth data [0,Max] to [0,255]
+    cv::Mat depth8U;
+    mImageDepth.convertTo( depth8U, CV_8U  );
+    cv::imshow("depth",depth8U);
     key = cv::waitKey(5);
   }
   oniDepthStream.destroy();
@@ -308,4 +315,7 @@ int main()
 //    Tcw.at<float>(3,3) = 1;
 //    Tcw.at<float>(1,3) = -1/B;
   cout << Tcw << endl;
+  cv::FileStorage fs("../calibration/RTO1.yml",cv::FileStorage::WRITE);
+  fs<<"RTO1"<<Tcw;
+  fs.release();
 }
