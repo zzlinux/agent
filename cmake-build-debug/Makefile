@@ -188,32 +188,32 @@ protocol/fast:
 	$(MAKE) -f protocol/CMakeFiles/protocol.dir/build.make protocol/CMakeFiles/protocol.dir/build
 .PHONY : protocol/fast
 
-calibration/floor_fit_cloud.o: calibration/floor_fit_cloud.cpp.o
+calibration/nirecorder.o: calibration/nirecorder.cpp.o
 
-.PHONY : calibration/floor_fit_cloud.o
+.PHONY : calibration/nirecorder.o
 
 # target to build an object file
-calibration/floor_fit_cloud.cpp.o:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o
-.PHONY : calibration/floor_fit_cloud.cpp.o
+calibration/nirecorder.cpp.o:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/nirecorder.cpp.o
+.PHONY : calibration/nirecorder.cpp.o
 
-calibration/floor_fit_cloud.i: calibration/floor_fit_cloud.cpp.i
+calibration/nirecorder.i: calibration/nirecorder.cpp.i
 
-.PHONY : calibration/floor_fit_cloud.i
+.PHONY : calibration/nirecorder.i
 
 # target to preprocess a source file
-calibration/floor_fit_cloud.cpp.i:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.i
-.PHONY : calibration/floor_fit_cloud.cpp.i
+calibration/nirecorder.cpp.i:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/nirecorder.cpp.i
+.PHONY : calibration/nirecorder.cpp.i
 
-calibration/floor_fit_cloud.s: calibration/floor_fit_cloud.cpp.s
+calibration/nirecorder.s: calibration/nirecorder.cpp.s
 
-.PHONY : calibration/floor_fit_cloud.s
+.PHONY : calibration/nirecorder.s
 
 # target to generate assembly for a file
-calibration/floor_fit_cloud.cpp.s:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.s
-.PHONY : calibration/floor_fit_cloud.cpp.s
+calibration/nirecorder.cpp.s:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/nirecorder.cpp.s
+.PHONY : calibration/nirecorder.cpp.s
 
 # Help Target
 help:
@@ -229,9 +229,9 @@ help:
 	@echo "... radar"
 	@echo "... thread"
 	@echo "... protocol"
-	@echo "... calibration/floor_fit_cloud.o"
-	@echo "... calibration/floor_fit_cloud.i"
-	@echo "... calibration/floor_fit_cloud.s"
+	@echo "... calibration/nirecorder.o"
+	@echo "... calibration/nirecorder.i"
+	@echo "... calibration/nirecorder.s"
 .PHONY : help
 
 

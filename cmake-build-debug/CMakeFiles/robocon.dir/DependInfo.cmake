@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robocon/workspace/agent/calibration/floor_fit_cloud.cpp" "/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o"
+  "/home/robocon/workspace/agent/calibration/nirecorder.cpp" "/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles/robocon.dir/calibration/nirecorder.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

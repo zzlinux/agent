@@ -40,7 +40,7 @@ ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/radarLocation)
 ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/thread)
 ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/protocol)
 
-set(SOURCE_FILES calibration/floor_fit_cloud.cpp)
+set(SOURCE_FILES calibration/nirecorder.cpp)
 add_executable(robocon ${SOURCE_FILES})
 target_link_libraries(robocon
         thread
