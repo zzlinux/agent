@@ -24,8 +24,8 @@ namespace hitcrt
     }
     void ThreadController::run()
     {
-        createTraceThreads();
-        //createCameraThreads();
+        //createTraceThreads();
+        createCameraThreads();
         //createRadarThread();
         m_communicationThread = boost::thread(boost::bind(&ThreadController::m_communication,this));
         m_mutualThread = boost::thread(boost::bind(&ThreadController::m_mutual,this));
@@ -41,7 +41,7 @@ namespace hitcrt
     }
     void ThreadController::createCameraThreads()
     {
-        camera = std::unique_ptr<CameraController>(new CameraController);
+        camera = std::unique_ptr<CameraController>(new CameraController(0));
         m_cameraDataThread = boost::thread(boost::bind(&ThreadController::m_cameraReadFrame,this));
         m_cameraProcessThread = boost::thread(boost::bind(&ThreadController::m_cameraProcess,this));
     }

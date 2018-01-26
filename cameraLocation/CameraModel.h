@@ -14,7 +14,7 @@ namespace hitcrt
 {
     class CameraModel {
     public:
-        CameraModel();
+        CameraModel(int cameraid);
         ~CameraModel(){};
         struct LINEKB{ double k;double b; };
         struct LINEE{ cv::Point2d PointStart;cv::Point2d PointEnd;};

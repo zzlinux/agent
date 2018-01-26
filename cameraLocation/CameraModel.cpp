@@ -6,9 +6,9 @@
 
 namespace hitcrt
 {
-    CameraModel::CameraModel()
+    CameraModel::CameraModel(int cameraid)
     {
-        cap = cv::VideoCapture(0);
+        cap = cv::VideoCapture(cameraid);
         assert(cap.isOpened());
         cv::FileStorage fs(cv::String("../param.yaml"), cv::FileStorage::READ);
         assert(fs.isOpened());

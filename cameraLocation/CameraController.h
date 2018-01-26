@@ -15,7 +15,7 @@ namespace hitcrt
     class CameraController :private CameraModel
     {
     public:
-        CameraController(){};
+        CameraController(int cameraid):CameraModel(cameraid){};
         ~CameraController(){};
         void apply(std::vector<float> &data,bool & isLocationValued);
         void readFrameFromCamera();

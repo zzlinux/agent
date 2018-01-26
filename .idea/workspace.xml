@@ -18,26 +18,10 @@
   <component name="ChangeListManager">
     <list default="true" id="56f8f48e-4b3b-40dc-a959-6b84e8c51aa4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/robocon" afterPath="$PROJECT_DIR$/bin/robocon" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/libcamera.a" afterPath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/libcamera.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/ThreadController.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/ThreadController.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/thread/libthread.a" afterPath="$PROJECT_DIR$/cmake-build-debug/thread/libthread.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/trace/CMakeFiles/trace.dir/BallAssociate.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/trace/CMakeFiles/trace.dir/BallAssociate.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/trace/CMakeFiles/trace.dir/BallDetector.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/trace/CMakeFiles/trace.dir/BallDetector.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/trace/CMakeFiles/trace.dir/CircleDetector.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/trace/CMakeFiles/trace.dir/CircleDetector.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/trace/libtrace.a" afterPath="$PROJECT_DIR$/cmake-build-debug/trace/libtrace.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cameraLocation/CameraController.cpp" afterPath="$PROJECT_DIR$/cameraLocation/CameraController.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cameraLocation/CameraController.h" afterPath="$PROJECT_DIR$/cameraLocation/CameraController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cameraLocation/CameraModel.cpp" afterPath="$PROJECT_DIR$/cameraLocation/CameraModel.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/param.yaml" afterPath="$PROJECT_DIR$/param.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cameraLocation/CameraModel.h" afterPath="$PROJECT_DIR$/cameraLocation/CameraModel.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thread/ThreadController.cpp" afterPath="$PROJECT_DIR$/thread/ThreadController.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/BallAssociate.cpp" afterPath="$PROJECT_DIR$/trace/BallAssociate.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/BallAssociate.h" afterPath="$PROJECT_DIR$/trace/BallAssociate.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/BallDetector.cpp" afterPath="$PROJECT_DIR$/trace/BallDetector.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/BallDetector.h" afterPath="$PROJECT_DIR$/trace/BallDetector.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/CircleDetector.cpp" afterPath="$PROJECT_DIR$/trace/CircleDetector.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trace/CircleDetector.h" afterPath="$PROJECT_DIR$/trace/CircleDetector.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,11 +36,43 @@
       <file leaf-file-name="ThreadController.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thread/ThreadController.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            <state relative-caret-position="270">
+              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding>
                 <element signature="e#40#69#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fitfloor.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calibration/fitfloor.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="floor_fit_cloud.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/calibration/floor_fit_cloud.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3539">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreadController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thread/ThreadController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,38 +100,18 @@
       <file leaf-file-name="BallDetector.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trace/BallDetector.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="198">
               <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="param.yaml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/param.yaml">
+      <file leaf-file-name="CameraController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cameraLocation/CameraController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RadarModel.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/radarLocation/RadarModel.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RadarModel.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/radarLocation/RadarModel.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -124,31 +120,19 @@
       <file leaf-file-name="CameraModel.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cameraLocation/CameraModel.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+            <state relative-caret-position="180">
+              <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CircleDetector.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trace/CircleDetector.h">
+      <file leaf-file-name="CameraModel.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cameraLocation/CameraModel.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="216">
+              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BallDetector.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trace/BallDetector.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3186">
-              <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-              <folding>
-                <element signature="e#40#65#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -173,6 +157,8 @@
         <option value="$PROJECT_DIR$/trace/BallDetector.cpp" />
         <option value="$PROJECT_DIR$/param.yaml" />
         <option value="$PROJECT_DIR$/cameraLocation/CameraController.cpp" />
+        <option value="$PROJECT_DIR$/cameraLocation/CameraController.h" />
+        <option value="$PROJECT_DIR$/cameraLocation/CameraModel.h" />
         <option value="$PROJECT_DIR$/cameraLocation/CameraModel.cpp" />
         <option value="$PROJECT_DIR$/thread/ThreadController.cpp" />
       </list>
@@ -215,7 +201,17 @@
             <path>
               <item name="robocon" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="agent" type="462c0819:PsiDirectoryNode" />
+              <item name="calibration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robocon" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="agent" type="462c0819:PsiDirectoryNode" />
               <item name="cameraLocation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robocon" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="agent" type="462c0819:PsiDirectoryNode" />
+              <item name="thread" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -225,7 +221,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CLionProjects/RM" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/calibration" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/calibration" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -294,23 +298,23 @@
       <workItem from="1516761262154" duration="14381000" />
       <workItem from="1516799221916" duration="5647000" />
       <workItem from="1516838807825" duration="25645000" />
-      <workItem from="1516926129013" duration="338000" />
+      <workItem from="1516926129013" duration="3713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85725000" />
+    <option name="totallyTimeSpent" value="89100000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21239892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28425357" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28425357" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38036808" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38036808" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -339,38 +343,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/trace/CircleDetector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thread/ThreadController.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trace/transformer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trace/transformer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/opencv2/core/cvdef.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7020">
@@ -600,13 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cameraLocation/CameraModel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -682,18 +647,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trace/BallDetector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/radarLocation/RadarController.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -713,28 +671,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/param.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="48" column="34" lean-forward="false" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trace/BallDetector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cameraLocation/CameraController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cameraLocation/CameraModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cameraLocation/CameraModel.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+        <state relative-caret-position="180">
+          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread/ThreadController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thread/ThreadController.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="270">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="e#40#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/param.yaml">
+    <entry file="file://$PROJECT_DIR$/calibration/fitfloor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+        <state relative-caret-position="432">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calibration/floor_fit_cloud.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3539">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
