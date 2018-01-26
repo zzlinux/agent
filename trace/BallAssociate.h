@@ -28,6 +28,10 @@ namespace hitcrt {
         const float MAXPREERROR = 0.1;
         int tracesize = 0;
         char area = 1;
+        struct colorhsv{
+            struct {int min;int max;}h,s,v;
+        };
+        colorhsv cball,gball;
     };
 }
 

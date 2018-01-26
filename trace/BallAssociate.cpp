@@ -14,6 +14,21 @@ namespace hitcrt
         Trajectory temp;
         for(size_t i = 0;i<MAXTRACENUM;i++)
             traces.push_back(temp);
+        // parameter init
+        cv::FileStorage fs(cv::String("../param.yaml"), cv::FileStorage::READ);
+        assert(fs.isOpened());
+        cball.h.min = fs["BLUE_MIN_H"];
+        cball = colorhsv{
+                {fs["BLUE_H_MIN"],fs["BLUE_H_MAX"]},
+                {fs["BLUE_S_MIN"],fs["BLUE_S_MAX"]},
+                {fs["BLUE_V_MIN"],fs["BLUE_V_MAX"]}
+        };
+        gball = colorhsv{
+                {fs["YELLOW_H_MIN"],fs["YELLOW_H_MAX"]},
+                {fs["YELLOW_S_MIN"],fs["YELLOW_S_MAX"]},
+                {fs["YELLOW_V_MIN"],fs["YELLOW_V_MAX"]}
+        };
+        fs.release();
     }
     void BallAssociate::apply(cv::Mat &color,std::vector<pcl::PointXYZ> &targets,std::vector<Trajectory> &ballTraces)
     {
@@ -110,9 +125,9 @@ namespace hitcrt
         Transformer::invTrans(p,point);
         cv::cvtColor(color,imgHSV,CV_BGR2HSV);
         if(area == 1||area == 2)
-            cv::inRange(imgHSV,cv::Scalar(100,43,46),cv::Scalar(124,255,255),imgThreshold);     //color ball
+            cv::inRange(imgHSV,cv::Scalar(cball.h.min,cball.s.min,cball.v.min),cv::Scalar(cball.h.max,cball.s.max,cball.v.max),imgThreshold);     //color ball
         else if(area == 3)
-            cv::inRange(imgHSV,cv::Scalar(26,43,46),cv::Scalar(34,255,255),imgThreshold);       //gold ball
+            cv::inRange(imgHSV,cv::Scalar(gball.h.min,gball.s.min,gball.v.min),cv::Scalar(gball.h.max,gball.s.max,gball.v.max),imgThreshold);       //gold ball
         cv::erode(imgThreshold, imgThreshold, cv::Mat(), cv::Point(-1, -1), 1);		//腐蚀
         cv::dilate(imgThreshold, imgThreshold, cv::Mat(), cv::Point(-1, -1), 5);	//膨胀
         //cv::imshow("binary",imgThreshold);
@@ -144,5 +159,6 @@ namespace hitcrt
         {
             clearTrace(i);
         }
+        tracesize = 0;
     }
 }

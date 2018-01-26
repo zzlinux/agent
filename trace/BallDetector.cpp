@@ -13,6 +13,23 @@
 #include <iostream>
 namespace hitcrt
 {
+    BallDetector::BallDetector():updateNum(0){
+        // parameter init
+        cv::FileStorage fs(cv::String("../param.yaml"), cv::FileStorage::READ);
+        assert(fs.isOpened());
+        cv::Mat circlerange;
+        fs["BALL"]>>circlerange;
+        fs.release();
+        r[0] = {{circlerange.at<float>(0,0),circlerange.at<float>(0,1)},
+                {circlerange.at<float>(0,2),circlerange.at<float>(0,3)},
+                {circlerange.at<float>(0,4),circlerange.at<float>(0,5)}};
+        r[1] = {{circlerange.at<float>(1,0),circlerange.at<float>(1,1)},
+                {circlerange.at<float>(1,2),circlerange.at<float>(1,3)},
+                {circlerange.at<float>(1,4),circlerange.at<float>(1,5)}};
+        r[2] = {{circlerange.at<float>(2,0),circlerange.at<float>(2,1)},
+                {circlerange.at<float>(2,2),circlerange.at<float>(2,3)},
+                {circlerange.at<float>(2,4),circlerange.at<float>(2,5)}};
+    };
     void BallDetector::init(char throwarea){area = throwarea;updateNum = 0;};
     void BallDetector::detector(cv::Mat &depth,cv::Mat &color, pcl::PointCloud<pcl::PointXYZ>::Ptr outCloud,std::vector<pcl::PointXYZ>& targets)
     {

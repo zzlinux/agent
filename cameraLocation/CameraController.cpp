@@ -48,7 +48,7 @@ namespace hitcrt
         }
         cv::putText(readFrame, txt.str(), cv::Point(10, 80), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(10, 90, 255), 2);
         cv::putText(readFrame, linenum.str(), cv::Point(10, 60), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(150, 200, 20), 2);
-        //imshow("frame",readFrame);
+        imshow("frame",readFrame);
         if(cv::waitKey(1)=='c')
         {
             cv::waitKey(100000000);

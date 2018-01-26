@@ -13,19 +13,11 @@ namespace hitcrt
 {
 class CircleDetector {
 public:
-    CircleDetector():radius3d(0.4),radius2d(0),isValued(false){
-        center3d = pcl::PointXYZ(0,0,0);
-        center2d = cv::Point(0,0);
-    };
+    CircleDetector();
     struct searchRange{
         struct {float min;float max;}x,y,z;
     };
-    const searchRange r[3] =
-            {
-                    {{0.6,1.5},{3.8,5},{0.5,2.3}},
-                    {{1,1.5},{5.7,7.2},{0.5,2.3}},
-                    {{-0.8,0.8},{5.5,6.5},{0.5,3.3}}
-            };
+    searchRange r[3];
     pcl::PointXYZ center3d;
     cv::Point center2d;
     float radius3d;

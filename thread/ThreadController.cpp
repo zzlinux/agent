@@ -20,6 +20,7 @@ namespace hitcrt
         cv::FileStorage fs(cv::String("../param.yaml"), cv::FileStorage::READ);
         assert(fs.isOpened());
         fs["RT01"] >> Param::RT01;
+        fs.release();
     }
     void ThreadController::run()
     {

@@ -13,6 +13,25 @@
 #include <pcl/common/centroid.h>
 namespace hitcrt
 {
+    CircleDetector::CircleDetector():radius3d(0.4),radius2d(0),isValued(false){
+        center3d = pcl::PointXYZ(0,0,0);
+        center2d = cv::Point(0,0);
+        // parameter init
+        cv::FileStorage fs(cv::String("../param.yaml"), cv::FileStorage::READ);
+        assert(fs.isOpened());
+        cv::Mat circlerange;
+        fs["CIRCLE"]>>circlerange;
+        fs.release();
+        r[0] = {{circlerange.at<float>(0,0),circlerange.at<float>(0,1)},
+                {circlerange.at<float>(0,2),circlerange.at<float>(0,3)},
+                {circlerange.at<float>(0,4),circlerange.at<float>(0,5)}};
+        r[1] = {{circlerange.at<float>(1,0),circlerange.at<float>(1,1)},
+                {circlerange.at<float>(1,2),circlerange.at<float>(1,3)},
+                {circlerange.at<float>(1,4),circlerange.at<float>(1,5)}};
+        r[2] = {{circlerange.at<float>(2,0),circlerange.at<float>(2,1)},
+                {circlerange.at<float>(2,2),circlerange.at<float>(2,3)},
+                {circlerange.at<float>(2,4),circlerange.at<float>(2,5)}};
+    };
     bool CircleDetector::detector(cv::Mat &depth,pcl::PointCloud<pcl::PointXYZ>::Ptr outCloud,char area)
     {
 
