@@ -16,25 +16,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56f8f48e-4b3b-40dc-a959-6b84e8c51aa4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/calibration/test.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/robocon" afterPath="$PROJECT_DIR$/bin/robocon" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/calibration/nirecorder.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/calibration/nirecorder.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calibration/floor_fit_cloud.cpp" afterPath="$PROJECT_DIR$/calibration/floor_fit_cloud.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calibration/nirecorder.cpp" afterPath="$PROJECT_DIR$/calibration/nirecorder.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/robocon.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/robocon.cbp" />
-    </list>
+    <list default="true" id="56f8f48e-4b3b-40dc-a959-6b84e8c51aa4" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -299,12 +281,12 @@
       <workItem from="1516761262154" duration="14381000" />
       <workItem from="1516799221916" duration="5647000" />
       <workItem from="1516838807825" duration="25645000" />
-      <workItem from="1516926129013" duration="12302000" />
+      <workItem from="1516926129013" duration="12897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97689000" />
+    <option name="totallyTimeSpent" value="98284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
