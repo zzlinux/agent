@@ -72,6 +72,7 @@ thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../trace/BallAssociate.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../trace/BallDetector.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../trace/CircleDetector.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../trace/FitTrace.h
+thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../trace/Recorder.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../trace/Trajectory.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../trace/rgbd_camera.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../trace/transformer.h

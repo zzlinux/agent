@@ -102,6 +102,18 @@ Trajectory.h
 opencv2/core/core.hpp
 /home/robocon/workspace/agent/trace/opencv2/core/core.hpp
 
+/home/robocon/workspace/agent/trace/Recorder.cpp
+Recorder.h
+/home/robocon/workspace/agent/trace/Recorder.h
+boost/date_time/posix_time/posix_time.hpp
+-
+
+/home/robocon/workspace/agent/trace/Recorder.h
+opencv2/core/core.hpp
+-
+pcl/point_types.h
+-
+
 /home/robocon/workspace/agent/trace/Trajectory.cpp
 Trajectory.h
 /home/robocon/workspace/agent/trace/Trajectory.h

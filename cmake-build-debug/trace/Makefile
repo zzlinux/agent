@@ -233,6 +233,33 @@ FitTrace.cpp.s:
 	cd /home/robocon/workspace/agent/cmake-build-debug && $(MAKE) -f trace/CMakeFiles/trace.dir/build.make trace/CMakeFiles/trace.dir/FitTrace.cpp.s
 .PHONY : FitTrace.cpp.s
 
+Recorder.o: Recorder.cpp.o
+
+.PHONY : Recorder.o
+
+# target to build an object file
+Recorder.cpp.o:
+	cd /home/robocon/workspace/agent/cmake-build-debug && $(MAKE) -f trace/CMakeFiles/trace.dir/build.make trace/CMakeFiles/trace.dir/Recorder.cpp.o
+.PHONY : Recorder.cpp.o
+
+Recorder.i: Recorder.cpp.i
+
+.PHONY : Recorder.i
+
+# target to preprocess a source file
+Recorder.cpp.i:
+	cd /home/robocon/workspace/agent/cmake-build-debug && $(MAKE) -f trace/CMakeFiles/trace.dir/build.make trace/CMakeFiles/trace.dir/Recorder.cpp.i
+.PHONY : Recorder.cpp.i
+
+Recorder.s: Recorder.cpp.s
+
+.PHONY : Recorder.s
+
+# target to generate assembly for a file
+Recorder.cpp.s:
+	cd /home/robocon/workspace/agent/cmake-build-debug && $(MAKE) -f trace/CMakeFiles/trace.dir/build.make trace/CMakeFiles/trace.dir/Recorder.cpp.s
+.PHONY : Recorder.cpp.s
+
 Trajectory.o: Trajectory.cpp.o
 
 .PHONY : Trajectory.o
@@ -335,6 +362,9 @@ help:
 	@echo "... FitTrace.o"
 	@echo "... FitTrace.i"
 	@echo "... FitTrace.s"
+	@echo "... Recorder.o"
+	@echo "... Recorder.i"
+	@echo "... Recorder.s"
 	@echo "... Trajectory.o"
 	@echo "... Trajectory.i"
 	@echo "... Trajectory.s"

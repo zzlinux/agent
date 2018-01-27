@@ -17,6 +17,8 @@ add_library(trace
         Trajectory.h
         transformer.cpp
         transformer.h
+        Recorder.cpp
+        Recorder.h
         )
 target_link_libraries(trace
         ${PCL_LIBRARIES}

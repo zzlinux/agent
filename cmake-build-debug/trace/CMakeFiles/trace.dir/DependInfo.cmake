@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/robocon/workspace/agent/trace/BallDetector.cpp" "/home/robocon/workspace/agent/cmake-build-debug/trace/CMakeFiles/trace.dir/BallDetector.cpp.o"
   "/home/robocon/workspace/agent/trace/CircleDetector.cpp" "/home/robocon/workspace/agent/cmake-build-debug/trace/CMakeFiles/trace.dir/CircleDetector.cpp.o"
   "/home/robocon/workspace/agent/trace/FitTrace.cpp" "/home/robocon/workspace/agent/cmake-build-debug/trace/CMakeFiles/trace.dir/FitTrace.cpp.o"
+  "/home/robocon/workspace/agent/trace/Recorder.cpp" "/home/robocon/workspace/agent/cmake-build-debug/trace/CMakeFiles/trace.dir/Recorder.cpp.o"
   "/home/robocon/workspace/agent/trace/Trajectory.cpp" "/home/robocon/workspace/agent/cmake-build-debug/trace/CMakeFiles/trace.dir/Trajectory.cpp.o"
   "/home/robocon/workspace/agent/trace/rgbd_camera.cpp" "/home/robocon/workspace/agent/cmake-build-debug/trace/CMakeFiles/trace.dir/rgbd_camera.cpp.o"
   "/home/robocon/workspace/agent/trace/transformer.cpp" "/home/robocon/workspace/agent/cmake-build-debug/trace/CMakeFiles/trace.dir/transformer.cpp.o"

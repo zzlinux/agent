@@ -24,8 +24,8 @@ namespace hitcrt
     }
     void ThreadController::run()
     {
-        //createTraceThreads();
-        createCameraThreads();
+        createTraceThreads();
+        //createCameraThreads();
         //createRadarThread();
         m_communicationThread = boost::thread(boost::bind(&ThreadController::m_communication,this));
         m_mutualThread = boost::thread(boost::bind(&ThreadController::m_mutual,this));
@@ -172,6 +172,7 @@ namespace hitcrt
         CircleDetector circle;
         BallDetector ball;
         BallAssociate associate;
+        Recorder recorder;
         char isHit = 10;
         while (true)
         {
@@ -208,8 +209,6 @@ namespace hitcrt
                     std::cout<<"get traces: "<<static_cast<int>(ballTraces.size())<<std::endl;
                 for(auto t:ballTraces)
                 {
-                    for(auto p:t.points)
-                        std::cout<<"x,y,z "<<p.x<<","<<p.y<<","<<p.z<<std::endl;
                     cv::Mat R21,R31;
                     FitTrace::fitting(t,R21,R31);
                     pcl::PointXYZ p;
@@ -217,13 +216,12 @@ namespace hitcrt
                     p.x = (p.y-R21.at<float>(0))/R21.at<float>(1);
                     p.z = R31.at<float>(0)+R31.at<float>(1)*p.y+R31.at<float>(2)*p.y*p.y;
                     float distCen = sqrt((p.x-circle.center3d.x)*(p.x-circle.center3d.x)+(p.z-circle.center3d.z)*(p.z-circle.center3d.z));
-                    std::cout<<"(p,dis) :"<<p<<"   "<<distCen<<std::endl;
-                    std::cout<<"(circle) "<<circle.center3d<<std::endl;
                     cv::Point cen;
                     Transformer::invTrans(p,cen);
                     cv::circle(color,cen,3,cv::Scalar(200,30,58),-1);
                     if(distCen<0.4) {isHit = 1;std::cout<<"yesyesyesyesyesyesyesyesyesyesyes"<<std::endl;}
                     else {isHit = 0;std::cout<<"errorerrorerrorerrorerrorerrorerrorerror"<<std::endl;}
+                    recorder.trace(p,circle.center3d,t.points,distCen,isHit);
                 }
                 double tracetime= ((double)cv::getTickCount() - throwTimeStart)/cv::getTickFrequency();
                 std::vector<float> throwresult(1);
@@ -259,7 +257,7 @@ namespace hitcrt
                 cv::circle(color,circle.center2d,circle.radius2d,cv::Scalar(255,255,255),1);
             }
             cv::imshow("color",color);
-            cv::imshow("depth",depth8U);
+            //cv::imshow("depth",depth8U);
             //view.showCloud(cloud);
             cloud->points.clear();
             cv::waitKey(1);

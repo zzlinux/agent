@@ -225,6 +225,30 @@ trace/CMakeFiles/trace.dir/transformer.cpp.o.provides: trace/CMakeFiles/trace.di
 trace/CMakeFiles/trace.dir/transformer.cpp.o.provides.build: trace/CMakeFiles/trace.dir/transformer.cpp.o
 
 
+trace/CMakeFiles/trace.dir/Recorder.cpp.o: trace/CMakeFiles/trace.dir/flags.make
+trace/CMakeFiles/trace.dir/Recorder.cpp.o: ../trace/Recorder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object trace/CMakeFiles/trace.dir/Recorder.cpp.o"
+	cd /home/robocon/workspace/agent/cmake-build-debug/trace && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/trace.dir/Recorder.cpp.o -c /home/robocon/workspace/agent/trace/Recorder.cpp
+
+trace/CMakeFiles/trace.dir/Recorder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/trace.dir/Recorder.cpp.i"
+	cd /home/robocon/workspace/agent/cmake-build-debug/trace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/trace/Recorder.cpp > CMakeFiles/trace.dir/Recorder.cpp.i
+
+trace/CMakeFiles/trace.dir/Recorder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/trace.dir/Recorder.cpp.s"
+	cd /home/robocon/workspace/agent/cmake-build-debug/trace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/trace/Recorder.cpp -o CMakeFiles/trace.dir/Recorder.cpp.s
+
+trace/CMakeFiles/trace.dir/Recorder.cpp.o.requires:
+
+.PHONY : trace/CMakeFiles/trace.dir/Recorder.cpp.o.requires
+
+trace/CMakeFiles/trace.dir/Recorder.cpp.o.provides: trace/CMakeFiles/trace.dir/Recorder.cpp.o.requires
+	$(MAKE) -f trace/CMakeFiles/trace.dir/build.make trace/CMakeFiles/trace.dir/Recorder.cpp.o.provides.build
+.PHONY : trace/CMakeFiles/trace.dir/Recorder.cpp.o.provides
+
+trace/CMakeFiles/trace.dir/Recorder.cpp.o.provides.build: trace/CMakeFiles/trace.dir/Recorder.cpp.o
+
+
 # Object files for target trace
 trace_OBJECTS = \
 "CMakeFiles/trace.dir/BallAssociate.cpp.o" \
@@ -233,7 +257,8 @@ trace_OBJECTS = \
 "CMakeFiles/trace.dir/FitTrace.cpp.o" \
 "CMakeFiles/trace.dir/rgbd_camera.cpp.o" \
 "CMakeFiles/trace.dir/Trajectory.cpp.o" \
-"CMakeFiles/trace.dir/transformer.cpp.o"
+"CMakeFiles/trace.dir/transformer.cpp.o" \
+"CMakeFiles/trace.dir/Recorder.cpp.o"
 
 # External object files for target trace
 trace_EXTERNAL_OBJECTS =
@@ -245,9 +270,10 @@ trace/libtrace.a: trace/CMakeFiles/trace.dir/FitTrace.cpp.o
 trace/libtrace.a: trace/CMakeFiles/trace.dir/rgbd_camera.cpp.o
 trace/libtrace.a: trace/CMakeFiles/trace.dir/Trajectory.cpp.o
 trace/libtrace.a: trace/CMakeFiles/trace.dir/transformer.cpp.o
+trace/libtrace.a: trace/CMakeFiles/trace.dir/Recorder.cpp.o
 trace/libtrace.a: trace/CMakeFiles/trace.dir/build.make
 trace/libtrace.a: trace/CMakeFiles/trace.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libtrace.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libtrace.a"
 	cd /home/robocon/workspace/agent/cmake-build-debug/trace && $(CMAKE_COMMAND) -P CMakeFiles/trace.dir/cmake_clean_target.cmake
 	cd /home/robocon/workspace/agent/cmake-build-debug/trace && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/trace.dir/link.txt --verbose=$(VERBOSE)
 
@@ -263,6 +289,7 @@ trace/CMakeFiles/trace.dir/requires: trace/CMakeFiles/trace.dir/FitTrace.cpp.o.r
 trace/CMakeFiles/trace.dir/requires: trace/CMakeFiles/trace.dir/rgbd_camera.cpp.o.requires
 trace/CMakeFiles/trace.dir/requires: trace/CMakeFiles/trace.dir/Trajectory.cpp.o.requires
 trace/CMakeFiles/trace.dir/requires: trace/CMakeFiles/trace.dir/transformer.cpp.o.requires
+trace/CMakeFiles/trace.dir/requires: trace/CMakeFiles/trace.dir/Recorder.cpp.o.requires
 
 .PHONY : trace/CMakeFiles/trace.dir/requires
 

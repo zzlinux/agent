@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/trace.dir/rgbd_camera.cpp.o"
   "CMakeFiles/trace.dir/Trajectory.cpp.o"
   "CMakeFiles/trace.dir/transformer.cpp.o"
+  "CMakeFiles/trace.dir/Recorder.cpp.o"
   "libtrace.pdb"
   "libtrace.a"
 )

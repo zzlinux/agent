@@ -516,9 +516,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/robocon/workspace/agent/calibration/floor_fit_cloud.cpp">
-			<Option target="robocon"/>
-		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/cameraLocation/CameraController.cpp">
 			<Option target="camera"/>
 		</Unit>
@@ -530,6 +527,9 @@
 		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/cameraLocation/CameraModel.h">
 			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/main.cpp">
+			<Option target="robocon"/>
 		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/protocol/serialapp.cpp">
 			<Option target="protocol"/>
@@ -658,6 +658,12 @@
 			<Option target="trace"/>
 		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/trace/FitTrace.h">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/trace/Recorder.cpp">
+			<Option target="trace"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/trace/Recorder.h">
 			<Option target="trace"/>
 		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/trace/Trajectory.cpp">

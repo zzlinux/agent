@@ -17,6 +17,7 @@
 #include "rgbd_camera.h"
 #include "Trajectory.h"
 #include "transformer.h"
+#include "Recorder.h"
 
 #include "CameraController.h"
 
