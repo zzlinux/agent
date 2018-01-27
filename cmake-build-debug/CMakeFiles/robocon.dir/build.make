@@ -57,38 +57,38 @@ include CMakeFiles/robocon.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/robocon.dir/flags.make
 
-CMakeFiles/robocon.dir/main.cpp.o: CMakeFiles/robocon.dir/flags.make
-CMakeFiles/robocon.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robocon.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robocon.dir/main.cpp.o -c /home/robocon/workspace/agent/main.cpp
+CMakeFiles/robocon.dir/calibration/test2.cpp.o: CMakeFiles/robocon.dir/flags.make
+CMakeFiles/robocon.dir/calibration/test2.cpp.o: ../calibration/test2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robocon.dir/calibration/test2.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robocon.dir/calibration/test2.cpp.o -c /home/robocon/workspace/agent/calibration/test2.cpp
 
-CMakeFiles/robocon.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robocon.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/main.cpp > CMakeFiles/robocon.dir/main.cpp.i
+CMakeFiles/robocon.dir/calibration/test2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robocon.dir/calibration/test2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/calibration/test2.cpp > CMakeFiles/robocon.dir/calibration/test2.cpp.i
 
-CMakeFiles/robocon.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robocon.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/main.cpp -o CMakeFiles/robocon.dir/main.cpp.s
+CMakeFiles/robocon.dir/calibration/test2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robocon.dir/calibration/test2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/calibration/test2.cpp -o CMakeFiles/robocon.dir/calibration/test2.cpp.s
 
-CMakeFiles/robocon.dir/main.cpp.o.requires:
+CMakeFiles/robocon.dir/calibration/test2.cpp.o.requires:
 
-.PHONY : CMakeFiles/robocon.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/robocon.dir/calibration/test2.cpp.o.requires
 
-CMakeFiles/robocon.dir/main.cpp.o.provides: CMakeFiles/robocon.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/robocon.dir/main.cpp.o.provides
+CMakeFiles/robocon.dir/calibration/test2.cpp.o.provides: CMakeFiles/robocon.dir/calibration/test2.cpp.o.requires
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/test2.cpp.o.provides.build
+.PHONY : CMakeFiles/robocon.dir/calibration/test2.cpp.o.provides
 
-CMakeFiles/robocon.dir/main.cpp.o.provides.build: CMakeFiles/robocon.dir/main.cpp.o
+CMakeFiles/robocon.dir/calibration/test2.cpp.o.provides.build: CMakeFiles/robocon.dir/calibration/test2.cpp.o
 
 
 # Object files for target robocon
 robocon_OBJECTS = \
-"CMakeFiles/robocon.dir/main.cpp.o"
+"CMakeFiles/robocon.dir/calibration/test2.cpp.o"
 
 # External object files for target robocon
 robocon_EXTERNAL_OBJECTS =
 
-../bin/robocon: CMakeFiles/robocon.dir/main.cpp.o
+../bin/robocon: CMakeFiles/robocon.dir/calibration/test2.cpp.o
 ../bin/robocon: CMakeFiles/robocon.dir/build.make
 ../bin/robocon: thread/libthread.a
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_system.so
@@ -197,7 +197,7 @@ CMakeFiles/robocon.dir/build: ../bin/robocon
 
 .PHONY : CMakeFiles/robocon.dir/build
 
-CMakeFiles/robocon.dir/requires: CMakeFiles/robocon.dir/main.cpp.o.requires
+CMakeFiles/robocon.dir/requires: CMakeFiles/robocon.dir/calibration/test2.cpp.o.requires
 
 .PHONY : CMakeFiles/robocon.dir/requires
 

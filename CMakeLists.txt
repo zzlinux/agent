@@ -33,14 +33,13 @@ include_directories(
         ${EIGEN3_INCLUDE_DIR}
         ${Boost_INCLUDE_DIRS}
 )
-
 ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/trace)
 ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/cameraLocation)
 ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/radarLocation)
 ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/thread)
 ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/protocol)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES calibration/test2.cpp)
 add_executable(robocon ${SOURCE_FILES})
 target_link_libraries(robocon
         thread

@@ -11,7 +11,7 @@ using namespace cv;
 
 int main(int ac, char** av)
 {
-
+    /*
     string filename = "../calibration/test2.yml";
     { //write
         Mat R = Mat_<uchar>::eye(3, 3),
@@ -83,6 +83,21 @@ int main(int ac, char** av)
 
     cout << endl
          << "Tip: Open up " << filename << " with a text editor to see the serialized data." << endl;
-
+    */
+    FileStorage fs("../dataAnalyse/traces.yml",FileStorage::READ);
+    FileNode n;
+    n = fs["Time20180127-155421"];
+    float delta = n["delta"];
+    std::cout<<delta<<std::endl;
+    n = n["circle"];
+    FileNodeIterator it = n.begin();
+    for(;it!=n.end();it++ )
+    {
+        std::cout<<(double)*it<<std::endl;
+    }
+    //FileNodeIterator it;
+    //it = n.begin();
+    //n = *it;
     return 0;
+
 }
