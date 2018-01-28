@@ -9,4 +9,5 @@ target_link_libraries(thread
         camera
         protocol
         radar
+        apriltag
         )

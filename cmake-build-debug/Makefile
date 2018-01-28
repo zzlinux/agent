@@ -188,32 +188,45 @@ protocol/fast:
 	$(MAKE) -f protocol/CMakeFiles/protocol.dir/build.make protocol/CMakeFiles/protocol.dir/build
 .PHONY : protocol/fast
 
-calibration/test2.o: calibration/test2.cpp.o
+#=============================================================================
+# Target rules for targets named apriltag
 
-.PHONY : calibration/test2.o
+# Build rule for target.
+apriltag: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 apriltag
+.PHONY : apriltag
+
+# fast build rule for target.
+apriltag/fast:
+	$(MAKE) -f apriltag/CMakeFiles/apriltag.dir/build.make apriltag/CMakeFiles/apriltag.dir/build
+.PHONY : apriltag/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
 
 # target to build an object file
-calibration/test2.cpp.o:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/test2.cpp.o
-.PHONY : calibration/test2.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-calibration/test2.i: calibration/test2.cpp.i
+main.i: main.cpp.i
 
-.PHONY : calibration/test2.i
+.PHONY : main.i
 
 # target to preprocess a source file
-calibration/test2.cpp.i:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/test2.cpp.i
-.PHONY : calibration/test2.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-calibration/test2.s: calibration/test2.cpp.s
+main.s: main.cpp.s
 
-.PHONY : calibration/test2.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-calibration/test2.cpp.s:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/test2.cpp.s
-.PHONY : calibration/test2.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -229,9 +242,10 @@ help:
 	@echo "... radar"
 	@echo "... thread"
 	@echo "... protocol"
-	@echo "... calibration/test2.o"
-	@echo "... calibration/test2.i"
-	@echo "... calibration/test2.s"
+	@echo "... apriltag"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

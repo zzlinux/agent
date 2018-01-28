@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/robocon.dir/calibration/test2.cpp.o"
+  "CMakeFiles/robocon.dir/main.cpp.o"
   "../bin/robocon.pdb"
   "../bin/robocon"
 )

@@ -28,6 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../cameraLocation"
   "../radarLocation"
   "../protocol"
+  "../apriltag"
   "/usr/include/openni2"
   "/usr/local/include/pcl-1.8"
   "/usr/include/eigen3"
@@ -41,6 +42,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/DependInfo.cmake"
   "/home/robocon/workspace/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/DependInfo.cmake"
   "/home/robocon/workspace/agent/cmake-build-debug/radarLocation/CMakeFiles/radar.dir/DependInfo.cmake"
+  "/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

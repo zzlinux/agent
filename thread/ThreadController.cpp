@@ -24,9 +24,10 @@ namespace hitcrt
     }
     void ThreadController::run()
     {
-        createTraceThreads();
+        //createTraceThreads();
         //createCameraThreads();
         //createRadarThread();
+        createApriltagThreads();
         m_communicationThread = boost::thread(boost::bind(&ThreadController::m_communication,this));
         m_mutualThread = boost::thread(boost::bind(&ThreadController::m_mutual,this));
         //m_radarProcessThread.join();
@@ -49,6 +50,11 @@ namespace hitcrt
     {
         radar = std::unique_ptr<RadarController>(new RadarController);
         m_radarProcessThread = boost::thread(boost::bind(&ThreadController::m_radarProcess,this));
+    }
+    void ThreadController::createApriltagThreads()
+    {
+        apriltag = std::unique_ptr<demo>(new demo);
+        m_apriltagProcessThread = boost::thread(boost::bind(&ThreadController::m_apriltagProcess,this));
     }
     void ThreadController::m_communication()
     {
@@ -303,5 +309,31 @@ namespace hitcrt
             }
             position.clear();
         }
+    }
+    void ThreadController::m_apriltagReadFrame()
+    {
+
+    }
+    void ThreadController::m_apriltagProcess()
+    {
+        std::cout <<"apriltagThread id: "<<m_apriltagProcessThread.get_id()<<std::endl;
+        apriltag->setup();
+        if (apriltag->isVideo()) {
+            cout << "Processing video" << endl;
+
+            // setup image source, window for drawing, serial port...
+            apriltag->setupVideo();
+
+            // the actual processing loop where tags are detected and visualized
+            apriltag->loop();
+
+        } else {
+            cout << "Processing image" << endl;
+
+            // process single image
+            apriltag->loadImages();
+
+        }
+
     }
 }

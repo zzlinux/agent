@@ -16,3 +16,6 @@
 /home/robocon/workspace/agent/cmake-build-debug/protocol/CMakeFiles/rebuild_cache.dir
 /home/robocon/workspace/agent/cmake-build-debug/protocol/CMakeFiles/edit_cache.dir
 /home/robocon/workspace/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir
+/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/rebuild_cache.dir
+/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/edit_cache.dir
+/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir

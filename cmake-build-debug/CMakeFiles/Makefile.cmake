@@ -36,6 +36,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/robocon/Documents/software/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Platform/UnixPaths.cmake"
   "/home/robocon/Documents/software/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
+  "../apriltag/CMakeLists.txt"
   "../cameraLocation/CMakeLists.txt"
   "CMakeFiles/3.8.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeCXXCompiler.cmake"
@@ -77,6 +78,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "radarLocation/CMakeFiles/CMakeDirectoryInformation.cmake"
   "thread/CMakeFiles/CMakeDirectoryInformation.cmake"
   "protocol/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "apriltag/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -87,4 +89,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "radarLocation/CMakeFiles/radar.dir/DependInfo.cmake"
   "thread/CMakeFiles/thread.dir/DependInfo.cmake"
   "protocol/CMakeFiles/protocol.dir/DependInfo.cmake"
+  "apriltag/CMakeFiles/apriltag.dir/DependInfo.cmake"
   )

@@ -20,10 +20,10 @@
 #include "Recorder.h"
 
 #include "CameraController.h"
-
 #include "RadarController.h"
-
 #include "serialapp.h"
+#include "lib/Demo.hpp"
+
 namespace hitcrt {
     class ThreadController {
     public:
@@ -32,14 +32,19 @@ namespace hitcrt {
         void init();
         void run();
     private:
+        std::list<cv::Mat> depthFrameBuff;
+        std::list<cv::Mat> colorFrameBuff;
+
         boost::atomic_char m_radarMode;
         boost::atomic_char m_traceMode;
         boost::atomic_char m_throwArea;
+        boost::shared_mutex kinectlock;
 
         std::unique_ptr<SerialApp> serial;
         std::unique_ptr<RGBDcamera> cap;
         std::unique_ptr<CameraController> camera;
         std::unique_ptr<RadarController> radar;
+        std::unique_ptr<demo> apriltag;
 
         boost::thread m_communicationThread;
         boost::thread m_mutualThread;
@@ -48,12 +53,13 @@ namespace hitcrt {
         boost::thread m_cameraDataThread;
         boost::thread m_cameraProcessThread;
         boost::thread m_radarProcessThread;
-
-        boost::shared_mutex kinectlock;
+        boost::thread m_apriltagDataThread;
+        boost::thread m_apriltagProcessThread;
 
         void createTraceThreads();
         void createCameraThreads();
         void createRadarThread();
+        void createApriltagThreads();
 
         void m_communication();
         void m_mutual();
@@ -62,9 +68,8 @@ namespace hitcrt {
         void m_cameraReadFrame();
         void m_cameraProcess();
         void m_radarProcess();
-
-        std::list<cv::Mat> depthFrameBuff;
-        std::list<cv::Mat> colorFrameBuff;
+        void m_apriltagReadFrame();
+        void m_apriltagProcess();
     };
 }
 

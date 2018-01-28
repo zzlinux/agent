@@ -68,9 +68,10 @@ CMakeFiles/robocon.dir/all: cameraLocation/CMakeFiles/camera.dir/all
 CMakeFiles/robocon.dir/all: radarLocation/CMakeFiles/radar.dir/all
 CMakeFiles/robocon.dir/all: thread/CMakeFiles/thread.dir/all
 CMakeFiles/robocon.dir/all: protocol/CMakeFiles/protocol.dir/all
+CMakeFiles/robocon.dir/all: apriltag/CMakeFiles/apriltag.dir/all
 	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/depend
 	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target robocon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=40,41 "Built target robocon"
 .PHONY : CMakeFiles/robocon.dir/all
 
 # Include target in all.
@@ -80,7 +81,7 @@ all: CMakeFiles/robocon.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/robocon.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles 53
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/robocon.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/robocon.dir/rule
@@ -125,7 +126,7 @@ trace/preinstall:
 trace/CMakeFiles/trace.dir/all:
 	$(MAKE) -f trace/CMakeFiles/trace.dir/build.make trace/CMakeFiles/trace.dir/depend
 	$(MAKE) -f trace/CMakeFiles/trace.dir/build.make trace/CMakeFiles/trace.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35 "Built target trace"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=45,46,47,48,49,50,51,52,53 "Built target trace"
 .PHONY : trace/CMakeFiles/trace.dir/all
 
 # Include target in all.
@@ -180,7 +181,7 @@ cameraLocation/preinstall:
 cameraLocation/CMakeFiles/camera.dir/all:
 	$(MAKE) -f cameraLocation/CMakeFiles/camera.dir/build.make cameraLocation/CMakeFiles/camera.dir/depend
 	$(MAKE) -f cameraLocation/CMakeFiles/camera.dir/build.make cameraLocation/CMakeFiles/camera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target camera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=19,20,21 "Built target camera"
 .PHONY : cameraLocation/CMakeFiles/camera.dir/all
 
 # Include target in all.
@@ -235,7 +236,7 @@ radarLocation/preinstall:
 radarLocation/CMakeFiles/radar.dir/all:
 	$(MAKE) -f radarLocation/CMakeFiles/radar.dir/build.make radarLocation/CMakeFiles/radar.dir/depend
 	$(MAKE) -f radarLocation/CMakeFiles/radar.dir/build.make radarLocation/CMakeFiles/radar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target radar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=26,27,28,29,30,31,32,33,34,35,36,37,38,39 "Built target radar"
 .PHONY : radarLocation/CMakeFiles/radar.dir/all
 
 # Include target in all.
@@ -291,9 +292,10 @@ thread/CMakeFiles/thread.dir/all: trace/CMakeFiles/trace.dir/all
 thread/CMakeFiles/thread.dir/all: cameraLocation/CMakeFiles/camera.dir/all
 thread/CMakeFiles/thread.dir/all: radarLocation/CMakeFiles/radar.dir/all
 thread/CMakeFiles/thread.dir/all: protocol/CMakeFiles/protocol.dir/all
+thread/CMakeFiles/thread.dir/all: apriltag/CMakeFiles/apriltag.dir/all
 	$(MAKE) -f thread/CMakeFiles/thread.dir/build.make thread/CMakeFiles/thread.dir/depend
 	$(MAKE) -f thread/CMakeFiles/thread.dir/build.make thread/CMakeFiles/thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=24,25,26 "Built target thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=42,43,44 "Built target thread"
 .PHONY : thread/CMakeFiles/thread.dir/all
 
 # Include target in all.
@@ -303,7 +305,7 @@ all: thread/CMakeFiles/thread.dir/all
 
 # Build rule for subdir invocation for target.
 thread/CMakeFiles/thread.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles 33
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles 51
 	$(MAKE) -f CMakeFiles/Makefile2 thread/CMakeFiles/thread.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles 0
 .PHONY : thread/CMakeFiles/thread.dir/rule
@@ -348,7 +350,7 @@ protocol/preinstall:
 protocol/CMakeFiles/protocol.dir/all:
 	$(MAKE) -f protocol/CMakeFiles/protocol.dir/build.make protocol/CMakeFiles/protocol.dir/depend
 	$(MAKE) -f protocol/CMakeFiles/protocol.dir/build.make protocol/CMakeFiles/protocol.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7 "Built target protocol"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=22,23,24,25 "Built target protocol"
 .PHONY : protocol/CMakeFiles/protocol.dir/all
 
 # Include target in all.
@@ -375,6 +377,61 @@ protocol/CMakeFiles/protocol.dir/clean:
 
 # clean rule for target.
 clean: protocol/CMakeFiles/protocol.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory apriltag
+
+# Convenience name for "all" pass in the directory.
+apriltag/all: apriltag/CMakeFiles/apriltag.dir/all
+
+.PHONY : apriltag/all
+
+# Convenience name for "clean" pass in the directory.
+apriltag/clean: apriltag/CMakeFiles/apriltag.dir/clean
+
+.PHONY : apriltag/clean
+
+# Convenience name for "preinstall" pass in the directory.
+apriltag/preinstall:
+
+.PHONY : apriltag/preinstall
+
+#=============================================================================
+# Target rules for target apriltag/CMakeFiles/apriltag.dir
+
+# All Build rule for target.
+apriltag/CMakeFiles/apriltag.dir/all:
+	$(MAKE) -f apriltag/CMakeFiles/apriltag.dir/build.make apriltag/CMakeFiles/apriltag.dir/depend
+	$(MAKE) -f apriltag/CMakeFiles/apriltag.dir/build.make apriltag/CMakeFiles/apriltag.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target apriltag"
+.PHONY : apriltag/CMakeFiles/apriltag.dir/all
+
+# Include target in all.
+all: apriltag/CMakeFiles/apriltag.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+apriltag/CMakeFiles/apriltag.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles 18
+	$(MAKE) -f CMakeFiles/Makefile2 apriltag/CMakeFiles/apriltag.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocon/workspace/agent/cmake-build-debug/CMakeFiles 0
+.PHONY : apriltag/CMakeFiles/apriltag.dir/rule
+
+# Convenience name for target.
+apriltag: apriltag/CMakeFiles/apriltag.dir/rule
+
+.PHONY : apriltag
+
+# clean rule for target.
+apriltag/CMakeFiles/apriltag.dir/clean:
+	$(MAKE) -f apriltag/CMakeFiles/apriltag.dir/build.make apriltag/CMakeFiles/apriltag.dir/clean
+.PHONY : apriltag/CMakeFiles/apriltag.dir/clean
+
+# clean rule for target.
+clean: apriltag/CMakeFiles/apriltag.dir/clean
 
 .PHONY : clean
 

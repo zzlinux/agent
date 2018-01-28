@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robocon/workspace/agent/calibration/test2.cpp" "/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles/robocon.dir/calibration/test2.cpp.o"
+  "/home/robocon/workspace/agent/main.cpp" "/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles/robocon.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -27,6 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../cameraLocation"
   "../radarLocation"
   "../protocol"
+  "../apriltag"
   "/usr/include/openni2"
   "/usr/local/include/pcl-1.8"
   "/usr/include/eigen3"
@@ -41,6 +42,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/DependInfo.cmake"
   "/home/robocon/workspace/agent/cmake-build-debug/protocol/CMakeFiles/protocol.dir/DependInfo.cmake"
   "/home/robocon/workspace/agent/cmake-build-debug/radarLocation/CMakeFiles/radar.dir/DependInfo.cmake"
+  "/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -39,6 +39,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/robocon/workspace/agent/cmake-build-debug/radarLocation/cmake_install.cmake")
   include("/home/robocon/workspace/agent/cmake-build-debug/thread/cmake_install.cmake")
   include("/home/robocon/workspace/agent/cmake-build-debug/protocol/cmake_install.cmake")
+  include("/home/robocon/workspace/agent/cmake-build-debug/apriltag/cmake_install.cmake")
 
 endif()
 

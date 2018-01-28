@@ -56,6 +56,17 @@ thread/CMakeFiles/thread.dir/Param.cpp.o
  /usr/local/include/opencv2/videoio.hpp
  /usr/local/include/opencv2/videoio/videoio_c.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o
+ ../apriltag/lib/Demo.hpp
+ ../apriltag/lib/FloatImage.h
+ ../apriltag/lib/Serial.h
+ ../apriltag/lib/Tag16h5.h
+ ../apriltag/lib/Tag25h7.h
+ ../apriltag/lib/Tag25h9.h
+ ../apriltag/lib/Tag36h11.h
+ ../apriltag/lib/Tag36h9.h
+ ../apriltag/lib/TagDetection.h
+ ../apriltag/lib/TagDetector.h
+ ../apriltag/lib/TagFamily.h
  ../cameraLocation/CameraController.h
  ../cameraLocation/CameraModel.h
  ../protocol/serialapp.h

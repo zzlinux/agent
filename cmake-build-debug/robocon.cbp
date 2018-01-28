@@ -5,7 +5,7 @@
 		<Option title="robocon"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\usr\local\share\pcl-1.8\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\vtk-5.8\;CMake Files\..\..\..\..\usr\lib\vtk-5.8\CMake\;CMake Files\cmake_modules\;CMake Files\trace\;CMake Files\cameraLocation\;CMake Files\radarLocation\;CMake Files\thread\;CMake Files\protocol\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\usr\local\share\pcl-1.8\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\vtk-5.8\;CMake Files\..\..\..\..\usr\lib\vtk-5.8\CMake\;CMake Files\cmake_modules\;CMake Files\trace\;CMake Files\cameraLocation\;CMake Files\radarLocation\;CMake Files\thread\;CMake Files\protocol\;CMake Files\apriltag\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug"/>
@@ -57,6 +57,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -97,6 +98,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -137,6 +139,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -177,6 +180,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -217,6 +221,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -257,6 +262,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -297,6 +303,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -337,6 +344,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -377,6 +385,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -417,6 +426,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -457,6 +467,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -496,6 +507,7 @@
 					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
 					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
 					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -515,9 +527,220 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="apriltag">
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/apriltag/libapriltag.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/apriltag"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/agent/trace"/>
+					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 apriltag"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="apriltag/fast">
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/apriltag/libapriltag.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/apriltag"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/agent/trace"/>
+					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 apriltag/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
-		<Unit filename="/home/robocon/workspace/agent/calibration/test2.cpp">
-			<Option target="robocon"/>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/ApriltagController.cpp">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/ApriltagController.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Demo.cpp">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Demo.hpp">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Edge.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Edge.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/FloatImage.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/FloatImage.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GLine2D.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GLine2D.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GLineSegment2D.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GLineSegment2D.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Gaussian.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Gaussian.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GrayModel.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GrayModel.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Gridder.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Homography33.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Homography33.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/MathUtil.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/MathUtil.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Quad.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Quad.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Segment.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Segment.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Serial.cpp">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Serial.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag16h5.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag16h5_other.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag25h7.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag25h9.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag36h11.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag36h11_other.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag36h9.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagDetection.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagDetection.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagDetector.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagDetector.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagFamily.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagFamily.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/UnionFindSimple.cc">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/UnionFindSimple.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/XYWeight.h">
+			<Option target="apriltag"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/pch.h">
+			<Option target="apriltag"/>
 		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/cameraLocation/CameraController.cpp">
 			<Option target="camera"/>
@@ -530,6 +753,9 @@
 		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/cameraLocation/CameraModel.h">
 			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/main.cpp">
+			<Option target="robocon"/>
 		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/protocol/serialapp.cpp">
 			<Option target="protocol"/>
@@ -788,6 +1014,9 @@
 		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/protocol/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\protocol\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/apriltag/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apriltag\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
