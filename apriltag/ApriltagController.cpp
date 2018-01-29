@@ -33,65 +33,13 @@ namespace hitcrt
                                  m_gain(-1),
                                  m_brightness(-1),
                                  m_deviceId(0)
-    {}
-    ApriltagController::~ApriltagController()
-    {}
-
-    double ApriltagController::tic() {
-        struct timeval t;
-        gettimeofday(&t, NULL);
-        return ((double)t.tv_sec + ((double)t.tv_usec)/1000000.);
-    }
-
-    inline double ApriltagController::standardRad(double t) {
-        if (t >= 0.) {
-            t = fmod(t+PI, TWOPI) - PI;
-        } else {
-            t = fmod(t-PI, -TWOPI) + PI;
-        }
-        return t;
-    }
-
-    void ApriltagController::wRo_to_euler(const Eigen::Matrix3d& wRo, double& yaw, double& pitch, double& roll) {
-        yaw = standardRad(atan2(wRo(1,0), wRo(0,0)));
-        double c = cos(yaw);
-        double s = sin(yaw);
-        pitch = standardRad(atan2(-wRo(2,0), wRo(0,0)*c + wRo(1,0)*s));
-        roll  = standardRad(atan2(wRo(0,2)*s - wRo(1,2)*c, -wRo(0,1)*s + wRo(1,1)*c));
-    }
-
-
-    void ApriltagController::setTagCodes(string s) {
-        if (s=="16h5") {
-            m_tagCodes = AprilTags::tagCodes16h5;
-        } else if (s=="25h7") {
-            m_tagCodes = AprilTags::tagCodes25h7;
-        } else if (s=="25h9") {
-            m_tagCodes = AprilTags::tagCodes25h9;
-        } else if (s=="36h9") {
-            m_tagCodes = AprilTags::tagCodes36h9;
-        } else if (s=="36h11") {
-            m_tagCodes = AprilTags::tagCodes36h11;
-        } else {
-            cout << "Invalid tag family specified" << endl;
-            exit(1);
-        }
-    }
-
-
-    void ApriltagController::setup() {
+    {
         m_tagDetector = new AprilTags::TagDetector(m_tagCodes);
 
         // prepare window for drawing the camera images
         if (m_draw) {
             cv::namedWindow(windowName, 1);
         }
-    }
-
-
-    void ApriltagController::setupVideo() {
-
-
         // find and open a USB camera (built in laptop camera, web cam etc)
         m_cap = cv::VideoCapture(m_deviceId);
         if(!m_cap.isOpened()) {
@@ -106,7 +54,23 @@ namespace hitcrt
              << m_cap.get(CV_CAP_PROP_FRAME_HEIGHT) << endl;
 
     }
-
+    ApriltagController::~ApriltagController()
+    {}
+    inline double ApriltagController::standardRad(double t) {
+        if (t >= 0.) {
+            t = fmod(t+PI, TWOPI) - PI;
+        } else {
+            t = fmod(t-PI, -TWOPI) + PI;
+        }
+        return t;
+    }
+    void ApriltagController::wRo_to_euler(const Eigen::Matrix3d& wRo, double& yaw, double& pitch, double& roll) {
+        yaw = standardRad(atan2(wRo(1,0), wRo(0,0)));
+        double c = cos(yaw);
+        double s = sin(yaw);
+        pitch = standardRad(atan2(-wRo(2,0), wRo(0,0)*c + wRo(1,0)*s));
+        roll  = standardRad(atan2(wRo(0,2)*s - wRo(1,2)*c, -wRo(0,1)*s + wRo(1,1)*c));
+    }
     void ApriltagController::print_detection(AprilTags::TagDetection& detection) {
         cout << "  Id: " << detection.id
              << " (Hamming: " << detection.hammingDistance << ")";
@@ -145,87 +109,6 @@ namespace hitcrt
         // this relative pose is very non-Gaussian; see iSAM source code
         // for suitable factors.
     }
-
-    void ApriltagController::processImage(cv::Mat& image, cv::Mat& image_gray) {
-        // alternative way is to grab, then retrieve; allows for
-        // multiple grab when processing below frame rate - v4l keeps a
-        // number of frames buffered, which can lead to significant lag
-        //      m_cap.grab();
-        //      m_cap.retrieve(image);
-
-        // detect April tags (requires a gray scale image)
-        cv::cvtColor(image, image_gray, CV_BGR2GRAY);
-        double t0;
-        if (m_timing) {
-            t0 = tic();
-        }
-        vector<AprilTags::TagDetection> detections = m_tagDetector->extractTags(image_gray);
-        if (m_timing) {
-            double dt = tic()-t0;
-            cout << "Extracting tags took " << dt << " seconds." << endl;
-        }
-
-        // print out each detection
-        cout << detections.size() << " tags detected:" << endl;
-        for (int i=0; i<detections.size(); i++) {
-            print_detection(detections[i]);
-        }
-
-        // show the current image including any detections
-        if (m_draw) {
-            for (int i=0; i<detections.size(); i++) {
-                // also highlight in the image
-                detections[i].draw(image);
-            }
-            imshow(windowName, image); // OpenCV call
-        }
-    }
-
-// Load and process a single image
-    void ApriltagController::loadImages() {
-        cv::Mat image;
-        cv::Mat image_gray;
-
-        for (list<string>::iterator it=m_imgNames.begin(); it!=m_imgNames.end(); it++) {
-            image = cv::imread(*it); // load image with opencv
-            processImage(image, image_gray);
-            while (cv::waitKey(100) == -1) {}
-        }
-    }
-
-// Video or image processing?
-    bool ApriltagController::isVideo() {
-        return m_imgNames.empty();
-    }
-
-// The processing loop where images are retrieved, tags detected,
-// and information about detections generated
-    void ApriltagController::loop() {
-
-        cv::Mat image;
-        cv::Mat image_gray;
-
-        int frame = 0;
-        double last_t = tic();
-        while (true) {
-
-            // capture frame
-            m_cap >> image;
-
-            processImage(image, image_gray);
-
-            // print out the frame rate at which image frames are being processed
-            frame++;
-            if (frame % 10 == 0) {
-                double t = tic();
-                cout << "  " << 10./(t-last_t) << " fps" << endl;
-                last_t = t;
-            }
-
-            // exit if any key is pressed
-            if (cv::waitKey(1) >= 0) break;
-        }
-    }
     void ApriltagController::readFrameFromCamera()
     {
         boost::unique_lock<boost::shared_mutex> writelock(cameralock);
@@ -259,7 +142,6 @@ namespace hitcrt
         }
         // exit if any key is pressed
         if (cv::waitKey(1) >= 0) return;
-
     }
 }
 

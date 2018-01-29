@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../apriltag/lib/Demo.hpp
+../apriltag/ApriltagController.h
 iostream
 -
 cstring
@@ -22,7 +22,9 @@ Eigen/Core
 Eigen/Dense
 -
 opencv2/opencv.hpp
-../apriltag/lib/opencv2/opencv.hpp
+-
+boost/thread.hpp
+-
 libv4l2.h
 -
 linux/videodev2.h
@@ -31,20 +33,18 @@ fcntl.h
 -
 errno.h
 -
-TagDetector.h
+lib/TagDetector.h
 ../apriltag/lib/TagDetector.h
-Tag16h5.h
+lib/Tag16h5.h
 ../apriltag/lib/Tag16h5.h
-Tag25h7.h
+lib/Tag25h7.h
 ../apriltag/lib/Tag25h7.h
-Tag25h9.h
+lib/Tag25h9.h
 ../apriltag/lib/Tag25h9.h
-Tag36h9.h
+lib/Tag36h9.h
 ../apriltag/lib/Tag36h9.h
-Tag36h11.h
+lib/Tag36h11.h
 ../apriltag/lib/Tag36h11.h
-Serial.h
-../apriltag/lib/Serial.h
 cmath
 -
 
@@ -52,10 +52,6 @@ cmath
 algorithm
 -
 vector
--
-
-../apriltag/lib/Serial.h
-string
 -
 
 ../apriltag/lib/Tag16h5.h
@@ -327,8 +323,8 @@ RadarController.h
 /home/robocon/workspace/agent/thread/RadarController.h
 serialapp.h
 /home/robocon/workspace/agent/thread/serialapp.h
-lib/Demo.hpp
-/home/robocon/workspace/agent/thread/lib/Demo.hpp
+ApriltagController.h
+/home/robocon/workspace/agent/thread/ApriltagController.h
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

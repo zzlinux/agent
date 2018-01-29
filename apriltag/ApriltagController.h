@@ -63,16 +63,9 @@ namespace hitcrt
         double tic();
         inline double standardRad(double t);
         void wRo_to_euler(const Eigen::Matrix3d& wRo, double& yaw, double& pitch, double& roll);
-        void setTagCodes(string s);
-        void setup();
         void readFrameFromCamera();
         bool getFrame();
         void print_detection(AprilTags::TagDetection& detection);
-        void processImage(cv::Mat& image, cv::Mat& image_gray);
-        void loadImages();
-        bool isVideo();
-        void setupVideo();
-        void loop();
         void apply();
     };
 }

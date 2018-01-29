@@ -53,8 +53,9 @@ namespace hitcrt
     }
     void ThreadController::createApriltagThreads()
     {
-        apriltag = std::unique_ptr<demo>(new demo);
+        apriltag = std::unique_ptr<ApriltagController>(new ApriltagController);
         m_apriltagProcessThread = boost::thread(boost::bind(&ThreadController::m_apriltagProcess,this));
+        m_apriltagDataThread = boost::thread(boost::bind(&ThreadController::m_apriltagReadFrame,this));
     }
     void ThreadController::m_communication()
     {
@@ -312,28 +313,26 @@ namespace hitcrt
     }
     void ThreadController::m_apriltagReadFrame()
     {
-
+        std::cout<<"apriltagDataThread id "<<m_apriltagDataThread.get_id()<<std::endl;
+        while (true)
+        {
+            boost::this_thread::interruption_point();
+            struct timeval st,en;
+            gettimeofday(&st,NULL);
+            apriltag->readFrameFromCamera();
+            gettimeofday(&en,NULL);
+            boost::this_thread::sleep(boost::posix_time::milliseconds(1));
+            //std::cout<<"camera write time is "<<(en.tv_usec-st.tv_usec)/1000<<" ms"<<std::endl;
+        }
     }
     void ThreadController::m_apriltagProcess()
     {
-        std::cout <<"apriltagThread id: "<<m_apriltagProcessThread.get_id()<<std::endl;
-        apriltag->setup();
-        if (apriltag->isVideo()) {
-            cout << "Processing video" << endl;
-
-            // setup image source, window for drawing, serial port...
-            apriltag->setupVideo();
-
-            // the actual processing loop where tags are detected and visualized
-            apriltag->loop();
-
-        } else {
-            cout << "Processing image" << endl;
-
-            // process single image
-            apriltag->loadImages();
-
+        std::cout <<"apriltagProcessThread id: "<<m_apriltagProcessThread.get_id()<<std::endl;
+        while (true)
+        {
+            boost::this_thread::interruption_point();
+            apriltag->getFrame();
+            apriltag->apply();
         }
-
     }
 }

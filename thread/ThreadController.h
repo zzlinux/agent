@@ -22,7 +22,7 @@
 #include "CameraController.h"
 #include "RadarController.h"
 #include "serialapp.h"
-#include "lib/Demo.hpp"
+#include "ApriltagController.h"
 
 namespace hitcrt {
     class ThreadController {
@@ -44,7 +44,7 @@ namespace hitcrt {
         std::unique_ptr<RGBDcamera> cap;
         std::unique_ptr<CameraController> camera;
         std::unique_ptr<RadarController> radar;
-        std::unique_ptr<demo> apriltag;
+        std::unique_ptr<ApriltagController> apriltag;
 
         boost::thread m_communicationThread;
         boost::thread m_mutualThread;

@@ -55,9 +55,8 @@ thread/CMakeFiles/thread.dir/Param.cpp.o: /usr/local/include/opencv2/video/track
 thread/CMakeFiles/thread.dir/Param.cpp.o: /usr/local/include/opencv2/videoio.hpp
 thread/CMakeFiles/thread.dir/Param.cpp.o: /usr/local/include/opencv2/videoio/videoio_c.h
 
-thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../apriltag/lib/Demo.hpp
+thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../apriltag/ApriltagController.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../apriltag/lib/FloatImage.h
-thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../apriltag/lib/Serial.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../apriltag/lib/Tag16h5.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../apriltag/lib/Tag25h7.h
 thread/CMakeFiles/thread.dir/ThreadController.cpp.o: ../apriltag/lib/Tag25h9.h
