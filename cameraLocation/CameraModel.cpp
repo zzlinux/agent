@@ -10,7 +10,7 @@ namespace hitcrt
     {
         cap = cv::VideoCapture(cameraid);
         assert(cap.isOpened());
-        cv::FileStorage fs(cv::String("../param.yaml"), cv::FileStorage::READ);
+        cv::FileStorage fs(cv::String("out_camera_data.yml"), cv::FileStorage::READ);
         assert(fs.isOpened());
         cv::Mat intrinsic,coeff;
         fs["camera_matrix"]>>intrinsic;

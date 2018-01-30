@@ -2,13 +2,13 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="robocon" targetName="protocol" />
-      <config projectName="robocon" targetName="robocon" />
       <config projectName="robocon" targetName="apriltag" />
-      <config projectName="robocon" targetName="camera" />
-      <config projectName="robocon" targetName="radar" />
       <config projectName="robocon" targetName="thread" />
+      <config projectName="robocon" targetName="camera" />
+      <config projectName="robocon" targetName="robocon" />
+      <config projectName="robocon" targetName="protocol" />
       <config projectName="robocon" targetName="trace" />
+      <config projectName="robocon" targetName="radar" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -18,26 +18,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56f8f48e-4b3b-40dc-a959-6b84e8c51aa4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/calibration/fcxy.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/robocon" afterPath="$PROJECT_DIR$/bin/robocon" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/apriltag/libapriltag.a" afterPath="$PROJECT_DIR$/cmake-build-debug/apriltag/libapriltag.a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/calibration/calibration.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/calibration/calibration.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/libcamera.a" afterPath="$PROJECT_DIR$/cmake-build-debug/cameraLocation/libcamera.a" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/ThreadController.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/ThreadController.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/thread/libthread.a" afterPath="$PROJECT_DIR$/cmake-build-debug/thread/libthread.a" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apriltag/ApriltagController.cpp" afterPath="$PROJECT_DIR$/apriltag/ApriltagController.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apriltag/ApriltagController.h" afterPath="$PROJECT_DIR$/apriltag/ApriltagController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/out_camera_data.yml" afterPath="$PROJECT_DIR$/bin/out_camera_data.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calibration/calibration.cpp" afterPath="$PROJECT_DIR$/calibration/calibration.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cameraLocation/CameraModel.cpp" afterPath="$PROJECT_DIR$/cameraLocation/CameraModel.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/cmake_clean.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/depend.internal" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/thread/CMakeFiles/thread.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/robocon.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/robocon.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/robocon.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/param.yaml" afterPath="$PROJECT_DIR$/param.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thread/ThreadController.cpp" afterPath="$PROJECT_DIR$/thread/ThreadController.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thread/ThreadController.h" afterPath="$PROJECT_DIR$/thread/ThreadController.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +55,8 @@
       <file leaf-file-name="ThreadController.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thread/ThreadController.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5562">
-              <caret line="309" column="12" lean-forward="false" selection-start-line="309" selection-start-column="12" selection-end-line="309" selection-end-column="12" />
+            <state relative-caret-position="300">
+              <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
               <folding>
                 <element signature="e#40#69#0" expanded="true" />
               </folding>
@@ -61,55 +64,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApriltagController.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apriltag/ApriltagController.cpp">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="984">
-              <caret line="140" column="26" lean-forward="false" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
-              <folding>
-                <element signature="e#41#72#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="379">
+              <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apriltag/lib/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thread/ThreadController.h">
+      <file leaf-file-name="calibration.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calibration/calibration.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+              <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apriltag/CMakeLists.txt">
+      <file leaf-file-name="param.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/param.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="300">
+              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cameraLocation/CameraController.h">
+      <file leaf-file-name="fcxy.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calibration/fcxy.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="108">
+              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CameraModel.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cameraLocation/CameraModel.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -118,45 +117,39 @@
       <file leaf-file-name="CameraController.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cameraLocation/CameraController.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="414">
+              <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Demo.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apriltag/lib/Demo.cpp">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cameraLocation/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApriltagController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apriltag/ApriltagController.h">
+      <file leaf-file-name="out_camera_data.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/out_camera_data.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding>
-                <element signature="e#116#135#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Demo.hpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apriltag/lib/Demo.hpp">
+      <file leaf-file-name="floor_fit_cloud.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/calibration/floor_fit_cloud.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="342">
+              <caret line="206" column="18" lean-forward="false" selection-start-line="206" selection-start-column="18" selection-end-line="206" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,14 +184,10 @@
         <option value="$PROJECT_DIR$/trace/BallDetector.cpp" />
         <option value="$PROJECT_DIR$/cameraLocation/CameraController.h" />
         <option value="$PROJECT_DIR$/cameraLocation/CameraModel.h" />
-        <option value="$PROJECT_DIR$/cameraLocation/CameraController.cpp" />
-        <option value="$PROJECT_DIR$/cameraLocation/CameraModel.cpp" />
-        <option value="$PROJECT_DIR$/calibration/calibration.cpp" />
         <option value="$PROJECT_DIR$/calibration/fitfloor.cpp" />
         <option value="$PROJECT_DIR$/calibration/nirecorder.cpp" />
         <option value="$PROJECT_DIR$/calibration/floor_fit_cloud.cpp" />
         <option value="$PROJECT_DIR$/trace/CircleDetector.cpp" />
-        <option value="$PROJECT_DIR$/param.yaml" />
         <option value="$PROJECT_DIR$/calibration/test.yml" />
         <option value="$PROJECT_DIR$/calibration/test.cpp" />
         <option value="$PROJECT_DIR$/dataAnalyse/Recorder.h" />
@@ -211,11 +200,16 @@
         <option value="$PROJECT_DIR$/dataAnalyse/traces.yml" />
         <option value="$PROJECT_DIR$/thread/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/apriltag/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/thread/ThreadController.h" />
         <option value="$PROJECT_DIR$/apriltag/ApriltagController.h" />
-        <option value="$PROJECT_DIR$/thread/ThreadController.cpp" />
         <option value="$PROJECT_DIR$/apriltag/ApriltagController.cpp" />
+        <option value="$PROJECT_DIR$/calibration/fcxy.txt" />
+        <option value="$PROJECT_DIR$/thread/ThreadController.cpp" />
+        <option value="$PROJECT_DIR$/param.yaml" />
+        <option value="$PROJECT_DIR$/calibration/calibration.cpp" />
+        <option value="$PROJECT_DIR$/cameraLocation/CameraModel.cpp" />
+        <option value="$PROJECT_DIR$/cameraLocation/CameraController.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -256,12 +250,17 @@
             <path>
               <item name="robocon" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="agent" type="462c0819:PsiDirectoryNode" />
-              <item name="apriltag" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="robocon" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="agent" type="462c0819:PsiDirectoryNode" />
-              <item name="thread" type="462c0819:PsiDirectoryNode" />
+              <item name="calibration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robocon" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="agent" type="462c0819:PsiDirectoryNode" />
+              <item name="cameraLocation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,16 +270,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../slambook/ch3/useEigen" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apriltag/lib" />
-      <recent name="$PROJECT_DIR$/calibration" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/trace" />
       <recent name="$PROJECT_DIR$/calibration" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/calibration" />
+      <recent name="$PROJECT_DIR$/apriltag/lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -385,30 +384,32 @@
       <workItem from="1517099285039" duration="4178000" />
       <workItem from="1517105861753" duration="6009000" />
       <workItem from="1517130152994" duration="7651000" />
-      <workItem from="1517184131231" duration="852000" />
+      <workItem from="1517184131231" duration="2716000" />
+      <workItem from="1517214262455" duration="332000" />
+      <workItem from="1517308191975" duration="5338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149147000" />
+    <option name="totallyTimeSpent" value="156681000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1857" height="1092" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21132076" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22479784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2965235" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1380368" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3793456" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2965235" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -430,20 +431,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/trace/transformer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trace/transformer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trace/BallAssociate.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
@@ -507,20 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cameraLocation/CameraModel.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="99" column="33" lean-forward="false" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/out_camera_data.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -539,20 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3060">
           <caret line="170" column="6" lean-forward="false" selection-start-line="170" selection-start-column="6" selection-end-line="170" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calibration/floor_fit_cloud.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4194">
-          <caret line="233" column="37" lean-forward="false" selection-start-line="233" selection-start-column="37" selection-end-line="233" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/param.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -703,20 +662,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apriltag/lib/Demo.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -735,21 +684,6 @@
         <state relative-caret-position="342">
           <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cameraLocation/CameraController.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calibration/calibration.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="346" column="26" lean-forward="false" selection-start-line="346" selection-start-column="26" selection-end-line="346" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -789,23 +723,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apriltag/ApriltagController.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="121" column="4" lean-forward="false" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+          <folding>
+            <element signature="e#41#72#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/thread/ThreadController.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5562">
-          <caret line="309" column="12" lean-forward="false" selection-start-line="309" selection-start-column="12" selection-end-line="309" selection-end-column="12" />
+        <state relative-caret-position="300">
+          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
           <folding>
             <element signature="e#40#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apriltag/ApriltagController.cpp">
+    <entry file="file://$PROJECT_DIR$/calibration/fcxy.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="140" column="26" lean-forward="false" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
-          <folding>
-            <element signature="e#41#72#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/param.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calibration/calibration.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cameraLocation/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cameraLocation/CameraModel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cameraLocation/CameraController.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/out_camera_data.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calibration/floor_fit_cloud.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="206" column="18" lean-forward="false" selection-start-line="206" selection-start-column="18" selection-end-line="206" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

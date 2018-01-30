@@ -494,7 +494,7 @@ int main( int argc, char** argv )
         }
 
         imshow("Image View", view);
-        int key = 0xff & waitKey(capture.isOpened() ? 50 : 500);
+        int key = 0xff & waitKey(capture.isOpened() ? 100 : 500);
 
         if( (key & 255) == 27 )
             break;
