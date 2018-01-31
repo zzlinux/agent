@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/robocon/workspace/agent/apriltag/ApriltagController.cpp" "/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o"
-  "/home/robocon/workspace/agent/apriltag/lib/Demo.cpp" "/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/lib/Demo.cpp.o"
   "/home/robocon/workspace/agent/apriltag/lib/Edge.cc" "/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/lib/Edge.cc.o"
   "/home/robocon/workspace/agent/apriltag/lib/FloatImage.cc" "/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/lib/FloatImage.cc.o"
   "/home/robocon/workspace/agent/apriltag/lib/GLine2D.cc" "/home/robocon/workspace/agent/cmake-build-debug/apriltag/CMakeFiles/apriltag.dir/lib/GLine2D.cc.o"
@@ -44,6 +43,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../radarLocation"
   "../protocol"
   "../apriltag"
+  "../calibration"
   "/usr/include/openni2"
   "/usr/local/include/pcl-1.8"
   "/usr/include/eigen3"

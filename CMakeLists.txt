@@ -20,27 +20,30 @@ find_package(PCL 1.7 REQUIRED)
 find_package(Eigen3 REQUIRED)
 
 include_directories(
-        ${PROJECT_SOURCE_DIR}/trace
-        ${PROJECT_SOURCE_DIR}/cameraLocation
-        ${PROJECT_SOURCE_DIR}/radarLocation
-        ${PROJECT_SOURCE_DIR}/protocol
-        ${PROJECT_SOURCE_DIR}/apriltag
+        src/trace
+        src/cameraLocation
+        src/radarLocation
+        src/protocol
+        src/apriltag
+        src/calibration
         ${OPENCV_INCLUDE_DIRS}
         ${OPENNI2_INCLUDE_DIRS}
         ${PCL_INCLUDE_DIRS}
         ${EIGEN3_INCLUDE_DIR}
         ${Boost_INCLUDE_DIRS}
 )
-ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/trace)
-ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/cameraLocation)
-ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/radarLocation)
-ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/thread)
-ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/protocol)
-ADD_SUBDIRECTORY(${PROJECT_SOURCE_DIR}/apriltag)
+ADD_SUBDIRECTORY(src/trace)
+ADD_SUBDIRECTORY(src/cameraLocation)
+ADD_SUBDIRECTORY(src/radarLocation)
+ADD_SUBDIRECTORY(src/thread)
+ADD_SUBDIRECTORY(src/protocol)
+ADD_SUBDIRECTORY(src/apriltag)
+ADD_SUBDIRECTORY(src/calibration)
 
-set(SOURCE_FILES calibration/floor_fit_cloud.cpp)
+set(SOURCE_FILES src/main.cpp)
 add_executable(robocon ${SOURCE_FILES})
 target_link_libraries(robocon
         thread
+        calibration
         ${BOOST_LIBRARIES}
         )

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRT01.a  CMakeFiles/RT01.dir/rgbd_camera.cpp.o CMakeFiles/RT01.dir/RgbdCalibration.cpp.o
+/usr/bin/ranlib libRT01.a

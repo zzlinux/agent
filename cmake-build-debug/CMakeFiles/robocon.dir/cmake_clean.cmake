@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o"
+  "CMakeFiles/robocon.dir/src/main.cpp.o"
   "../bin/robocon.pdb"
   "../bin/robocon"
 )

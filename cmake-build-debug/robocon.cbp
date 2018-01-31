@@ -5,7 +5,7 @@
 		<Option title="robocon"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\usr\local\share\pcl-1.8\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\vtk-5.8\;CMake Files\..\..\..\..\usr\lib\vtk-5.8\CMake\;CMake Files\cmake_modules\;CMake Files\trace\;CMake Files\cameraLocation\;CMake Files\radarLocation\;CMake Files\thread\;CMake Files\protocol\;CMake Files\apriltag\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\usr\local\share\pcl-1.8\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\vtk-5.8\;CMake Files\..\..\..\..\usr\lib\vtk-5.8\CMake\;CMake Files\cmake_modules\;CMake Files\src\;CMake Files\src\trace\;CMake Files\src\cameraLocation\;CMake Files\src\radarLocation\;CMake Files\src\thread\;CMake Files\src\protocol\;CMake Files\src\apriltag\;CMake Files\src\calibration\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug"/>
@@ -53,11 +53,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -94,11 +95,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -120,8 +122,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="trace">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/trace/libtrace.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/trace"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/trace/libtrace.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/trace"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -135,11 +137,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -154,15 +157,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 trace"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/trace/Makefile&quot;  VERBOSE=1 trace"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/trace/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/trace/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/trace/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="trace/fast">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/trace/libtrace.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/trace"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/trace/libtrace.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/trace"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -176,11 +179,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -195,15 +199,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 trace/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/trace/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/trace/Makefile&quot;  VERBOSE=1 trace/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/trace/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/trace/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/trace/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="camera">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/libcamera.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/cameraLocation"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/libcamera.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -217,11 +221,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -236,15 +241,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 camera"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/Makefile&quot;  VERBOSE=1 camera"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="camera/fast">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/libcamera.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/cameraLocation"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/libcamera.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -258,11 +263,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -277,15 +283,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 camera/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/Makefile&quot;  VERBOSE=1 camera/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/cameraLocation/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="radar">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/radarLocation/libradar.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/radarLocation"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/libradar.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -299,11 +305,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -318,15 +325,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 radar"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/Makefile&quot;  VERBOSE=1 radar"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="radar/fast">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/radarLocation/libradar.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/radarLocation"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/libradar.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -340,11 +347,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -359,15 +367,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 radar/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/Makefile&quot;  VERBOSE=1 radar/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/radarLocation/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="thread">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/thread/libthread.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/thread"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/thread/libthread.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/thread"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -381,11 +389,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -400,15 +409,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 thread"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/thread/Makefile&quot;  VERBOSE=1 thread"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/thread/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/thread/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/thread/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="thread/fast">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/thread/libthread.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/thread"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/thread/libthread.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/thread"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -422,11 +431,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -441,15 +451,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 thread/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/thread/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/thread/Makefile&quot;  VERBOSE=1 thread/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/thread/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/thread/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/thread/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="protocol">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/protocol/libprotocol.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/protocol"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/protocol/libprotocol.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/protocol"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -463,11 +473,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -481,15 +492,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 protocol"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/protocol/Makefile&quot;  VERBOSE=1 protocol"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/protocol/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/protocol/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="protocol/fast">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/protocol/libprotocol.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/protocol"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/protocol/libprotocol.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/protocol"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -503,11 +514,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -521,15 +533,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 protocol/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/protocol/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/protocol/Makefile&quot;  VERBOSE=1 protocol/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/protocol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/protocol/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/protocol/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="apriltag">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/apriltag/libapriltag.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/apriltag"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/libapriltag.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/apriltag"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -543,11 +555,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -562,15 +575,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 apriltag"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/Makefile&quot;  VERBOSE=1 apriltag"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="apriltag/fast">
-				<Option output="/home/robocon/workspace/agent/cmake-build-debug/apriltag/libapriltag.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/apriltag"/>
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/libapriltag.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/apriltag"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -584,11 +597,12 @@
 					<Add option="-DDISABLE_LIBUSB_1_0"/>
 					<Add option="-DDISABLE_RSSDK"/>
 					<Add directory="/usr/include/vtk-5.8"/>
-					<Add directory="/home/robocon/workspace/agent/trace"/>
-					<Add directory="/home/robocon/workspace/agent/cameraLocation"/>
-					<Add directory="/home/robocon/workspace/agent/radarLocation"/>
-					<Add directory="/home/robocon/workspace/agent/protocol"/>
-					<Add directory="/home/robocon/workspace/agent/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
 					<Add directory="/usr/include/openni2"/>
 					<Add directory="/usr/local/include/pcl-1.8"/>
 					<Add directory="/usr/include/eigen3"/>
@@ -603,311 +617,401 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 apriltag/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/Makefile&quot;  VERBOSE=1 apriltag/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/apriltag/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calibration">
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/calibration/libcalibration.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/calibration"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/calibration/Makefile&quot;  VERBOSE=1 calibration"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/calibration/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/calibration/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/calibration/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calibration/fast">
+				<Option output="/home/robocon/workspace/agent/cmake-build-debug/src/calibration/libcalibration.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robocon/workspace/agent/cmake-build-debug/src/calibration"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDISABLE_OPENNI"/>
+					<Add option="-DDISABLE_ENSENSO"/>
+					<Add option="-DDISABLE_DAVIDSDK"/>
+					<Add option="-DDISABLE_DSSDK"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DDISABLE_RSSDK"/>
+					<Add directory="/usr/include/vtk-5.8"/>
+					<Add directory="/home/robocon/workspace/agent/src/trace"/>
+					<Add directory="/home/robocon/workspace/agent/src/cameraLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/radarLocation"/>
+					<Add directory="/home/robocon/workspace/agent/src/protocol"/>
+					<Add directory="/home/robocon/workspace/agent/src/apriltag"/>
+					<Add directory="/home/robocon/workspace/agent/src/calibration"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/local/include/pcl-1.8"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/calibration/Makefile&quot;  VERBOSE=1 calibration/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/calibration/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/calibration/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/robocon/workspace/agent/cmake-build-debug/src/calibration/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/ApriltagController.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/ApriltagController.cpp">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/ApriltagController.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/ApriltagController.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Demo.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Edge.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Demo.hpp">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Edge.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Edge.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/FloatImage.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Edge.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/FloatImage.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/FloatImage.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/GLine2D.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/FloatImage.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/GLine2D.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GLine2D.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/GLineSegment2D.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GLine2D.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/GLineSegment2D.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GLineSegment2D.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Gaussian.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GLineSegment2D.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Gaussian.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Gaussian.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/GrayModel.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Gaussian.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/GrayModel.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GrayModel.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Gridder.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/GrayModel.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Homography33.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Gridder.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Homography33.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Homography33.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/MathUtil.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Homography33.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/MathUtil.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/MathUtil.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Quad.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/MathUtil.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Quad.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Quad.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Segment.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Quad.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Segment.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Segment.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Serial.cpp">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Segment.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Serial.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Serial.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Tag16h5.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Serial.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Tag16h5_other.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag16h5.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Tag25h7.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag16h5_other.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Tag25h9.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag25h7.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Tag36h11.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag25h9.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Tag36h11_other.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag36h11.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/Tag36h9.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag36h11_other.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/TagDetection.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/Tag36h9.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/TagDetection.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagDetection.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/TagDetector.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagDetection.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/TagDetector.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagDetector.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/TagFamily.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagDetector.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/TagFamily.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagFamily.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/UnionFindSimple.cc">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/TagFamily.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/UnionFindSimple.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/UnionFindSimple.cc">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/XYWeight.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/UnionFindSimple.h">
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/pch.h">
 			<Option target="apriltag"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/XYWeight.h">
-			<Option target="apriltag"/>
+		<Unit filename="/home/robocon/workspace/agent/src/calibration/RgbdCalibration.cpp">
+			<Option target="calibration"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/lib/pch.h">
-			<Option target="apriltag"/>
+		<Unit filename="/home/robocon/workspace/agent/src/calibration/RgbdCalibration.h">
+			<Option target="calibration"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/calibration/floor_fit_cloud.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/calibration/rgbd_camera.cpp">
+			<Option target="calibration"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/src/calibration/rgbd_camera.h">
+			<Option target="calibration"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/src/cameraLocation/CameraController.cpp">
+			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/src/cameraLocation/CameraController.h">
+			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/src/cameraLocation/CameraModel.cpp">
+			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/src/cameraLocation/CameraModel.h">
+			<Option target="camera"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/src/main.cpp">
 			<Option target="robocon"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/cameraLocation/CameraController.cpp">
-			<Option target="camera"/>
-		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/cameraLocation/CameraController.h">
-			<Option target="camera"/>
-		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/cameraLocation/CameraModel.cpp">
-			<Option target="camera"/>
-		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/cameraLocation/CameraModel.h">
-			<Option target="camera"/>
-		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/protocol/serialapp.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/protocol/serialapp.cpp">
 			<Option target="protocol"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/protocol/serialapp.h">
+		<Unit filename="/home/robocon/workspace/agent/src/protocol/serialapp.h">
 			<Option target="protocol"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/protocol/serialbase.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/protocol/serialbase.cpp">
 			<Option target="protocol"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/protocol/serialbase.h">
+		<Unit filename="/home/robocon/workspace/agent/src/protocol/serialbase.h">
 			<Option target="protocol"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/protocol/utility.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/protocol/utility.cpp">
 			<Option target="protocol"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/protocol/utility.h">
+		<Unit filename="/home/robocon/workspace/agent/src/protocol/utility.h">
 			<Option target="protocol"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/RadarController.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/RadarController.cpp">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/RadarController.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/RadarController.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/RadarModel.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/RadarModel.cpp">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/RadarModel.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/RadarModel.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/Connection_information.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/Connection_information.cpp">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/Connection_information.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/Connection_information.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/Urg_driver.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/Urg_driver.cpp">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/Urg_driver.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/Urg_driver.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/ticks.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/ticks.cpp">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/ticks.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/ticks.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_connection.c">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_connection.c">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_connection.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_connection.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_debug.c">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_debug.c">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_debug.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_debug.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_ring_buffer.c">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_ring_buffer.c">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_ring_buffer.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_ring_buffer.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_sensor.c">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_sensor.c">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_sensor.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_sensor.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_serial.c">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_serial.c">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_serial.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_serial.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_serial_utils_linux.c">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_serial_utils_linux.c">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_tcpclient.c">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_tcpclient.c">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_tcpclient.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_tcpclient.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_utils.c">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_utils.c">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/lib/urg_utils.h">
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/lib/urg_utils.h">
 			<Option target="radar"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/thread/Param.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/thread/Param.cpp">
 			<Option target="thread"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/thread/Param.h">
+		<Unit filename="/home/robocon/workspace/agent/src/thread/Param.h">
 			<Option target="thread"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/thread/ThreadController.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/thread/ThreadController.cpp">
 			<Option target="thread"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/thread/ThreadController.h">
+		<Unit filename="/home/robocon/workspace/agent/src/thread/ThreadController.h">
 			<Option target="thread"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/BallAssociate.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/BallAssociate.cpp">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/BallAssociate.h">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/BallAssociate.h">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/BallDetector.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/BallDetector.cpp">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/BallDetector.h">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/BallDetector.h">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/CircleDetector.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/CircleDetector.cpp">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/CircleDetector.h">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/CircleDetector.h">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/FitTrace.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/FitTrace.cpp">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/FitTrace.h">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/FitTrace.h">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/Recorder.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/Recorder.cpp">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/Recorder.h">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/Recorder.h">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/Trajectory.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/Trajectory.cpp">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/Trajectory.h">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/Trajectory.h">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/rgbd_camera.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/rgbd_camera.cpp">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/rgbd_camera.h">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/rgbd_camera.h">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/transformer.cpp">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/transformer.cpp">
 			<Option target="trace"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/transformer.h">
+		<Unit filename="/home/robocon/workspace/agent/src/trace/transformer.h">
 			<Option target="trace"/>
 		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/CMakeLists.txt">
@@ -1000,23 +1104,26 @@
 		<Unit filename="/home/robocon/workspace/agent/cmake_modules/FindEigen3.cmake">
 			<Option virtualFolder="CMake Files\cmake_modules\"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/trace/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\trace\"/>
+		<Unit filename="/home/robocon/workspace/agent/src/trace/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\trace\"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/cameraLocation/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\cameraLocation\"/>
+		<Unit filename="/home/robocon/workspace/agent/src/cameraLocation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\cameraLocation\"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/radarLocation/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\radarLocation\"/>
+		<Unit filename="/home/robocon/workspace/agent/src/radarLocation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\radarLocation\"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/thread/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thread\"/>
+		<Unit filename="/home/robocon/workspace/agent/src/thread/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\thread\"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/protocol/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\protocol\"/>
+		<Unit filename="/home/robocon/workspace/agent/src/protocol/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\protocol\"/>
 		</Unit>
-		<Unit filename="/home/robocon/workspace/agent/apriltag/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\apriltag\"/>
+		<Unit filename="/home/robocon/workspace/agent/src/apriltag/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\apriltag\"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/src/calibration/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\calibration\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

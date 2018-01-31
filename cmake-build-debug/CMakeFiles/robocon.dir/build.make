@@ -57,40 +57,41 @@ include CMakeFiles/robocon.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/robocon.dir/flags.make
 
-CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o: CMakeFiles/robocon.dir/flags.make
-CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o: ../calibration/floor_fit_cloud.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o -c /home/robocon/workspace/agent/calibration/floor_fit_cloud.cpp
+CMakeFiles/robocon.dir/src/main.cpp.o: CMakeFiles/robocon.dir/flags.make
+CMakeFiles/robocon.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/robocon.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robocon.dir/src/main.cpp.o -c /home/robocon/workspace/agent/src/main.cpp
 
-CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/calibration/floor_fit_cloud.cpp > CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.i
+CMakeFiles/robocon.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robocon.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/src/main.cpp > CMakeFiles/robocon.dir/src/main.cpp.i
 
-CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/calibration/floor_fit_cloud.cpp -o CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.s
+CMakeFiles/robocon.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robocon.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/src/main.cpp -o CMakeFiles/robocon.dir/src/main.cpp.s
 
-CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o.requires:
+CMakeFiles/robocon.dir/src/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o.requires
+.PHONY : CMakeFiles/robocon.dir/src/main.cpp.o.requires
 
-CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o.provides: CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o.requires
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o.provides.build
-.PHONY : CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o.provides
+CMakeFiles/robocon.dir/src/main.cpp.o.provides: CMakeFiles/robocon.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/robocon.dir/src/main.cpp.o.provides
 
-CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o.provides.build: CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o
+CMakeFiles/robocon.dir/src/main.cpp.o.provides.build: CMakeFiles/robocon.dir/src/main.cpp.o
 
 
 # Object files for target robocon
 robocon_OBJECTS = \
-"CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o"
+"CMakeFiles/robocon.dir/src/main.cpp.o"
 
 # External object files for target robocon
 robocon_EXTERNAL_OBJECTS =
 
-../bin/robocon: CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o
+../bin/robocon: CMakeFiles/robocon.dir/src/main.cpp.o
 ../bin/robocon: CMakeFiles/robocon.dir/build.make
-../bin/robocon: thread/libthread.a
+../bin/robocon: src/thread/libthread.a
+../bin/robocon: src/calibration/libcalibration.a
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -100,7 +101,7 @@ robocon_EXTERNAL_OBJECTS =
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/robocon: trace/libtrace.a
+../bin/robocon: src/trace/libtrace.a
 ../bin/robocon: /usr/local/lib/libpcl_common.so
 ../bin/robocon: /usr/lib/libvtkGenericFiltering.so.5.8.0
 ../bin/robocon: /usr/lib/libvtkGeovis.so.5.8.0
@@ -124,7 +125,6 @@ robocon_EXTERNAL_OBJECTS =
 ../bin/robocon: /usr/local/lib/libpcl_search.so
 ../bin/robocon: /usr/local/lib/libpcl_sample_consensus.so
 ../bin/robocon: /usr/local/lib/libpcl_filters.so
-../bin/robocon: /usr/lib/libOpenNI2.so
 ../bin/robocon: /usr/local/lib/libpcl_io.so
 ../bin/robocon: /usr/local/lib/libpcl_features.so
 ../bin/robocon: /usr/local/lib/libpcl_visualization.so
@@ -145,7 +145,6 @@ robocon_EXTERNAL_OBJECTS =
 ../bin/robocon: /usr/local/lib/libpcl_search.so
 ../bin/robocon: /usr/local/lib/libpcl_sample_consensus.so
 ../bin/robocon: /usr/local/lib/libpcl_filters.so
-../bin/robocon: /usr/lib/libOpenNI2.so
 ../bin/robocon: /usr/local/lib/libpcl_io.so
 ../bin/robocon: /usr/local/lib/libpcl_features.so
 ../bin/robocon: /usr/local/lib/libpcl_visualization.so
@@ -169,10 +168,11 @@ robocon_EXTERNAL_OBJECTS =
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/robocon: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/robocon: cameraLocation/libcamera.a
-../bin/robocon: protocol/libprotocol.a
-../bin/robocon: radarLocation/libradar.a
-../bin/robocon: apriltag/libapriltag.a
+../bin/robocon: src/cameraLocation/libcamera.a
+../bin/robocon: src/protocol/libprotocol.a
+../bin/robocon: src/radarLocation/libradar.a
+../bin/robocon: src/apriltag/libapriltag.a
+../bin/robocon: /usr/lib/libOpenNI2.so
 ../bin/robocon: /usr/local/lib/libopencv_videostab.so.3.1.0
 ../bin/robocon: /usr/local/lib/libopencv_superres.so.3.1.0
 ../bin/robocon: /usr/local/lib/libopencv_stitching.so.3.1.0
@@ -198,7 +198,7 @@ CMakeFiles/robocon.dir/build: ../bin/robocon
 
 .PHONY : CMakeFiles/robocon.dir/build
 
-CMakeFiles/robocon.dir/requires: CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o.requires
+CMakeFiles/robocon.dir/requires: CMakeFiles/robocon.dir/src/main.cpp.o.requires
 
 .PHONY : CMakeFiles/robocon.dir/requires
 

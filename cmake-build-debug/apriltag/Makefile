@@ -152,33 +152,6 @@ ApriltagController.cpp.s:
 	cd /home/robocon/workspace/agent/cmake-build-debug && $(MAKE) -f apriltag/CMakeFiles/apriltag.dir/build.make apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.s
 .PHONY : ApriltagController.cpp.s
 
-lib/Demo.o: lib/Demo.cpp.o
-
-.PHONY : lib/Demo.o
-
-# target to build an object file
-lib/Demo.cpp.o:
-	cd /home/robocon/workspace/agent/cmake-build-debug && $(MAKE) -f apriltag/CMakeFiles/apriltag.dir/build.make apriltag/CMakeFiles/apriltag.dir/lib/Demo.cpp.o
-.PHONY : lib/Demo.cpp.o
-
-lib/Demo.i: lib/Demo.cpp.i
-
-.PHONY : lib/Demo.i
-
-# target to preprocess a source file
-lib/Demo.cpp.i:
-	cd /home/robocon/workspace/agent/cmake-build-debug && $(MAKE) -f apriltag/CMakeFiles/apriltag.dir/build.make apriltag/CMakeFiles/apriltag.dir/lib/Demo.cpp.i
-.PHONY : lib/Demo.cpp.i
-
-lib/Demo.s: lib/Demo.cpp.s
-
-.PHONY : lib/Demo.s
-
-# target to generate assembly for a file
-lib/Demo.cpp.s:
-	cd /home/robocon/workspace/agent/cmake-build-debug && $(MAKE) -f apriltag/CMakeFiles/apriltag.dir/build.make apriltag/CMakeFiles/apriltag.dir/lib/Demo.cpp.s
-.PHONY : lib/Demo.cpp.s
-
 lib/Edge.o: lib/Edge.cc.o
 
 .PHONY : lib/Edge.o
@@ -596,9 +569,6 @@ help:
 	@echo "... ApriltagController.o"
 	@echo "... ApriltagController.i"
 	@echo "... ApriltagController.s"
-	@echo "... lib/Demo.o"
-	@echo "... lib/Demo.i"
-	@echo "... lib/Demo.s"
 	@echo "... lib/Edge.o"
 	@echo "... lib/Edge.i"
 	@echo "... lib/Edge.s"

@@ -133,7 +133,7 @@ trace: cmake_check_build_system
 
 # fast build rule for target.
 trace/fast:
-	$(MAKE) -f trace/CMakeFiles/trace.dir/build.make trace/CMakeFiles/trace.dir/build
+	$(MAKE) -f src/trace/CMakeFiles/trace.dir/build.make src/trace/CMakeFiles/trace.dir/build
 .PHONY : trace/fast
 
 #=============================================================================
@@ -146,7 +146,7 @@ camera: cmake_check_build_system
 
 # fast build rule for target.
 camera/fast:
-	$(MAKE) -f cameraLocation/CMakeFiles/camera.dir/build.make cameraLocation/CMakeFiles/camera.dir/build
+	$(MAKE) -f src/cameraLocation/CMakeFiles/camera.dir/build.make src/cameraLocation/CMakeFiles/camera.dir/build
 .PHONY : camera/fast
 
 #=============================================================================
@@ -159,7 +159,7 @@ radar: cmake_check_build_system
 
 # fast build rule for target.
 radar/fast:
-	$(MAKE) -f radarLocation/CMakeFiles/radar.dir/build.make radarLocation/CMakeFiles/radar.dir/build
+	$(MAKE) -f src/radarLocation/CMakeFiles/radar.dir/build.make src/radarLocation/CMakeFiles/radar.dir/build
 .PHONY : radar/fast
 
 #=============================================================================
@@ -172,7 +172,7 @@ thread: cmake_check_build_system
 
 # fast build rule for target.
 thread/fast:
-	$(MAKE) -f thread/CMakeFiles/thread.dir/build.make thread/CMakeFiles/thread.dir/build
+	$(MAKE) -f src/thread/CMakeFiles/thread.dir/build.make src/thread/CMakeFiles/thread.dir/build
 .PHONY : thread/fast
 
 #=============================================================================
@@ -185,7 +185,7 @@ protocol: cmake_check_build_system
 
 # fast build rule for target.
 protocol/fast:
-	$(MAKE) -f protocol/CMakeFiles/protocol.dir/build.make protocol/CMakeFiles/protocol.dir/build
+	$(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/build
 .PHONY : protocol/fast
 
 #=============================================================================
@@ -198,35 +198,48 @@ apriltag: cmake_check_build_system
 
 # fast build rule for target.
 apriltag/fast:
-	$(MAKE) -f apriltag/CMakeFiles/apriltag.dir/build.make apriltag/CMakeFiles/apriltag.dir/build
+	$(MAKE) -f src/apriltag/CMakeFiles/apriltag.dir/build.make src/apriltag/CMakeFiles/apriltag.dir/build
 .PHONY : apriltag/fast
 
-calibration/floor_fit_cloud.o: calibration/floor_fit_cloud.cpp.o
+#=============================================================================
+# Target rules for targets named calibration
 
-.PHONY : calibration/floor_fit_cloud.o
+# Build rule for target.
+calibration: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calibration
+.PHONY : calibration
+
+# fast build rule for target.
+calibration/fast:
+	$(MAKE) -f src/calibration/CMakeFiles/calibration.dir/build.make src/calibration/CMakeFiles/calibration.dir/build
+.PHONY : calibration/fast
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
 
 # target to build an object file
-calibration/floor_fit_cloud.cpp.o:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.o
-.PHONY : calibration/floor_fit_cloud.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-calibration/floor_fit_cloud.i: calibration/floor_fit_cloud.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : calibration/floor_fit_cloud.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-calibration/floor_fit_cloud.cpp.i:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.i
-.PHONY : calibration/floor_fit_cloud.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-calibration/floor_fit_cloud.s: calibration/floor_fit_cloud.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : calibration/floor_fit_cloud.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-calibration/floor_fit_cloud.cpp.s:
-	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/calibration/floor_fit_cloud.cpp.s
-.PHONY : calibration/floor_fit_cloud.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/robocon.dir/build.make CMakeFiles/robocon.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -243,9 +256,10 @@ help:
 	@echo "... thread"
 	@echo "... protocol"
 	@echo "... apriltag"
-	@echo "... calibration/floor_fit_cloud.o"
-	@echo "... calibration/floor_fit_cloud.i"
-	@echo "... calibration/floor_fit_cloud.s"
+	@echo "... calibration"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

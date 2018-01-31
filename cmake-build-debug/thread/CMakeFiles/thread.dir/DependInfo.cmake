@@ -29,6 +29,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../radarLocation"
   "../protocol"
   "../apriltag"
+  "../calibration"
   "/usr/include/openni2"
   "/usr/local/include/pcl-1.8"
   "/usr/include/eigen3"
