@@ -3,6 +3,7 @@
 //
 
 #include "CameraController.h"
+#include "../thread/Param.h"
 
 namespace hitcrt
 {
@@ -18,7 +19,7 @@ namespace hitcrt
         readFrame = frame.clone();
     }
     void CameraController::apply(std::vector<float> &data,bool & isLocationValued) {
-        //cap>>readFrame;
+        isLocationValued = true;
         if (readFrame.empty()) { isLocationValued = false;return;}
         std::vector<cv::Mat> channels;
         cv::remap(readFrame, readFrame, map1, map2, cv::INTER_LINEAR);
@@ -44,18 +45,19 @@ namespace hitcrt
                 text << "(x,y) : " << data[0] << "," << data[1] << "  angle: " << data[2] << std::endl;
                 linenum << "double line";
                 cv::putText(readFrame, text.str(), cv::Point(10, 20), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(10, 180, 70), 2);
-            } else if (flag = 1) linenum << "single line" << std::endl;
+            } else if (flag = 1){
+                isLocationValued = false;
+                linenum << "single line" << std::endl;
+            }
         }
         cv::putText(readFrame, txt.str(), cv::Point(10, 80), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(10, 90, 255), 2);
         cv::putText(readFrame, linenum.str(), cv::Point(10, 60), cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(150, 200, 20), 2);
-        imshow("frame",readFrame);
+        if(Param::cameraLocation.debug)Param::mimshow("frame",readFrame);
         if(cv::waitKey(1)=='c')
         {
             cv::waitKey(100000000);
         }
         /***********************view end***********************/
-
-        isLocationValued = true;
         return ;
     }
     /*

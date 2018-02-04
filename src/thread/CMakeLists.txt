@@ -5,6 +5,7 @@ add_library(thread
         Param.cpp
         )
 target_link_libraries(thread
+        ${BOOST_LIBRARIES}
         trace
         camera
         protocol

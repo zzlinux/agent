@@ -36,6 +36,7 @@ src/thread/CMakeFiles/thread.dir/Param.cpp.o
  /usr/local/include/opencv2/flann/defines.h
  /usr/local/include/opencv2/flann/miniflann.hpp
  /usr/local/include/opencv2/highgui.hpp
+ /usr/local/include/opencv2/highgui/highgui.hpp
  /usr/local/include/opencv2/highgui/highgui_c.h
  /usr/local/include/opencv2/imgcodecs.hpp
  /usr/local/include/opencv2/imgcodecs/imgcodecs_c.h

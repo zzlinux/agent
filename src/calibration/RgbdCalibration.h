@@ -17,7 +17,7 @@ namespace hitcrt
     private:
         std::unique_ptr<RGBDcamera> cap;
         cv::Mat rgb,dep,depth8U;
-        std::string ground = "../calibration/grounds.txt";
+        std::string ground = "../../grounds.txt";
         void computeRT01();
         void getGroundCloud();
     };

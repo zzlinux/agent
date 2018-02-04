@@ -19,7 +19,6 @@ namespace hitcrt
         struct LINEKB{ double k;double b; };
         struct LINEE{ cv::Point2d PointStart;cv::Point2d PointEnd;};
         cv::VideoCapture cap;
-        cv::Mat camera_matrix, dist_coeffs;
         cv::Mat map1, map2;
         void thinImg(cv::Mat & src,std::vector<cv::Point2d> & bonePoints);
         void Ransc(std::vector<cv::Point2d> & VecPoint,std::vector<std::vector<cv::Point>> &lines);

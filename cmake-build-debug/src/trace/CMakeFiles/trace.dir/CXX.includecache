@@ -9,12 +9,16 @@
 /home/robocon/workspace/agent/src/thread/Param.h
 opencv2/opencv.hpp
 -
+boost/thread.hpp
+-
 
 /home/robocon/workspace/agent/src/trace/BallAssociate.cpp
 BallAssociate.h
 /home/robocon/workspace/agent/src/trace/BallAssociate.h
 transformer.h
 /home/robocon/workspace/agent/src/trace/transformer.h
+../thread/Param.h
+/home/robocon/workspace/agent/src/thread/Param.h
 sys/time.h
 -
 opencv2/imgproc/imgproc.hpp
@@ -25,6 +29,8 @@ opencv2/highgui/highgui.hpp
 /home/robocon/workspace/agent/src/trace/BallAssociate.h
 Trajectory.h
 /home/robocon/workspace/agent/src/trace/Trajectory.h
+../thread/Param.h
+/home/robocon/workspace/agent/src/thread/Param.h
 vector
 -
 pcl/point_types.h

@@ -3,6 +3,7 @@
 //
 
 #include "RadarController.h"
+#include "../thread/Param.h"
 
 namespace hitcrt
 {
@@ -33,7 +34,7 @@ namespace hitcrt
         value <<"isvalued :"<<"yes";
         cv::putText(image,text.str(),cv::Point(20,50),cv::FONT_HERSHEY_PLAIN,2,cv::Scalar(194,20,93),1);
         cv::putText(image,value.str(),cv::Point(20,80),cv::FONT_HERSHEY_PLAIN,2,cv::Scalar(87,45,200),1);
-        //cv::imshow("radarImage",image);
+        if(Param::radarLocation.debug)Param::mimshow("radarImage",image);
         return true;
     }
     bool RadarController::getRadarPosition(std::vector<std::vector<cv::Point2d> >&lines,std::vector<float > &position,char mode)

@@ -9,6 +9,8 @@
 /home/robocon/workspace/agent/src/apriltag/ApriltagController.cpp
 ApriltagController.h
 /home/robocon/workspace/agent/src/apriltag/ApriltagController.h
+../thread/Param.h
+/home/robocon/workspace/agent/src/thread/Param.h
 Eigen/Core
 -
 Eigen/Dense
@@ -61,6 +63,8 @@ lib/Tag36h11.h
 /home/robocon/workspace/agent/src/apriltag/lib/Tag36h11.h
 cmath
 -
+../thread/Param.h
+/home/robocon/workspace/agent/src/thread/Param.h
 
 /home/robocon/workspace/agent/src/apriltag/lib/Edge.cc
 Edge.h
@@ -395,6 +399,12 @@ vector
 -
 
 /home/robocon/workspace/agent/src/apriltag/lib/XYWeight.h
+
+/home/robocon/workspace/agent/src/thread/Param.h
+opencv2/opencv.hpp
+-
+boost/thread.hpp
+-
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

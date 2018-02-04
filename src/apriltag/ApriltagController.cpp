@@ -3,6 +3,7 @@
 //
 
 #include "ApriltagController.h"
+#include "../thread/Param.h"
 #include <Eigen/Core>
 #include <Eigen/Dense>
 #include <cmath>
@@ -36,10 +37,6 @@ namespace hitcrt
     {
         m_tagDetector = new AprilTags::TagDetector(m_tagCodes);
 
-        // prepare window for drawing the camera images
-        if (m_draw) {
-            cv::namedWindow(windowName, 1);
-        }
         // find and open a USB camera (built in laptop camera, web cam etc)
         m_cap = cv::VideoCapture(m_deviceId);
         if(!m_cap.isOpened()) {
@@ -138,7 +135,7 @@ namespace hitcrt
                 // also highlight in the image
                 detections[i].draw(readFrame);
             }
-            cv::imshow(windowName, readFrame); // OpenCV call
+            if(Param::apriltag.debug)Param::mimshow(windowName, readFrame); // OpenCV call
         }
         // exit if any key is pressed
         if (cv::waitKey(1) >= 0) return;

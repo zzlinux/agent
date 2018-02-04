@@ -6,6 +6,7 @@
 #define TRACK_BALLASSOCIATE_H
 
 #include "Trajectory.h"
+#include "../thread/Param.h"
 #include <vector>
 #include <pcl/point_types.h>
 #include <opencv2/core/core.hpp>
@@ -32,6 +33,8 @@ namespace hitcrt {
             struct {int min;int max;}h,s,v;
         };
         colorhsv cball,gball;
+        Param::colorhsv c = Param::cball;
+        Param::colorhsv g = Param::gball;
     };
 }
 

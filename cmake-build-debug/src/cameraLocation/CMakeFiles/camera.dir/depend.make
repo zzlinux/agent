@@ -4,6 +4,7 @@
 src/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o: ../src/cameraLocation/CameraController.cpp
 src/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o: ../src/cameraLocation/CameraController.h
 src/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o: ../src/cameraLocation/CameraModel.h
+src/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o: ../src/thread/Param.h
 src/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o: /usr/local/include/opencv/cxcore.h
 src/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o: /usr/local/include/opencv2/calib3d.hpp
 src/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o: /usr/local/include/opencv2/calib3d/calib3d_c.h
@@ -61,6 +62,7 @@ src/cameraLocation/CMakeFiles/camera.dir/CameraController.cpp.o: /usr/local/incl
 
 src/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o: ../src/cameraLocation/CameraModel.cpp
 src/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o: ../src/cameraLocation/CameraModel.h
+src/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o: ../src/thread/Param.h
 src/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o: /usr/local/include/opencv/cxcore.h
 src/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o: /usr/local/include/opencv2/calib3d.hpp
 src/cameraLocation/CMakeFiles/camera.dir/CameraModel.cpp.o: /usr/local/include/opencv2/calib3d/calib3d_c.h

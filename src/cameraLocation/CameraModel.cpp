@@ -3,6 +3,7 @@
 //
 
 #include "CameraModel.h"
+#include "../thread/Param.h"
 
 namespace hitcrt
 {
@@ -10,24 +11,7 @@ namespace hitcrt
     {
         cap = cv::VideoCapture(cameraid);
         assert(cap.isOpened());
-        cv::FileStorage fs(cv::String("out_camera_data.yml"), cv::FileStorage::READ);
-        assert(fs.isOpened());
-        cv::Mat intrinsic,coeff;
-        fs["camera_matrix"]>>intrinsic;
-        fs["distortion_coefficients"]>>coeff;
-        fs.release();
-        float intrinsic_matrix[] = {
-                2.913949555529118e+02,0,0,
-                0.249703033828407,      2.918644439977966e+02,    0,
-                3.139312208326291e+02,  2.424113307214599e+02,    1
-        };
-        float coeffs[]={
-                -0.224965668654656,    0.038536667147829,
-                8.150664191690574e-04,  -9.482220330654349e-04
-        };
-        camera_matrix = cv::Mat(3, 3, CV_32FC1, intrinsic_matrix);
-        dist_coeffs = cv::Mat(1, 4, CV_32FC1, coeffs);
-        cv::initUndistortRectifyMap(intrinsic, coeff, cv::Mat(), cv::Mat(), cv::Size(640, 480), CV_32F, map1, map2);
+        cv::initUndistortRectifyMap(Param::cameraLocationIntrinsic.t(), Param::cameraLocationCoeffs, cv::Mat(), cv::Mat(), cv::Size(640, 480), CV_32F, map1, map2);
     }
     #define  RANDOMPOINT VecPoint.at(leftPointsIndex.at(rand()%leftPointsIndex.size()))
     void CameraModel::Ransc(std::vector<cv::Point2d> & VecPoint,std::vector<std::vector<cv::Point>> &lines)

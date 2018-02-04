@@ -25,7 +25,8 @@
 #include "ApriltagController.h"
 
 namespace hitcrt {
-    class ThreadController {
+    class ThreadController
+    {
     public:
         ThreadController();
         ~ThreadController(){};

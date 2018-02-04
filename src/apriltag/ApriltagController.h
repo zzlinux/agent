@@ -26,10 +26,11 @@
 #include "lib/Tag36h9.h"
 #include "lib/Tag36h11.h"
 #include <cmath>
+#include "../thread/Param.h"
 using namespace std;
 namespace hitcrt
 {
-    class ApriltagController{
+    class ApriltagController {
     public:
         AprilTags::TagDetector* m_tagDetector;
         AprilTags::TagCodes m_tagCodes;

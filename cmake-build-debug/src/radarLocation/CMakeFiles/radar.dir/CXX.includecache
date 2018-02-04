@@ -9,6 +9,8 @@
 /home/robocon/workspace/agent/src/radarLocation/RadarController.cpp
 RadarController.h
 /home/robocon/workspace/agent/src/radarLocation/RadarController.h
+../thread/Param.h
+/home/robocon/workspace/agent/src/thread/Param.h
 
 /home/robocon/workspace/agent/src/radarLocation/RadarController.h
 RadarModel.h
@@ -163,6 +165,12 @@ arpa/inet.h
 /home/robocon/workspace/agent/src/radarLocation/lib/urg_utils.h
 urg_sensor.h
 /home/robocon/workspace/agent/src/radarLocation/lib/urg_sensor.h
+
+/home/robocon/workspace/agent/src/thread/Param.h
+opencv2/opencv.hpp
+-
+boost/thread.hpp
+-
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h

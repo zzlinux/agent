@@ -9,7 +9,7 @@ namespace hitcrt
 {
     Recorder::Recorder()
     {
-        t = cv::FileStorage("../dataAnalyse/traces.yml",cv::FileStorage::APPEND);
+        t = cv::FileStorage("../dataAnalyse/traces.yml",cv::FileStorage::WRITE);
     }
     void Recorder::trace(pcl::PointXYZ &ball, pcl::PointXYZ &circle, std::vector<pcl::PointXYZ> &points,
                          float distCen,char isHit)

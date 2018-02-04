@@ -17,30 +17,41 @@ namespace hitcrt
     }
     void ThreadController::init()
     {
-        cv::FileStorage fs(cv::String("../config/RT01.yml"), cv::FileStorage::READ);
+        cv::FileStorage fs(cv::String("../config/param.yaml"), cv::FileStorage::READ);
         assert(fs.isOpened());
+        cv::FileNode task = fs["TASK"],debug = fs["DEBUG"],trace = fs["trace"],ball = fs["ball"];
+        cv::FileNode c = fs[ball["color"]],g = fs[ball["gold"]];
+        Param::trace = {(int)task["trace"],(int)debug["trace"]};
+        Param::cameraLocation = {(int)task["cameraLocation"],(int)debug["cameraLocation"]};
+        Param::radarLocation = {(int)task["radarLocation"],(int)debug["radarLocation"]};
+        Param::apriltag = {(int)task["apriltag"],(int)debug["apriltag"]};
+        Param::traceinfo = {(int)trace["mode"],(std::string)trace["oni"]};
+        Param::cball = {{(int)c["hmin"],(int)c["hmax"]},{(int)c["smin"],(int)c["smax"]},{(int)c["vmin"],(int)c["vmax"]}};
+        Param::gball = {{(int)g["hmin"],(int)g["hmax"]},{(int)g["smin"],(int)g["smax"]},{(int)g["vmin"],(int)g["vmax"]}};
         fs["RT01"] >> Param::RT01;
-        std::cout<<"helloword: "<<Param::RT01<<std::endl;
+        fs["OV2710_INTRINSIC"] >> Param::cameraLocationIntrinsic;
+        fs["OV2710_COEFFS"] >> Param::cameraLocationCoeffs;
+        fs["CIRCLE"] >> Param::CIRCLE_RANGE;
+        fs["BALL"] >> Param::BALL_RANGE;
         fs.release();
     }
     void ThreadController::run()
     {
-        cv::FileStorage fs("../config/param.yaml",cv::FileStorage::READ);
-        cv::FileNode thread = fs["thread"];
-        if((int)thread["trace"])createTraceThreads();
-        if((int)thread["cameraLocation"])createCameraThreads();
-        if((int)thread["radarLocation"])createRadarThread();
-        if((int)thread["apriltag"])createApriltagThreads();
+        if(Param::trace.start)createTraceThreads();
+        if(Param::cameraLocation.start)createCameraThreads();
+        if(Param::radarLocation.start)createRadarThread();
+        if(Param::apriltag.start)createApriltagThreads();
         m_communicationThread = boost::thread(boost::bind(&ThreadController::m_communication,this));
         m_mutualThread = boost::thread(boost::bind(&ThreadController::m_mutual,this));
         //m_radarProcessThread.join();
         //m_cameraProcessThread.join();
-        fs.release();
         m_mutualThread.join();
     }
     void ThreadController::createTraceThreads()
     {
-        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,"/home/robocon/workspace/oni/0124-circleedgeback-10in.ONI"));
+        if(Param::traceinfo.rgbdMode)cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::Live_mode,RGBDcamera::Kinect));
+        else cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,Param::traceinfo.file.data()));
+        //cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,"/home/robocon/workspace/oni/0124-circleedgeback-10in.ONI"));
         m_traceDataThread = boost::thread(boost::bind(&ThreadController::m_traceReadFrame,this));
         m_traceProcessThread = boost::thread(boost::bind(&ThreadController::m_traceProcess,this));
     }
@@ -177,7 +188,7 @@ namespace hitcrt
     {
         std::cout<<"traceprocessThread id  "<<m_traceProcessThread.get_id()<<std::endl;
         double throwTimeStart;
-        const int MAXTHROWTIME = 8;
+        const int MAXTHROWTIME = 4;
         //pcl::visualization::CloudViewer view("cloud");
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
         CircleDetector circle;
@@ -201,6 +212,7 @@ namespace hitcrt
             if(color.empty()||depth.empty()){continue;}
             depth.convertTo(depth8U,CV_8UC1);
             if(m_traceMode==1){
+                if(m_throwArea == 0)continue;
                 if(!circle.detector(depth,cloud,m_throwArea)){std::cout<<"find circle failed"<<std::endl;continue;}
                 std::cout<<"find circle ok"<<std::endl;
                 m_traceMode = 2;
@@ -240,6 +252,7 @@ namespace hitcrt
                     throwresult[0] = 1;
                     serial->send(SerialApp::SEND_TRACE,throwresult);
                     m_traceMode = 0;
+                    //m_throwArea = 0;
                     //circle.isValued = false;
                     std::cout<<"yes tracetime: "<<tracetime<<std::endl;
                     continue;
@@ -247,6 +260,7 @@ namespace hitcrt
                     throwresult[0] = 0;
                     serial->send(SerialApp::SEND_TRACE,throwresult);
                     m_traceMode = 0;
+                    //m_throwArea = 0;
                     //circle.isValued = false;
                     std::cout<<"failed tracetime: "<<tracetime<<std::endl;
                     continue;
@@ -254,21 +268,22 @@ namespace hitcrt
                 if(tracetime>=MAXTHROWTIME){
                     throwresult[0] = 0;
                     serial->send(SerialApp::SEND_TRACE,throwresult);
-                    circle.isValued = false;
+                    //circle.isValued = false;
                     m_traceMode = 0;
+                    //m_throwArea = 0;
                     std::cout<<"failed for tracetime: "<<tracetime<<std::endl;
                     continue;
                 }
             }
             /***************************DEBUG VIEW*************************/
-            if(!Param::DEBUG)continue;
+            if(!Param::trace.debug)continue;
             if(circle.isValued)
             {
                 cv::circle(color,circle.center2d,3,cv::Scalar(80,35,176),-1);
                 cv::circle(color,circle.center2d,circle.radius2d,cv::Scalar(255,255,255),1);
+                cv::circle(color,circle.center2d,circle.radius2dOut,cv::Scalar(255,255,255),1);
             }
-            cv::imshow("color",color);
-            //cv::imshow("depth",depth8U);
+            Param::mimshow("color",color);
             //view.showCloud(cloud);
             cloud->points.clear();
             cv::waitKey(1);
@@ -335,8 +350,12 @@ namespace hitcrt
         while (true)
         {
             boost::this_thread::interruption_point();
+            struct timeval st,en;
+            gettimeofday(&st,NULL);
             apriltag->getFrame();
             apriltag->apply();
+            boost::this_thread::sleep(boost::posix_time::milliseconds(1));
+            //std::cout<<"camera write time is "<<(en.tv_usec-st.tv_usec)/1000<<" ms"<<std::endl;
         }
     }
 }

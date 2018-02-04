@@ -22,6 +22,7 @@ public:
     cv::Point center2d;
     float radius3d;
     int radius2d;
+    int radius2dOut;
     bool isValued;
     bool detector(cv::Mat &depth,pcl::PointCloud<pcl::PointXYZ>::Ptr outCloud,char area);
 };

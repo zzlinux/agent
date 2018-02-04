@@ -17,7 +17,7 @@ namespace hitcrt
 {
     RgbdCalibration::RgbdCalibration()
     {
-        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::ONI_mode,RGBDcamera::Kinect,"../../oni/color.ONI"));
+        cap = std::unique_ptr<RGBDcamera>(new RGBDcamera(RGBDcamera::Live_mode,RGBDcamera::Kinect,"../../oni/color.ONI"));
     }
     void RgbdCalibration::run()
     {
@@ -112,7 +112,7 @@ namespace hitcrt
             }
             view.showCloud(cloud_plane);
         }
-        outfile.clear();
+        outfile.close();
     }
     void RgbdCalibration::computeRT01()
     {
@@ -126,6 +126,7 @@ namespace hitcrt
             fin >>x >> y >> z;
             v_point3D.push_back(cv::Point3f(x, y, z));
         }
+        fin.close();
         struct  timeval st,en;
         gettimeofday(&st, NULL);
         cv::Mat M(v_point3D.size(), 3, CV_32FC1);

@@ -1,44 +1,57 @@
 %YAML:1.0
-DEBUG: 1
 appMode: 2
-thread:
-    trace: 0
+TASK:
+    trace: 1
     radarLocation: 0
     cameraLocation: 0
-    apriltag: 1
-BLUE_H_MIN: 85
-BLUE_H_MAX: 124
-BLUE_S_MIN: 43
-BLUE_S_MAX: 255
-BLUE_V_MIN: 0
-BLUE_V_MAX: 255
-RED_H_MIN: 156
-RED_H_MAX: 179
-RED_S_MIN: 43
-RED_S_MAX: 255
-RED_V_MIN: 0
-RED_V_MAX: 255
-YELLOW_H_MIN: 26
-YELLOW_H_MAX: 34
-YELLOW_S_MIN: 43
-YELLOW_S_MAX: 255
-YELLOW_V_MIN: 46
-YELLOW_V_MAX: 255
-GREEN_H_MIN: 35
-GREEN_H_MAX: 77
-GREEN_S_MIN: 43
-GREEN_S_MAX: 255
-GREEN_V_MIN: 46
-GREEN_V_MAX: 255
-FIELD: 0
+    apriltag: 0
+DEBUG:
+    trace: 1
+    radarLocation: 0
+    cameraLocation: 1
+    apriltag: 0
+trace:
+    mode: 0
+    oni: "/home/robocon/workspace/oni/0124-circleedgeback-10in.ONI"
+ball:
+    color: "BLUE"
+    gold: "YELLOW"
+BLUE:
+    hmin: 85
+    hmax: 124
+    smin: 43
+    smax: 255
+    vmin: 0
+    vmax: 255
+RED:
+    hmin: 156
+    hmax: 179
+    smin: 43
+    smax: 255
+    vmin: 0
+    vmax: 255
+YELLOW:
+    hmin: 26
+    hmax: 34
+    smin: 43
+    smax: 255
+    vmin: 46
+    vmax: 255
+GREEN:
+    hmin: 35
+    hmax: 77
+    smin: 43
+    smax: 255
+    vmin: 46
+    vmax: 255
 RT01: !!opencv-matrix
    rows: 4
    cols: 4
    dt: f
-   data: [0.99996048, 0.0087468913, -0.0016097437, -0.0081115328,
-          -4.7348142e-10, 0.18099652, 0.98348373, -0.16784926,
-          0.0088937851, -0.98344493, 0.18098937, 0.91200918,
-          0, 0, 0, 1]
+   data: [ 9.99981105e-01, 6.01835735e-03, -1.23092392e-03,
+       -5.93803823e-03, 0., 2.00380027e-01, 9.79718328e-01,
+       -1.97705820e-01, 6.14294736e-03, -9.79699790e-01, 2.00376242e-01,
+       9.66625035e-01, 0., 0., 0., 1. ]
 CIRCLE: !!opencv-matrix
    rows: 3
    cols: 6

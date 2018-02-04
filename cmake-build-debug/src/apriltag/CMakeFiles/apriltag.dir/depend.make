@@ -12,6 +12,7 @@ src/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o: ../src/apriltag/l
 src/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o: ../src/apriltag/lib/TagDetection.h
 src/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o: ../src/apriltag/lib/TagDetector.h
 src/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o: ../src/apriltag/lib/TagFamily.h
+src/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o: ../src/thread/Param.h
 src/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o: /usr/include/eigen3/Eigen/Cholesky
 src/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o: /usr/include/eigen3/Eigen/Core
 src/apriltag/CMakeFiles/apriltag.dir/ApriltagController.cpp.o: /usr/include/eigen3/Eigen/Dense

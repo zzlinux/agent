@@ -10,6 +10,7 @@
 #include <opencv2/core/core.hpp>
 #include <iostream>
 #include <boost/thread/thread.hpp>
+#include "../thread/Param.h"
 namespace hitcrt
 {
     class CameraController :private CameraModel

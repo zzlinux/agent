@@ -16,12 +16,7 @@ namespace hitcrt
     CircleDetector::CircleDetector():radius3d(0.4),radius2d(0),isValued(false){
         center3d = pcl::PointXYZ(0,0,0);
         center2d = cv::Point(0,0);
-        // parameter init
-        cv::FileStorage fs(cv::String("../config/param.yaml"), cv::FileStorage::READ);
-        assert(fs.isOpened());
-        cv::Mat circlerange;
-        fs["CIRCLE"]>>circlerange;
-        fs.release();
+        cv::Mat circlerange = Param::CIRCLE_RANGE;
         r[0] = {{circlerange.at<float>(0,0),circlerange.at<float>(0,1)},
                 {circlerange.at<float>(0,2),circlerange.at<float>(0,3)},
                 {circlerange.at<float>(0,4),circlerange.at<float>(0,5)}};
@@ -109,10 +104,12 @@ namespace hitcrt
             *outCloud+=*cloud_cluster;
             if(area ==1||area == 2) center3d  = pcl::PointXYZ(centroid[0],centroid[1],2.4);
             else if(area == 3) center3d = pcl::PointXYZ(centroid[0],centroid[1],3.4);
-            cv::Point border;
+            cv::Point border,borderOut;
             Transformer::invTrans(center3d,center2d);
             Transformer::invTrans(pcl::PointXYZ(centroid[0],centroid[1],center3d.z+0.4),border);
+            Transformer::invTrans(pcl::PointXYZ(centroid[0],centroid[1],center3d.z+0.48),borderOut);
             radius2d = center2d.y-border.y;
+            radius2dOut = center2d.y-borderOut.y;
             std::cout << "gan cluster.size: " << cloud_cluster->points.size() << std::endl;
             std::cout<<"max(x,y,z): "<<centroid[0]<<","<<centroid[1]<<","<<centroid[2]<<","<<maxPt.z<<std::endl;
             circleNum++;
