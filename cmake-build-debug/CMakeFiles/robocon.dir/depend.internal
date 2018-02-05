@@ -33,6 +33,7 @@ CMakeFiles/robocon.dir/src/main.cpp.o
  ../src/trace/Trajectory.h
  ../src/trace/rgbd_camera.h
  ../src/trace/transformer.h
+ /home/robocon/workspace/agent/src/calibration/MonoCameraCalibration.h
  /home/robocon/workspace/agent/src/calibration/RgbdCalibration.h
  /home/robocon/workspace/agent/src/main.cpp
  /home/robocon/workspace/agent/src/thread/ThreadController.h

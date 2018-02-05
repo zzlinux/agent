@@ -105,19 +105,45 @@ src/calibration/CMakeFiles/calibration.dir/RgbdCalibration.cpp.o.provides: src/c
 src/calibration/CMakeFiles/calibration.dir/RgbdCalibration.cpp.o.provides.build: src/calibration/CMakeFiles/calibration.dir/RgbdCalibration.cpp.o
 
 
+src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o: src/calibration/CMakeFiles/calibration.dir/flags.make
+src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o: ../src/calibration/MonoCameraCalibration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o"
+	cd /home/robocon/workspace/agent/cmake-build-debug/src/calibration && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o -c /home/robocon/workspace/agent/src/calibration/MonoCameraCalibration.cpp
+
+src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.i"
+	cd /home/robocon/workspace/agent/cmake-build-debug/src/calibration && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocon/workspace/agent/src/calibration/MonoCameraCalibration.cpp > CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.i
+
+src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.s"
+	cd /home/robocon/workspace/agent/cmake-build-debug/src/calibration && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocon/workspace/agent/src/calibration/MonoCameraCalibration.cpp -o CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.s
+
+src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o.requires:
+
+.PHONY : src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o.requires
+
+src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o.provides: src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o.requires
+	$(MAKE) -f src/calibration/CMakeFiles/calibration.dir/build.make src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o.provides.build
+.PHONY : src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o.provides
+
+src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o.provides.build: src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o
+
+
 # Object files for target calibration
 calibration_OBJECTS = \
 "CMakeFiles/calibration.dir/rgbd_camera.cpp.o" \
-"CMakeFiles/calibration.dir/RgbdCalibration.cpp.o"
+"CMakeFiles/calibration.dir/RgbdCalibration.cpp.o" \
+"CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o"
 
 # External object files for target calibration
 calibration_EXTERNAL_OBJECTS =
 
 src/calibration/libcalibration.a: src/calibration/CMakeFiles/calibration.dir/rgbd_camera.cpp.o
 src/calibration/libcalibration.a: src/calibration/CMakeFiles/calibration.dir/RgbdCalibration.cpp.o
+src/calibration/libcalibration.a: src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o
 src/calibration/libcalibration.a: src/calibration/CMakeFiles/calibration.dir/build.make
 src/calibration/libcalibration.a: src/calibration/CMakeFiles/calibration.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcalibration.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robocon/workspace/agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libcalibration.a"
 	cd /home/robocon/workspace/agent/cmake-build-debug/src/calibration && $(CMAKE_COMMAND) -P CMakeFiles/calibration.dir/cmake_clean_target.cmake
 	cd /home/robocon/workspace/agent/cmake-build-debug/src/calibration && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/calibration.dir/link.txt --verbose=$(VERBOSE)
 
@@ -128,6 +154,7 @@ src/calibration/CMakeFiles/calibration.dir/build: src/calibration/libcalibration
 
 src/calibration/CMakeFiles/calibration.dir/requires: src/calibration/CMakeFiles/calibration.dir/rgbd_camera.cpp.o.requires
 src/calibration/CMakeFiles/calibration.dir/requires: src/calibration/CMakeFiles/calibration.dir/RgbdCalibration.cpp.o.requires
+src/calibration/CMakeFiles/calibration.dir/requires: src/calibration/CMakeFiles/calibration.dir/MonoCameraCalibration.cpp.o.requires
 
 .PHONY : src/calibration/CMakeFiles/calibration.dir/requires
 

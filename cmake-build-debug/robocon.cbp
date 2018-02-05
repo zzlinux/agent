@@ -834,6 +834,12 @@
 		<Unit filename="/home/robocon/workspace/agent/src/apriltag/lib/pch.h">
 			<Option target="apriltag"/>
 		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/src/calibration/MonoCameraCalibration.cpp">
+			<Option target="calibration"/>
+		</Unit>
+		<Unit filename="/home/robocon/workspace/agent/src/calibration/MonoCameraCalibration.h">
+			<Option target="calibration"/>
+		</Unit>
 		<Unit filename="/home/robocon/workspace/agent/src/calibration/RgbdCalibration.cpp">
 			<Option target="calibration"/>
 		</Unit>

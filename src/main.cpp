@@ -1,6 +1,7 @@
 #include <iostream>
 #include "thread/ThreadController.h"
 #include "calibration/RgbdCalibration.h"
+#include "calibration/MonoCameraCalibration.h"
 
 using namespace hitcrt;
 
@@ -25,6 +26,9 @@ int main() {
         }
         case MONOCAMERACALIBRATION:
         {
+            std::cout<<"MONOCAMERA CALIBRATION APP"<<std::endl;
+            MonoCameraCalibration calibration;
+            calibration.run();
             break;
         }
         case ROBOCON:

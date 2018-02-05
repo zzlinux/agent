@@ -14,7 +14,7 @@
 namespace hitcrt
 {
     BallDetector::BallDetector():updateNum(0){
-        cv::Mat ballrange = Param::BALL_RANGE;
+        cv::Mat ballrange = Param::traceinfo.ball_range;
         r[0] = {{ballrange.at<float>(0,0),ballrange.at<float>(0,1)},
                 {ballrange.at<float>(0,2),ballrange.at<float>(0,3)},
                 {ballrange.at<float>(0,4),ballrange.at<float>(0,5)}};

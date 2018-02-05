@@ -11,8 +11,6 @@ namespace  hitcrt{
     Param::task Param::apriltag;
     Param::info Param::traceinfo;
 
-    Param::colorhsv Param::cball;
-    Param::colorhsv Param::gball;
 
     float Param::FX = 366.534;  //Kinect 1号
     float Param::FY = 366.534;
@@ -23,8 +21,6 @@ namespace  hitcrt{
     cv::Mat Param::RT01 = cv::Mat(4,4,CV_32FC1, cv::Scalar(0));
     cv::Mat Param::cameraLocationIntrinsic;
     cv::Mat Param::cameraLocationCoeffs;
-    cv::Mat Param::CIRCLE_RANGE = cv::Mat(3,6,CV_32FC1,cv::Scalar(0));
-    cv::Mat Param::BALL_RANGE = cv::Mat(3,6,CV_32FC1,cv::Scalar(0));
     pthread_mutex_t Param::mutex;
     void Param::mimshow(std::string winname, cv::Mat &mat)
     {

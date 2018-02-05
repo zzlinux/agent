@@ -19,20 +19,21 @@ namespace hitcrt
     {
         cv::FileStorage fs(cv::String("../config/param.yaml"), cv::FileStorage::READ);
         assert(fs.isOpened());
-        cv::FileNode task = fs["TASK"],debug = fs["DEBUG"],trace = fs["trace"],ball = fs["ball"];
-        cv::FileNode c = fs[ball["color"]],g = fs[ball["gold"]];
+        cv::FileNode task = fs["TASK"],debug = fs["DEBUG"],trace = fs["trace"],cameraLocation = fs["cameraLocation"];
+        cv::FileNode c = trace[(string)trace["ballcolor"]],g = trace[(string)trace["ballgold"]];
         Param::trace = {(int)task["trace"],(int)debug["trace"]};
         Param::cameraLocation = {(int)task["cameraLocation"],(int)debug["cameraLocation"]};
         Param::radarLocation = {(int)task["radarLocation"],(int)debug["radarLocation"]};
         Param::apriltag = {(int)task["apriltag"],(int)debug["apriltag"]};
-        Param::traceinfo = {(int)trace["mode"],(std::string)trace["oni"]};
-        Param::cball = {{(int)c["hmin"],(int)c["hmax"]},{(int)c["smin"],(int)c["smax"]},{(int)c["vmin"],(int)c["vmax"]}};
-        Param::gball = {{(int)g["hmin"],(int)g["hmax"]},{(int)g["smin"],(int)g["smax"]},{(int)g["vmin"],(int)g["vmax"]}};
-        fs["RT01"] >> Param::RT01;
-        fs["OV2710_INTRINSIC"] >> Param::cameraLocationIntrinsic;
-        fs["OV2710_COEFFS"] >> Param::cameraLocationCoeffs;
-        fs["CIRCLE"] >> Param::CIRCLE_RANGE;
-        fs["BALL"] >> Param::BALL_RANGE;
+        Param::traceinfo = {(int)trace["mode"],(std::string)trace["oni"],
+                        {{(int)c["hmin"],(int)c["hmax"]},{(int)c["smin"],(int)c["smax"]},{(int)c["vmin"],(int)c["vmax"]}},
+                        {{(int)g["hmin"],(int)g["hmax"]},{(int)g["smin"],(int)g["smax"]},{(int)g["vmin"],(int)g["vmax"]}},
+        };
+        trace["CIRCLE"]>>Param::traceinfo.circle_range;
+        trace["BALL"]>>Param::traceinfo.ball_range;
+        trace["RT01"] >> Param::RT01;
+        cameraLocation["OV2710_INTRINSIC"] >> Param::cameraLocationIntrinsic;
+        cameraLocation["OV2710_COEFFS"] >> Param::cameraLocationCoeffs;
         fs.release();
     }
     void ThreadController::run()

@@ -32,6 +32,7 @@ CMakeFiles/robocon.dir/src/main.cpp.o: ../src/trace/Recorder.h
 CMakeFiles/robocon.dir/src/main.cpp.o: ../src/trace/Trajectory.h
 CMakeFiles/robocon.dir/src/main.cpp.o: ../src/trace/rgbd_camera.h
 CMakeFiles/robocon.dir/src/main.cpp.o: ../src/trace/transformer.h
+CMakeFiles/robocon.dir/src/main.cpp.o: ../src/calibration/MonoCameraCalibration.h
 CMakeFiles/robocon.dir/src/main.cpp.o: ../src/calibration/RgbdCalibration.h
 CMakeFiles/robocon.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/robocon.dir/src/main.cpp.o: ../src/thread/ThreadController.h

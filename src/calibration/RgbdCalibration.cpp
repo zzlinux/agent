@@ -13,6 +13,7 @@
 #include <pcl/ModelCoefficients.h>
 #include <pcl/segmentation/sac_segmentation.h>
 #include <pcl/visualization/cloud_viewer.h>
+#include <boost/date_time/posix_time/posix_time.hpp>
 namespace hitcrt
 {
     RgbdCalibration::RgbdCalibration()
@@ -49,7 +50,14 @@ namespace hitcrt
         char key = ' ';
         pcl::visualization::CloudViewer view("viewer");
         std::ofstream outfile(ground);
+        boost::posix_time::ptime time_now,time_now1;
+        boost::posix_time::millisec_posix_time_system_config::time_duration_type time_elapse;
+        time_now = boost::posix_time::microsec_clock::universal_time();
         while (key != 'q') {
+            time_now1 = boost::posix_time::microsec_clock::universal_time();
+            time_elapse = time_now1 - time_now;
+            int sec = time_elapse.total_seconds();
+            if(sec >=10) break;
             rgb = cap->getFrameRGB();
             dep = cap->getFrameDepth();
             dep.convertTo(depth8U,CV_8UC1);

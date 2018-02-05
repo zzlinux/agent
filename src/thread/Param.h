@@ -20,18 +20,21 @@ namespace  hitcrt{
         static cv::Mat RT01;
         static cv::Mat cameraLocationIntrinsic;
         static cv::Mat cameraLocationCoeffs;
-        static cv::Mat CIRCLE_RANGE;
-        static cv::Mat BALL_RANGE;
 
         struct task{bool start;bool debug;};
         static task trace,cameraLocation,radarLocation,apriltag;
-        struct info{bool rgbdMode;std::string file;};
-        static info traceinfo;
 
         struct colorhsv{
             struct {int min;int max;}h,s,v;
         };
-        static colorhsv cball,gball;
+        struct info{bool rgbdMode;
+            std::string file;
+            colorhsv cball;
+            colorhsv gball;
+            cv::Mat circle_range;
+            cv::Mat ball_range;
+        };
+        static info traceinfo;
 
         static pthread_mutex_t mutex;
         static void mimshow(std::string winname, cv::Mat &mat);

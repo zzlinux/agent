@@ -16,7 +16,7 @@ namespace hitcrt
     CircleDetector::CircleDetector():radius3d(0.4),radius2d(0),isValued(false){
         center3d = pcl::PointXYZ(0,0,0);
         center2d = cv::Point(0,0);
-        cv::Mat circlerange = Param::CIRCLE_RANGE;
+        cv::Mat circlerange = Param::traceinfo.circle_range;
         r[0] = {{circlerange.at<float>(0,0),circlerange.at<float>(0,1)},
                 {circlerange.at<float>(0,2),circlerange.at<float>(0,3)},
                 {circlerange.at<float>(0,4),circlerange.at<float>(0,5)}};

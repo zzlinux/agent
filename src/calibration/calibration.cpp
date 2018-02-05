@@ -357,7 +357,8 @@ int main( int argc, char** argv )
     videofile = parser.has("V");
     if ( parser.has("o") )
         outputFilename = parser.get<string>("o");
-    else outputFilename = "../calibration/camera.yml";
+    else outputFilename = "../config/camera.yml";
+    outputFilename = "../config/camera.yml";
     showUndistorted = parser.has("su");
     if ( isdigit(parser.get<string>("@input_data")[0]) )
         cameraId = parser.get<int>("@input_data");
@@ -407,7 +408,6 @@ int main( int argc, char** argv )
     {
         Mat view, viewGray;
         bool blink = false;
-
         if( capture.isOpened() )
         {
             Mat view0;
