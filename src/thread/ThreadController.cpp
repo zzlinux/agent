@@ -44,9 +44,7 @@ namespace hitcrt
         if(Param::apriltag.start)createApriltagThreads();
         m_communicationThread = boost::thread(boost::bind(&ThreadController::m_communication,this));
         m_mutualThread = boost::thread(boost::bind(&ThreadController::m_mutual,this));
-        //m_radarProcessThread.join();
-        //m_cameraProcessThread.join();
-        m_mutualThread.join();
+        m_communicationThread.join();
     }
     void ThreadController::createTraceThreads()
     {
@@ -116,19 +114,32 @@ namespace hitcrt
             char ch = getchar();
             if(ch == 'q')
             {
-                m_traceDataThread.interrupt();
-                m_traceDataThread.join();
-                m_traceProcessThread.interrupt();
-                m_traceProcessThread.join();
-
-                //m_cameraDataThread.interrupt();
-                //m_cameraDataThread.join();
-                //m_cameraProcessThread.interrupt();
-                //m_cameraProcessThread.join();
-
-                //m_radarProcessThread.interrupt();
-                //m_radarProcessThread.join();
-
+                if(Param::trace.start)
+                {
+                    m_traceDataThread.interrupt();
+                    m_traceDataThread.join();
+                    m_traceProcessThread.interrupt();
+                    m_traceProcessThread.join();
+                }
+                if(Param::cameraLocation.start)
+                {
+                    m_cameraDataThread.interrupt();
+                    m_cameraDataThread.join();
+                    m_cameraProcessThread.interrupt();
+                    m_cameraProcessThread.join();
+                }
+                if(Param::radarLocation.start)
+                {
+                    m_radarProcessThread.interrupt();
+                    m_radarProcessThread.join();
+                }
+                if(Param::apriltag.start)
+                {
+                    m_apriltagDataThread.interrupt();
+                    m_apriltagDataThread.join();
+                    m_apriltagProcessThread.interrupt();
+                    m_apriltagProcessThread.join();
+                }
                 m_mutualThread.interrupt();
                 m_mutualThread.join();
 
