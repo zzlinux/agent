@@ -24,8 +24,12 @@ namespace hitcrt
         r[2] = {{ballrange.at<float>(2,0),ballrange.at<float>(2,1)},
                 {ballrange.at<float>(2,2),ballrange.at<float>(2,3)},
                 {ballrange.at<float>(2,4),ballrange.at<float>(2,5)}};
+        cv::Mat ball2D = Param::traceinfo.ball_range2d;
+        R[0] = {ball2D.at<int>(0,0),ball2D.at<int>(0,1)};
+        R[1] = {ball2D.at<int>(1,0),ball2D.at<int>(1,1)};
+        R[2] = {ball2D.at<int>(2,0),ball2D.at<int>(2,1)};
     };
-    void BallDetector::init(char throwarea){area = throwarea;updateNum = 0;};
+    void BallDetector::init(char throwarea){area = (int)throwarea-1;updateNum = 0;};
     void BallDetector::detector(cv::Mat &depth,cv::Mat &color, pcl::PointCloud<pcl::PointXYZ>::Ptr outCloud,std::vector<pcl::PointXYZ>& targets)
     {
         /********************remove giant targets**************************/
@@ -64,8 +68,12 @@ namespace hitcrt
         }
         cv::Mat andmask,fgimg,fgcolor;
         andmask = contMask&mask;
-        depth.copyTo(fgimg,andmask);
-        color.copyTo(fgcolor,andmask);
+        cv::Mat ballMask(depth8U.size(),CV_8UC1,cv::Scalar(0));
+        cv::rectangle(ballMask,cv::Point(R[area].l,0),cv::Point(R[area].r,color.rows-1),cv::Scalar(255),-1);
+        ballMask = andmask&ballMask;
+        depth.copyTo(fgimg,ballMask);
+        color.copyTo(fgcolor,ballMask);
+        //cv::imshow("ballmask",ballMask);
         //cv::imshow("andmask",andmask);
         //cv::imshow("mask",mask);
         //cv::imshow("fgcolor",fgcolor);
@@ -90,21 +98,20 @@ namespace hitcrt
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_y_filtered(new pcl::PointCloud<pcl::PointXYZ>);
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_x_filtered(new pcl::PointCloud<pcl::PointXYZ>);
         pcl::PassThrough<pcl::PointXYZ> pass;
-        int i = (int)area-1;
         pass.setInputCloud(cloud);
         pass.setFilterFieldName("z");
         //std::cout<<"z :"<<r[i].z.min<<","<<r[i].z.max<<std::endl;
-        pass.setFilterLimits(r[i].z.min,r[i].z.max);
+        pass.setFilterLimits(r[area].z.min,r[area].z.max);
         pass.filter(*cloud_z_filtered);
         pass.setInputCloud(cloud_z_filtered);
         pass.setFilterFieldName("y");
         //std::cout<<"y :"<<r[i].y.min<<","<<r[i].y.max<<std::endl;
-        pass.setFilterLimits(r[i].y.min,r[i].y.max);
+        pass.setFilterLimits(r[area].y.min,r[area].y.max);
         pass.filter(*cloud_y_filtered);
         pass.setInputCloud(cloud_y_filtered);
         pass.setFilterFieldName("x");
         //std::cout<<"x :"<<r[i].x.min<<","<<r[i].x.max<<std::endl;
-        pass.setFilterLimits(r[i].x.min,r[i].x.max);
+        pass.setFilterLimits(r[area].x.min,r[area].x.max);
         pass.filter(*cloud_x_filtered);
         //std::cout<<"ball pass filter.size: "<<cloud_x_filtered->points.size()<<std::endl;
         if(cloud_x_filtered->points.size()==0)return;

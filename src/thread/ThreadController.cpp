@@ -30,7 +30,9 @@ namespace hitcrt
                         {{(int)g["hmin"],(int)g["hmax"]},{(int)g["smin"],(int)g["smax"]},{(int)g["vmin"],(int)g["vmax"]}},
         };
         trace["CIRCLE"]>>Param::traceinfo.circle_range;
+        trace["CIRCLE2D"]>>Param::traceinfo.circle_range2d;
         trace["BALL"]>>Param::traceinfo.ball_range;
+        trace["BALL2D"]>>Param::traceinfo.ball_range2d;
         trace["RT01"] >> Param::RT01;
         cameraLocation["OV2710_INTRINSIC"] >> Param::cameraLocationIntrinsic;
         cameraLocation["OV2710_COEFFS"] >> Param::cameraLocationCoeffs;

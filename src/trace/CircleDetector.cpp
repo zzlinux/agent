@@ -26,15 +26,24 @@ namespace hitcrt
         r[2] = {{circlerange.at<float>(2,0),circlerange.at<float>(2,1)},
                 {circlerange.at<float>(2,2),circlerange.at<float>(2,3)},
                 {circlerange.at<float>(2,4),circlerange.at<float>(2,5)}};
+        cv::Mat circle2D = Param::traceinfo.circle_range2d;
+        R[0] = {circle2D.at<int>(0,0),circle2D.at<int>(0,1)};
+        R[1] = {circle2D.at<int>(1,0),circle2D.at<int>(1,1)};
+        R[2] = {circle2D.at<int>(2,0),circle2D.at<int>(2,1)};
     };
-    bool CircleDetector::detector(cv::Mat &depth,pcl::PointCloud<pcl::PointXYZ>::Ptr outCloud,char area)
+    bool CircleDetector::detector(cv::Mat &depth,pcl::PointCloud<pcl::PointXYZ>::Ptr outCloud,char Area)
     {
-
+        int area = (int)Area-1;
+        cv::Mat circleMask(depth.size(),CV_8UC1,cv::Scalar(0));
+        cv::rectangle(circleMask,cv::Point(R[area].l,0),cv::Point(R[area].r,depth.rows-1),cv::Scalar(255),-1);
+        cv::Mat circledepth;
+        depth.copyTo(circledepth,circleMask);
+        cv::imshow("circleMask",circledepth);
         std::vector<cv::Point3f> pt3d;
-        for(int j = 0;j<depth.rows;j++)
+        for(int j = 0;j<circledepth.rows;j++)
         {
-            uint16_t* data = depth.ptr<uint16_t>(j);
-            for(int i = 0;i<depth.cols;i++)
+            uint16_t* data = circledepth.ptr<uint16_t>(j);
+            for(int i = 0;i<circledepth.cols;i++)
             {
                 float depth = data[i];
                 float pz = fabs(depth);
@@ -50,18 +59,17 @@ namespace hitcrt
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_y_filtered(new pcl::PointCloud<pcl::PointXYZ>);
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_x_filtered(new pcl::PointCloud<pcl::PointXYZ>);
         pcl::PassThrough<pcl::PointXYZ> pass;
-        int i = (int)area-1;
         pass.setInputCloud(cloud);
         pass.setFilterFieldName("z");
-        pass.setFilterLimits(r[i].z.min,r[i].z.max);
+        pass.setFilterLimits(r[area].z.min,r[area].z.max);
         pass.filter(*cloud_z_filtered);
         pass.setInputCloud(cloud_z_filtered);
         pass.setFilterFieldName("y");
-        pass.setFilterLimits(r[i].y.min,r[i].y.max);
+        pass.setFilterLimits(r[area].y.min,r[area].y.max);
         pass.filter(*cloud_y_filtered);
         pass.setInputCloud(cloud_y_filtered);
         pass.setFilterFieldName("x");
-        pass.setFilterLimits(r[i].x.min,r[i].x.max);
+        pass.setFilterLimits(r[area].x.min,r[area].x.max);
         pass.filter(*cloud_x_filtered);
         std::cout<<"gan pass filter.size: "<<cloud_x_filtered->points.size()<<std::endl;
         if(cloud_x_filtered->points.size()==0)return false;

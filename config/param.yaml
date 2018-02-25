@@ -28,6 +28,13 @@ trace:
        data: [0.6,1.5, 3.8,5, 0.5,2.3,
               1,1.5,   5.7,7.2, 0.5,2.3,
               -0.8,0.8, 5.5,6.5, 0.5,3.3]
+    CIRCLE2D: !!opencv-matrix
+       rows: 3
+       cols: 2
+       dt: i
+       data: [200,450,
+              220,420,
+              200,450]
     BALL: !!opencv-matrix
        rows: 3
        cols: 6
@@ -35,6 +42,13 @@ trace:
        data: [-0.5,1.5, 0.8,6, 0.6,3,
               0,2.5, 0.8,8, 0.6,3.5,
               -1.5,1.5, 0.8,8, 0.6,4.2]
+    BALL2D: !!opencv-matrix
+       rows: 3
+       cols: 2
+       dt: i
+       data: [210,610,
+              210,500,
+              210,610]
     ballcolor: "BLUE"
     ballgold: "YELLOW"
     BLUE:

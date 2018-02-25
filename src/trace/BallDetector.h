@@ -20,10 +20,12 @@ namespace hitcrt {
             struct {float min;float max;}x,y,z;
         };
         searchRange r[3];
+        struct searchRange2d{int l;int r;};
+        searchRange2d R[3];
         cv::Ptr<cv::BackgroundSubtractor> bg_model = cv::createBackgroundSubtractorMOG2().dynamicCast<cv::BackgroundSubtractor>();
         int updateNum;
         const int MAXUPDATENUM = 8;
-        char area = 1;
+        int area = 1;
     };
 }
 

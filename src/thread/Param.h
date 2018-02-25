@@ -32,7 +32,9 @@ namespace  hitcrt{
             colorhsv cball;
             colorhsv gball;
             cv::Mat circle_range;
+            cv::Mat circle_range2d;
             cv::Mat ball_range;
+            cv::Mat ball_range2d;
         };
         static info traceinfo;
 

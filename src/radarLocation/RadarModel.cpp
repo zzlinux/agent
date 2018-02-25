@@ -35,8 +35,8 @@ namespace hitcrt
         float scale = data.size()/240;
         if(mode == 0)
         {
-            start = (int)scale*150;
-            end = data.size();
+            start = (int)scale*130;
+            end = (int)scale*210;
         }else if(mode == 1)
         {
             start = (int)scale*75;
